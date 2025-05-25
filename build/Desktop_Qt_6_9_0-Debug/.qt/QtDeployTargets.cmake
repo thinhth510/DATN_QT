@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_VS_MockProject_FILE /home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/VS_MockProject)
+set(__QT_DEPLOY_TARGET_VS_MockProject_TYPE EXECUTABLE)
