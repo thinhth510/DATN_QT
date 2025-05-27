@@ -6,6 +6,7 @@
 PlaylistView::PlaylistView(Playlist *playlist, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::PlaylistView)
+    , uartReceiver(new UARTReceiver(this))
     , m_playlist(playlist)
     , m_player(new QMediaPlayer(this))
     , m_audioOutput(new QAudioOutput(this))
@@ -20,7 +21,20 @@ PlaylistView::PlaylistView(Playlist *playlist, QWidget *parent)
 
 PlaylistView::~PlaylistView()
 {
+    if (uartReceiver) {
+        uartReceiver->stopListening();
+        delete uartReceiver;
+        uartReceiver = nullptr;
+    }
     delete ui;
+}
+
+void PlaylistView::closeEvent(QCloseEvent *event) {
+    if (uartReceiver) {
+        uartReceiver->stopListening();
+    }
+    m_player->stop();
+    QMainWindow::closeEvent(event);
 }
 
 void PlaylistView::setupUI()
@@ -86,6 +100,16 @@ void PlaylistView::setupConnections()
     connect(m_player, &QMediaPlayer::mediaStatusChanged, this, &PlaylistView::handleMediaStatusChanged);
     connect(m_player, &QMediaPlayer::playbackStateChanged, this, &PlaylistView::handleStateChanged);
     connect(m_player, &QMediaPlayer::metaDataChanged, this, &PlaylistView::updateMetadata);
+
+    // Kết nối tín hiệu UART
+    connect(uartReceiver, &UARTReceiver::controlCommandReceived, this, &PlaylistView::handleUARTCommand);
+    connect(uartReceiver, &UARTReceiver::numberReceived, this, &PlaylistView::handleUARTNumber);
+    connect(uartReceiver, &UARTReceiver::errorOccurred, this, &PlaylistView::handleUARTError);
+
+    // Khởi động UART
+    if (!uartReceiver->startListening()) {
+        qDebug() << "Failed to start UART listening in VideoView";
+    }
 }
 
 void PlaylistView::updatePlaylistModel()
@@ -162,8 +186,15 @@ void PlaylistView::on_playButton_clicked()
 
 void PlaylistView::on_nextButton_clicked()
 {
+    if (m_playlist->mediaFiles().isEmpty()) {
+        return;
+    }
+    
     if (m_currentIndex < m_playlist->mediaFiles().size() - 1) {
         loadFile(m_currentIndex + 1);
+    } else {
+        // Nếu đang ở bài cuối, quay về bài đầu
+        loadFile(0);
     }
 }
 
@@ -232,4 +263,34 @@ void PlaylistView::handleStateChanged(QMediaPlayer::PlaybackState state)
     ui->playButton->setIcon(style()->standardIcon(
         m_isPlaying ? QStyle::SP_MediaPause : QStyle::SP_MediaPlay
     ));
-} 
+}
+
+void PlaylistView::handleUARTCommand(const QString &command)
+{
+    qDebug() << "VideoView received UART command:" << command;
+
+    if (command == "stop") {
+        on_stopButton_clicked();
+    }
+    else if (command == "play_pause") {
+        on_playButton_clicked();
+    }
+    else if (command == "previous") {
+        on_previousButton_clicked();
+    }
+    else if (command == "next") {
+        on_nextButton_clicked();
+    }
+}
+
+void PlaylistView::handleUARTNumber(int number) {
+    qDebug() << "VideoView received UART number:" << number;
+    if (number >= 0 && number <= 100) {
+        ui->volumeSlider->setValue(number);
+    }
+}
+
+void PlaylistView::handleUARTError(const QString &error)
+{
+    qDebug() << "PlaylistView UART error:" << error;
+}

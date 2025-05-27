@@ -2,11 +2,14 @@
   /home/d1fficult/Mock\ Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/VS_MockProject_autogen/moc_predefs.h \
   /home/d1fficult/Mock\ Project/VS_MockProject/include/model/mediafile.h \
   /home/d1fficult/Mock\ Project/VS_MockProject/include/model/playlist.h \
+  /home/d1fficult/Mock\ Project/VS_MockProject/include/model/uartreceiver.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QDateTime \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QEventLoop \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QFileInfo \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QList \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QObject \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QString \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QTimer \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QUrl \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q17memory.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q20functional.h \
@@ -15,6 +18,7 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q20type_traits.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q20utility.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q23utility.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qabstracteventdispatcher.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qalgorithms.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qanystringview.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qarraydata.h \
@@ -24,6 +28,7 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qatomic.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qatomic_cxx11.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qbasicatomic.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qbasictimer.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qbindingstorage.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qbytearray.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qbytearrayalgorithms.h \
@@ -89,6 +94,8 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qpair.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qpoint.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qprocessordetection.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qproperty.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qpropertyprivate.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qrect.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qrefcount.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qscopedpointer.h \
@@ -127,6 +134,7 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtenvironmentvariables.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtextstream.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtformat_impl.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtimer.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtimezone.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtmetamacros.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtnoop.h \
@@ -181,6 +189,12 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimedia-config.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimediaexports.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimediaglobal.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/QSerialPort \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/QSerialPortInfo \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/qserialport.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/qserialportglobal.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/qserialportinfo.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/qtserialportexports.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/QMainWindow \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/qmainwindow.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/qsizepolicy.h \

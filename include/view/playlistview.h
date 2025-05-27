@@ -5,6 +5,7 @@
 #include <QMediaPlayer>
 #include <QAudioOutput>
 #include "model/playlist.h"
+#include "../model/uartreceiver.h"
 
 namespace Ui {
 class PlaylistView;
@@ -17,6 +18,13 @@ class PlaylistView : public QMainWindow
 public:
     explicit PlaylistView(Playlist *playlist, QWidget *parent = nullptr);
     ~PlaylistView();
+
+    void handleUARTCommand(const QString &command);
+    void handleUARTNumber(int number);
+    void handleUARTError(const QString &error);
+
+protected:
+    void closeEvent(QCloseEvent *event) override;
 
 private slots:
     void on_playButton_clicked();
@@ -47,6 +55,7 @@ private:
     Playlist *m_playlist;
     QMediaPlayer *m_player;
     QAudioOutput *m_audioOutput;
+    UARTReceiver *uartReceiver;
     int m_currentIndex;
     bool m_isPlaying;
 };
