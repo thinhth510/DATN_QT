@@ -39,7 +39,7 @@ VideoView::VideoView(const QString &videoPath, QWidget *parent)
     ui->pushButton_Volume->setIcon(style()->standardIcon(QStyle::SP_MediaVolume));
 
     // Cài đặt slider volume
-    ui->horizontalSlider_Volume->setMinimum(1);
+    ui->horizontalSlider_Volume->setMinimum(0);
     ui->horizontalSlider_Volume->setMaximum(100);
     ui->horizontalSlider_Volume->setValue(30);
 
