@@ -17,19 +17,16 @@ VideoView::VideoView(const QString &videoPath, QWidget *parent)
 
     // Tạo QVideoWidget và gán vào group box
     videoWidget = new QVideoWidget();
-    videoWidget->setGeometry(5,5, ui->groupBox_Video->width() - 10, ui->groupBox_Video->height() - 10);
-    videoWidget->setParent(ui->groupBox_Video);
-    videoWidget->show();
+    QVBoxLayout* videoLayout = new QVBoxLayout(ui->groupBox_Video);
+    videoLayout->setContentsMargins(0, 0, 0, 0);
+    videoLayout->addWidget(videoWidget);
+    ui->groupBox_Video->setLayout(videoLayout);
 
     // Thiết lập video output
     controller->getPlayer()->setVideoOutput(videoWidget);
 
     // Thiết lập nguồn video
     controller->setSource(QUrl::fromLocalFile(videoPath));
-
-    // Hiển thị tên file
-    QFileInfo fileInfo(videoPath);
-    ui->label_File_Name->setText(fileInfo.fileName());
 
     // Thiết lập icon cho các nút
     ui->pushButton_Play_Pause->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));

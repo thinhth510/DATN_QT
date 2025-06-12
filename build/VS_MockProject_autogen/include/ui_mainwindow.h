@@ -69,7 +69,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1024, 768);
+        MainWindow->resize(1024, 600);
         MainWindow->setStyleSheet(QString::fromUtf8("background-color : rgb(52,51,64);"));
         actionOpen_Audio = new QAction(MainWindow);
         actionOpen_Audio->setObjectName(QString::fromUtf8("actionOpen_Audio"));
@@ -173,7 +173,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1024, 23));
+        menubar->setGeometry(QRect(0, 0, 1024, 20));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuPlaylist = new QMenu(menubar);

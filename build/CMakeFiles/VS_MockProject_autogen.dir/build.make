@@ -68,7 +68,7 @@ include CMakeFiles/VS_MockProject_autogen.dir/progress.make
 
 CMakeFiles/VS_MockProject_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target VS_MockProject"
-	/usr/bin/cmake -E cmake_autogen "/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles/VS_MockProject_autogen.dir/AutogenInfo.json" ""
+	/usr/bin/cmake -E cmake_autogen "/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles/VS_MockProject_autogen.dir/AutogenInfo.json" Debug
 
 VS_MockProject_autogen: CMakeFiles/VS_MockProject_autogen
 VS_MockProject_autogen: CMakeFiles/VS_MockProject_autogen.dir/build.make

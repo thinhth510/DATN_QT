@@ -53,7 +53,7 @@ public:
     {
         if (PlaylistView->objectName().isEmpty())
             PlaylistView->setObjectName(QString::fromUtf8("PlaylistView"));
-        PlaylistView->resize(1000, 700);
+        PlaylistView->resize(1024, 600);
         PlaylistView->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
 "    background-color: rgb(52,51,64);\n"
 "}\n"
@@ -103,9 +103,9 @@ public:
         centralwidget = new QWidget(PlaylistView);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
-        verticalLayout->setSpacing(10);
+        verticalLayout->setSpacing(5);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(10, 10, 10, 10);
+        verticalLayout->setContentsMargins(5, 5, 5, 5);
         infoWidget = new QWidget(centralwidget);
         infoWidget->setObjectName(QString::fromUtf8("infoWidget"));
         verticalLayout_2 = new QVBoxLayout(infoWidget);
