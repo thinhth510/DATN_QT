@@ -4,6 +4,7 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QDebug>
+#include <QShortcut>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,6 +19,10 @@ MainWindow::MainWindow(QWidget *parent)
     setupMediaBrowser();
     setupPlaylistManager();
     loadPlaylists();
+
+    // Thêm phím tắt F11 để chuyển đổi full screen
+    QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F11), this);
+    connect(fullScreenShortcut, &QShortcut::activated, this, &MainWindow::toggleFullScreen);
 }
 
 MainWindow::~MainWindow()
@@ -277,6 +282,15 @@ void MainWindow::on_playButton_clicked()
         
         // Tự động bắt đầu phát
         QMetaObject::invokeMethod(m_playlistView, "on_playButton_clicked", Qt::QueuedConnection);
+    }
+}
+
+void MainWindow::toggleFullScreen()
+{
+    if (isFullScreen()) {
+        showNormal();
+    } else {
+        showFullScreen();
     }
 }
 

@@ -35,6 +35,7 @@ private slots:
     void on_pushButton_Seek_Backward_clicked();
     void on_horizontalSlider_Volume_valueChanged(int value);
     void on_pushButton_Volume_clicked();
+    void toggleFullScreen();
 
 private:
     Ui::AudioView *ui;

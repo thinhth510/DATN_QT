@@ -117,6 +117,8 @@ private slots:
      */
     void on_playButton_clicked();
 
+    void toggleFullScreen();
+
 protected:
     /**
      * @brief Override closeEvent để xử lý khi đóng cửa sổ

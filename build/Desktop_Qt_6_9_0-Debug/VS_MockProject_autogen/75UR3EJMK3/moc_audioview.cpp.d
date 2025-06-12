@@ -428,6 +428,10 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimedia-config.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimediaexports.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimediaglobal.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/QVideoWidget \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/qtmultimediawidgetsexports.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/qtmultimediawidgetsglobal.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/qvideowidget.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/QSerialPort \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/QSerialPortInfo \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/qserialport.h \

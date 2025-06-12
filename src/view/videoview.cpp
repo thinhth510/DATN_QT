@@ -180,3 +180,12 @@ void VideoView::handleUARTError(const QString &error)
 {
     qDebug() << "VideoView UART error:" << error;
 }
+
+void VideoView::toggleFullScreen()
+{
+    if (isFullScreen()) {
+        showNormal();
+    } else {
+        showFullScreen();
+    }
+}

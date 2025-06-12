@@ -3,8 +3,11 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QObject \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q17memory.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q20functional.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q20iterator.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q20memory.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q20type_traits.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q20utility.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/q23utility.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qalgorithms.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qanystringview.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qarraydata.h \
@@ -29,8 +32,11 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qcontainerfwd.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qcontainerinfo.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qcontainertools_impl.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qcontiguouscache.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qdarwinhelpers.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qdatastream.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qdebug.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qendian.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qexceptionhandling.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qflags.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qfloat16.h \
@@ -40,14 +46,18 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qgenericatomic.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qglobal.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qglobalstatic.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qhash.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qhashfunctions.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qiodevicebase.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qiterable.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qiterator.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qlatin1stringview.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qline.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qlist.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qlogging.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qmalloc.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qmap.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qmargins.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qmath.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qmetacontainer.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qmetatype.h \
@@ -60,10 +70,19 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qobjectdefs_impl.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qoverload.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qpair.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qpoint.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qprocessordetection.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qrect.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qrefcount.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qscopedpointer.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qscopeguard.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qset.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qshareddata.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qshareddata_impl.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qsharedpointer.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qsharedpointer_impl.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qsize.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qspan.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qstdlibdetection.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qstring.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qstringalgorithms.h \
@@ -89,6 +108,7 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtdeprecationmarkers.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtenvironmentvariables.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtextstream.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtformat_impl.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtmetamacros.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtnoop.h \
@@ -102,12 +122,36 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qtypes.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qurl.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qutf8stringview.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qvariant.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qvarlengtharray.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qversiontagging.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qxptype_traits.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/qyieldcpu.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qaction.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qbitmap.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qbrush.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qcolor.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qcursor.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qfont.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qfontinfo.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qfontmetrics.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qfontvariableaxis.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qicon.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qimage.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qkeysequence.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qpalette.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qpixelformat.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qpixmap.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qpolygon.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qregion.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qrgb.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qrgba64.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qtgui-config.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qtguiexports.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qtguiglobal.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qtransform.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qwindowdefs.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/QAudioOutput \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/QMediaPlayer \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudio.h \
@@ -117,6 +161,15 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimedia-config.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimediaexports.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimediaglobal.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/QVideoWidget \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/qtmultimediawidgetsexports.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/qtmultimediawidgetsglobal.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/qvideowidget.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/qsizepolicy.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/qtwidgets-config.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/qtwidgetsexports.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/qwidget.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -187,10 +240,12 @@
   /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/stl_multiset.h \
   /usr/include/c++/11/bits/stl_numeric.h \
   /usr/include/c++/11/bits/stl_pair.h \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/bits/stl_set.h \
   /usr/include/c++/11/bits/stl_tempbuf.h \
   /usr/include/c++/11/bits/stl_tree.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
@@ -203,11 +258,14 @@
   /usr/include/c++/11/bits/uniform_int_dist.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/unordered_map.h \
+  /usr/include/c++/11/bits/unordered_set.h \
   /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/cassert \
   /usr/include/c++/11/cctype \
   /usr/include/c++/11/cerrno \
   /usr/include/c++/11/chrono \
+  /usr/include/c++/11/climits \
   /usr/include/c++/11/clocale \
   /usr/include/c++/11/cmath \
   /usr/include/c++/11/cstddef \
@@ -244,6 +302,7 @@
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
   /usr/include/c++/11/ratio \
+  /usr/include/c++/11/set \
   /usr/include/c++/11/stdexcept \
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/string \
@@ -265,6 +324,7 @@
   /usr/include/c++/11/type_traits \
   /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/unordered_map \
+  /usr/include/c++/11/unordered_set \
   /usr/include/c++/11/utility \
   /usr/include/c++/11/variant \
   /usr/include/c++/11/vector \
@@ -273,7 +333,9 @@
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
@@ -295,8 +357,11 @@
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -341,10 +406,12 @@
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

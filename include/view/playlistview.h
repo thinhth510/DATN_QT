@@ -40,6 +40,7 @@ private slots:
     void updateMetadata();
     void handleMediaStatusChanged(QMediaPlayer::MediaStatus status);
     void handleStateChanged(QMediaPlayer::PlaybackState state);
+    void toggleFullScreen();
 
 private:
     void setupUI();

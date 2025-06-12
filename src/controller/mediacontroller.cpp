@@ -74,3 +74,11 @@ void MediaController::handlePlaybackStateChanged(QMediaPlayer::PlaybackState sta
     m_isPaused = (state != QMediaPlayer::PlayingState);
     emit playbackStateChanged(state);
 }
+
+void MediaController::setMedia(const QUrl &url) {
+    setSource(url);
+}
+
+void MediaController::setVideoOutput(QVideoWidget *videoWidget) {
+    m_player->setVideoOutput(videoWidget);
+}

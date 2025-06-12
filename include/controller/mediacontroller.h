@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QMediaPlayer>
 #include <QAudioOutput>
+#include <QVideoWidget>
 
 class MediaController : public QObject
 {
@@ -19,6 +20,8 @@ public:
 
     // Thiết lập nguồn media (audio hoặc video)
     void setSource(const QUrl &url);
+    void setMedia(const QUrl &url);  // Alias for setSource
+    void setVideoOutput(QVideoWidget *videoWidget);
 
     // Các chức năng điều khiển media
     void play();

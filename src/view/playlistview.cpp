@@ -2,6 +2,7 @@
 #include "ui_playlistview.h"
 #include <QStandardItemModel>
 #include <QHeaderView>
+#include <QShortcut>
 
 PlaylistView::PlaylistView(Playlist *playlist, QWidget *parent)
     : QMainWindow(parent)
@@ -17,6 +18,10 @@ PlaylistView::PlaylistView(Playlist *playlist, QWidget *parent)
     setupUI();
     setupConnections();
     updatePlaylistModel();
+
+    // Thêm phím tắt F11 để chuyển đổi full screen
+    QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F11), this);
+    connect(fullScreenShortcut, &QShortcut::activated, this, &PlaylistView::toggleFullScreen);
 }
 
 PlaylistView::~PlaylistView()
@@ -293,4 +298,13 @@ void PlaylistView::handleUARTNumber(int number) {
 void PlaylistView::handleUARTError(const QString &error)
 {
     qDebug() << "PlaylistView UART error:" << error;
+}
+
+void PlaylistView::toggleFullScreen()
+{
+    if (isFullScreen()) {
+        showNormal();
+    } else {
+        showFullScreen();
+    }
 }
