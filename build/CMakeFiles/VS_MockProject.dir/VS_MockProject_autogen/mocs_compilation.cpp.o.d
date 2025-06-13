@@ -118,10 +118,8 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/KEB5ZR3DWC/../../../include/controller/mediacontroller.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
  /usr/include/c++/11/cstddef /usr/include/c++/11/cstdint \
  /usr/include/assert.h /usr/include/x86_64-linux-gnu/qt6/QtCore/qconfig.h \
@@ -156,6 +154,7 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypeinfo.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerfwd.h \
  /usr/include/c++/11/variant /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/optional \
@@ -193,6 +192,10 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractanimation.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs_impl.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
@@ -274,21 +277,14 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbindingstorage.h \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/ctime \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaPlayer \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaplayer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimedia-config.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaenumdebug.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstracteventdispatcher.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmap.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringconverter.h \
@@ -304,72 +300,6 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer_impl.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QAudioOutput \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiooutput.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/QVideoWidget \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/qvideowidget.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qmargins.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qpoint.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgba64.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qregion.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qfont.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontmetrics.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontinfo.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qcursor.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qbitmap.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qkeysequence.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/qtmultimediawidgetdefs.h \
- /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/KEB5ZR3DWC/moc_uartcontroller.cpp \
- /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/KEB5ZR3DWC/../../../include/controller/uartcontroller.h \
- /home/d1fficult/Mock\ Project/VS_MockProject/include/view/videoview.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qicon.h \
- /home/d1fficult/Mock\ Project/VS_MockProject/include/controller/mediacontroller.h \
- /home/d1fficult/Mock\ Project/VS_MockProject/include/view/../model/uartreceiver.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QSerialPort \
- /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialport.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QSerialPortInfo \
- /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportinfo.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
- /home/d1fficult/Mock\ Project/VS_MockProject/include/view/audioview.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgets \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgetsDepends \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractanimation.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstracteventdispatcher.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractnativeeventfilter.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractproxymodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
@@ -386,6 +316,7 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbindingstorage.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbitarray.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbuffer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h \
@@ -400,6 +331,7 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcbormap.h \
@@ -471,6 +403,7 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileselector.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfilesystemwatcher.h \
@@ -521,6 +454,8 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlibraryinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qversionnumber.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qpoint.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlocale.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlockfile.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qloggingcategory.h \
@@ -571,6 +506,8 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/11/bits/random.tcc \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qreadwritelock.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qmargins.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qresource.h \
@@ -679,6 +616,7 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstack.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstandardpaths.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstorageinfo.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringalgorithms.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringbuilder.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringconverter.h \
@@ -699,6 +637,8 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qthreadpool.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qthreadstorage.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimeline.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimezone.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtranslator.h \
@@ -719,10 +659,29 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimedia \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimediaDepends \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qabstractfileiconprovider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qicon.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgba64.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qregion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qabstracttextdocumentlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h \
@@ -738,14 +697,18 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qkeysequence.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qglyphrun.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qrawfont.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qfont.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontdatabase.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qaccessible.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qaccessiblebridge.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfactoryinterface.h \
@@ -761,6 +724,8 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMargins \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qsurface.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qsurfaceformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qcursor.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qbitmap.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qbitmap.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qclipboard.h \
@@ -834,6 +799,8 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintDevice \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintengine.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontinfo.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontmetrics.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h \
@@ -882,8 +849,124 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QtNetwork \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QtNetworkDepends \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetwork-config.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qabstractnetworkcache.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkrequest.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedDataPointer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qabstractsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qauthenticator.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qdnslookup.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qproperty.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qdtls.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtcpsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qabstractsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhostaddress.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslerror.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcertificate.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qssl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhostaddress.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhostinfo.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhstspolicy.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhttp2configuration.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhttpmultipart.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QByteArray \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QIODevice \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QNetworkRequest \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkrequest.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qlocalserver.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qlocalsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkaccessmanager.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QSslConfiguration \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslconfiguration.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QSslPreSharedKeyAuthenticator \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslpresharedkeyauthenticator.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QMetaType \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkcookie.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkcookiejar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkdatagram.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkdiskcache.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qabstractnetworkcache.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkinformation.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkinterface.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkproxy.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkreply.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QNetworkAccessManager \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qocspresponse.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qpassworddigestor.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QCryptographicHash \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsctpserver.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtcpserver.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsctpsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkdatagram.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qssl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcertificate.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcertificateextension.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcipher.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qssldiffiehellmanparameters.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslellipticcurve.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslerror.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslkey.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtcpserver.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtcpsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qudpsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimedia-config.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiobuffer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudioformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiodecoder.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaenumdebug.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiobuffer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiodevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudioformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudioinput.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiooutput.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiosink.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiodevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiosource.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qcamera.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qcameradevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideoframe.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideoframeformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qcameradevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qimagecapture.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediacapturesession.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediadevices.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaenumdebug.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediametadata.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaplayer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediarecorder.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediametadata.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediatimerange.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qsoundeffect.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideoframe.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideoframeformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideosink.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qwavedecoder.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgets \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgetsDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
@@ -892,6 +975,7 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
@@ -989,6 +1073,7 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmdiarea.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmdisubwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
@@ -1011,8 +1096,6 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollerProperties \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollerproperties.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QMetaType \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qshortcut.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QShortcut \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizegrip.h \
@@ -1053,29 +1136,64 @@ CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidgetaction.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwizard.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/QVideoWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/qvideowidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/qtmultimediawidgetdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QScreen \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QSslError \
+ /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/KEB5ZR3DWC/moc_uartcontroller.cpp \
+ /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/KEB5ZR3DWC/../../../include/controller/uartcontroller.h \
+ /home/d1fficult/Mock\ Project/VS_MockProject/include/view/videoview.h \
+ /home/d1fficult/Mock\ Project/VS_MockProject/include/controller/mediacontroller.h \
+ /home/d1fficult/Mock\ Project/VS_MockProject/include/view/../model/uartreceiver.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QtSerialPort \
+ /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QtSerialPortDepends \
+ /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialport.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportinfo.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qtserialportversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QSerialPortInfo \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
+ /home/d1fficult/Mock\ Project/VS_MockProject/include/view/audioview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStyle \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QShortcut \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/Q6AU6LSD6J/moc_uartreceiver.cpp \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/Q6AU6LSD6J/../../../include/model/uartreceiver.h \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/moc_audioview.cpp \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/../../../include/view/audioview.h \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/moc_mainwindow.cpp \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/../../../include/view/mainwindow.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringListModel \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QCloseEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFileDialog \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMessageBox \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/../../../include/view/videoview.h \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/../../../include/view/audioview.h \
  /home/d1fficult/Mock\ Project/VS_MockProject/include/model/playlist.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QFile \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonDocument \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonArray \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonObject \
  /home/d1fficult/Mock\ Project/VS_MockProject/include/model/mediafile.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediametadata.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEventLoop \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaPlayer \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/../../../include/view/playlistview.h \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/../../../include/view/../model/uartreceiver.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QAudioOutput \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHeaderView \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/moc_playlistview.cpp \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/../../../include/view/playlistview.h \
  /home/d1fficult/Mock\ Project/VS_MockProject/build/VS_MockProject_autogen/75UR3EJMK3/moc_videoview.cpp \

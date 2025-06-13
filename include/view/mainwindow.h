@@ -12,6 +12,10 @@
 #include <QtGui>       // Các thành phần giao diện
 #include <QStringListModel>  // Model cho danh sách chuỗi
 #include <QCloseEvent>      // Xử lý sự kiện đóng cửa sổ
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QDebug>
+#include <QShortcut>
 
 // Local includes
 #include "videoview.h"      // Giao diện xem video
@@ -43,12 +47,19 @@ public:
      * @brief Constructor
      * @param parent Widget cha (mặc định là nullptr)
      */
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     
     /**
      * @brief Destructor - Giải phóng tài nguyên
      */
     ~MainWindow();
+
+protected:
+    /**
+     * @brief Override closeEvent để xử lý khi đóng cửa sổ
+     * @param event Event đóng cửa sổ
+     */
+    void closeEvent(QCloseEvent *event) override;
 
 private slots:
     // Media File Operations
@@ -119,15 +130,19 @@ private slots:
 
     void toggleFullScreen();
 
-protected:
-    /**
-     * @brief Override closeEvent để xử lý khi đóng cửa sổ
-     * @param event Event đóng cửa sổ
-     */
-    void closeEvent(QCloseEvent *event) override;
-
 private:
-    // UI Setup Methods
+    // UI Components
+    Ui::MainWindow *ui;                   // Con trỏ đến UI được tạo bởi Qt Designer
+    QFileSystemModel *m_fileModel;        // Model quản lý file system
+    QStringListModel *m_playlistModel;    // Model quản lý danh sách trong playlist
+    PlaylistView *m_playlistView;         // View hiển thị playlist
+
+    // Data
+    QList<Playlist> m_playlists;          // Danh sách các playlist
+    Playlist *m_currentPlaylist;          // Con trỏ đến playlist hiện tại
+    QString m_currentMediaPath;           // Đường dẫn thư mục media hiện tại
+
+    // Setup Methods
     void setupUI();           // Thiết lập giao diện người dùng
     void setupMediaBrowser(); // Thiết lập trình duyệt media
     void setupPlaylistManager(); // Thiết lập quản lý playlist
@@ -140,15 +155,6 @@ private:
     void updateMediaList(const QString &path);  // Cập nhật danh sách media
     void filterMediaFiles(const QString &filter); // Lọc file media
     void updatePlaylistModel(); // Cập nhật model playlist
-
-private:
-    Ui::MainWindow *ui;                   // Con trỏ đến UI được tạo bởi Qt Designer
-    QFileSystemModel *m_fileModel;        // Model quản lý file system
-    QStringListModel *m_playlistModel;    // Model quản lý danh sách trong playlist
-    QList<Playlist> m_playlists;          // Danh sách các playlist
-    Playlist *m_currentPlaylist;          // Con trỏ đến playlist hiện tại
-    QString m_currentMediaPath;           // Đường dẫn thư mục media hiện tại
-    PlaylistView *m_playlistView;         // View hiển thị playlist
 };
 
 #endif // MAINWINDOW_H

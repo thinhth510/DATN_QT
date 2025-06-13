@@ -1,8 +1,4 @@
 #include "model/playlist.h"
-#include <QFile>
-#include <QJsonDocument>
-#include <QJsonArray>
-#include <QJsonObject>
 
 Playlist::Playlist(const QString &name)
     : m_name(name)

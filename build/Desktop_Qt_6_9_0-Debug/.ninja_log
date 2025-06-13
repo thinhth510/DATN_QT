@@ -38,3 +38,29 @@
 7	4640	1749739919289970935	CMakeFiles/VS_MockProject.dir/src/view/audioview.cpp.o	1c8bf2cdf1d3171
 7	4817	1749739919289970935	CMakeFiles/VS_MockProject.dir/src/view/mainwindow.cpp.o	5e04ab863965124b
 4817	5277	1749739924099969536	VS_MockProject	72e3239ea1eb2b31
+9	1275	1749741757599262795	VS_MockProject_autogen/timestamp	2c0d3bc7745fc4d7
+9	1275	1749741757599262795	VS_MockProject_autogen/mocs_compilation.cpp	2c0d3bc7745fc4d7
+9	1275	1749741757599262795	/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/VS_MockProject_autogen/timestamp	2c0d3bc7745fc4d7
+9	1275	1749741757599262795	/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/VS_MockProject_autogen/mocs_compilation.cpp	2c0d3bc7745fc4d7
+1276	3530	1749741757606262818	CMakeFiles/VS_MockProject.dir/src/view/videoview.cpp.o	59cd02eb221013a3
+1276	6308	1749741757606262818	CMakeFiles/VS_MockProject.dir/src/controller/uartcontroller.cpp.o	6920145a200db780
+1276	6442	1749741757606262818	CMakeFiles/VS_MockProject.dir/src/main.cpp.o	9eb355a831c6c71b
+1275	6768	1749741757605262815	CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o	68af6df8b026df47
+1276	6834	1749741757606262818	CMakeFiles/VS_MockProject.dir/src/view/mainwindow.cpp.o	5e04ab863965124b
+6835	7320	1749741763165280717	VS_MockProject	72e3239ea1eb2b31
+13	3964	1749813645956129847	VS_MockProject_autogen/timestamp	2c0d3bc7745fc4d7
+13	3964	1749813645956129847	VS_MockProject_autogen/mocs_compilation.cpp	2c0d3bc7745fc4d7
+13	3964	1749813645956129847	/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/VS_MockProject_autogen/timestamp	2c0d3bc7745fc4d7
+13	3964	1749813645956129847	/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/VS_MockProject_autogen/mocs_compilation.cpp	2c0d3bc7745fc4d7
+3967	8868	1749813645966129660	CMakeFiles/VS_MockProject.dir/src/model/uartreceiver.cpp.o	6974cfb350bdcda9
+3967	11708	1749813645966129660	CMakeFiles/VS_MockProject.dir/src/model/playlist.cpp.o	d39f1ed6afd1c911
+3966	11958	1749813645965129679	CMakeFiles/VS_MockProject.dir/src/view/audioview.cpp.o	1c8bf2cdf1d3171
+3966	11979	1749813645965129679	CMakeFiles/VS_MockProject.dir/src/model/mediafile.cpp.o	8c28afd363f538b2
+3966	12098	1749813645965129679	CMakeFiles/VS_MockProject.dir/src/view/playlistview.cpp.o	2d112d2f9d14bec
+3965	12224	1749813645964129698	CMakeFiles/VS_MockProject.dir/VS_MockProject_autogen/mocs_compilation.cpp.o	68af6df8b026df47
+3965	12294	1749813645964129698	CMakeFiles/VS_MockProject.dir/src/main.cpp.o	9eb355a831c6c71b
+3966	12303	1749813645965129679	CMakeFiles/VS_MockProject.dir/src/controller/uartcontroller.cpp.o	6920145a200db780
+3965	12529	1749813645964129698	CMakeFiles/VS_MockProject.dir/src/view/videoview.cpp.o	59cd02eb221013a3
+3966	12576	1749813645965129679	CMakeFiles/VS_MockProject.dir/src/controller/mediacontroller.cpp.o	644124527d062359
+3965	12697	1749813645964129698	CMakeFiles/VS_MockProject.dir/src/view/mainwindow.cpp.o	5e04ab863965124b
+12698	13165	1749813654696966967	VS_MockProject	72e3239ea1eb2b31

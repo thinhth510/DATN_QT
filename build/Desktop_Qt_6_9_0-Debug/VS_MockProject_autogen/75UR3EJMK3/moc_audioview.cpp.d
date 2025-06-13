@@ -2,9 +2,15 @@
   /home/d1fficult/Mock\ Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/VS_MockProject_autogen/moc_predefs.h \
   /home/d1fficult/Mock\ Project/VS_MockProject/include/controller/mediacontroller.h \
   /home/d1fficult/Mock\ Project/VS_MockProject/include/model/uartreceiver.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QByteArray \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QCryptographicHash \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QDeadlineTimer \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QDebug \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QEvent \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QFileInfo \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QFlags \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QHash \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QIODevice \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QList \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QMap \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QMargins \
@@ -14,11 +20,14 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QPointF \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QRect \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QScopedPointer \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QSharedDataPointer \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QSize \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QSizeF \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QString \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QStringList \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QTime \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QTimer \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QUrl \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QVariant \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QtCore \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtCore/QtCoreDepends \
@@ -419,29 +428,120 @@
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qvectornd.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qwindow.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtGui/qwindowdefs.h \
-  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/QAudioOutput \
-  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/QMediaPlayer \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/QtMultimedia \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/QtMultimediaDepends \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qabstractvideobuffer.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudio.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudiobuffer.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudiobufferinput.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudiobufferoutput.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudiodecoder.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudiodevice.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudioformat.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudioinput.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudiooutput.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudiosink.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qaudiosource.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qcamera.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qcameradevice.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qcapturablewindow.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qimagecapture.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qmediacapturesession.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qmediadevices.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qmediaformat.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qmediametadata.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qmediaplayer.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qmediarecorder.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qmediatimerange.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qscreencapture.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qsoundeffect.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtaudio.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimedia-config.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimediaexports.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimediaglobal.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtmultimediaversion.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qtvideo.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qvideoframe.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qvideoframeformat.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qvideoframeinput.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qvideosink.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qwavedecoder.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimedia/qwindowcapture.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/QVideoWidget \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/qtmultimediawidgetsexports.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/qtmultimediawidgetsglobal.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtMultimediaWidgets/qvideowidget.h \
-  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/QSerialPort \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/QNetworkAccessManager \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/QNetworkRequest \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/QSslConfiguration \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/QSslError \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/QSslSocket \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/QTcpServer \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/QtNetwork \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/QtNetworkDepends \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qabstractnetworkcache.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qabstractsocket.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qauthenticator.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qdnslookup.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qdtls.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qformdatabuilder.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qhostaddress.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qhostinfo.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qhstspolicy.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qhttp1configuration.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qhttp2configuration.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qhttpheaders.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qhttpmultipart.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qlocalserver.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qlocalsocket.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkcookie.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkcookiejar.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkdatagram.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkdiskcache.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkinformation.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkinterface.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkproxy.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkreply.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkrequest.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qnetworkrequestfactory.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qocspresponse.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qpassworddigestor.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qrestaccessmanager.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qrestreply.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qssl.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qsslcertificate.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qsslcertificateextension.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qsslcipher.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qsslconfiguration.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qssldiffiehellmanparameters.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qsslellipticcurve.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qsslerror.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qsslkey.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qsslserver.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qsslsocket.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qtcpserver.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qtcpsocket.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qtnetwork-config.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qtnetworkexports.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qtnetworkversion.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtNetwork/qudpsocket.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/QSerialPortInfo \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/QtSerialPort \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/QtSerialPortDepends \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/qserialport.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/qserialportglobal.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/qserialportinfo.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/qtserialportexports.h \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtSerialPort/qtserialportversion.h \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/QCommonStyle \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/QLayout \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/QMainWindow \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/QScrollerProperties \
+  /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/QStyle \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/QtWidgets \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/QtWidgetsDepends \
   /home/d1fficult/Qt/6.9.0/gcc_64/include/QtWidgets/qabstractbutton.h \

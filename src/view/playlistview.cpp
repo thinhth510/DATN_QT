@@ -1,8 +1,5 @@
 #include "view/playlistview.h"
 #include "ui_playlistview.h"
-#include <QStandardItemModel>
-#include <QHeaderView>
-#include <QShortcut>
 
 PlaylistView::PlaylistView(Playlist *playlist, QWidget *parent)
     : QMainWindow(parent)
@@ -19,9 +16,10 @@ PlaylistView::PlaylistView(Playlist *playlist, QWidget *parent)
     setupConnections();
     updatePlaylistModel();
 
-    // Thêm phím tắt F11 để chuyển đổi full screen
-    QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F11), this);
+    // Thêm phím tắt F1 để chuyển đổi full screen
+    QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F1), this);
     connect(fullScreenShortcut, &QShortcut::activated, this, &PlaylistView::toggleFullScreen);
+    showFullScreen();
 }
 
 PlaylistView::~PlaylistView()

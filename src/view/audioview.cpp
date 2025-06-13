@@ -1,7 +1,3 @@
-#include <QStyle>
-#include <QFileInfo>
-#include <QTime>
-#include <QShortcut>
 #include "view/audioview.h"
 #include "ui_audioview.h"
 
@@ -51,9 +47,10 @@ AudioView::AudioView(const QString &audioPath, QWidget *parent)
 
     ui->horizontalSlider_Duration->setRange(0, 0);
 
-    // Thêm phím tắt F11 để chuyển đổi full screen
-    QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F11), this);
+    // Thêm phím tắt F1 để chuyển đổi full screen
+    QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F1), this);
     connect(fullScreenShortcut, &QShortcut::activated, this, &AudioView::toggleFullScreen);
+    showFullScreen();
 }
 
 AudioView::~AudioView() {

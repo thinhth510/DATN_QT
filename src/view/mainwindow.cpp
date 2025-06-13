@@ -20,9 +20,10 @@ MainWindow::MainWindow(QWidget *parent)
     setupPlaylistManager();
     loadPlaylists();
 
-    // Thêm phím tắt F11 để chuyển đổi full screen
-    QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F11), this);
+    // Thêm phím tắt F1 để chuyển đổi full screen
+    QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F1), this);
     connect(fullScreenShortcut, &QShortcut::activated, this, &MainWindow::toggleFullScreen);
+    showFullScreen();
 }
 
 MainWindow::~MainWindow()

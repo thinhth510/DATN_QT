@@ -306,11 +306,20 @@
   /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QByteArray \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QCryptographicHash \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QDeadlineTimer \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QEventLoop \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFile \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QIODevice \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonArray \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonDocument \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMargins \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMetaType \
@@ -318,11 +327,13 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QScopedPointer \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedDataPointer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringListModel \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
@@ -541,6 +552,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintDevice \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintDeviceWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QShortcut \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QSurfaceFormat \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QVector3D \
@@ -658,25 +670,104 @@
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QAudioOutput \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaPlayer \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimedia \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimediaDepends \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiobuffer.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiodecoder.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiodevice.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudioformat.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudioinput.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiooutput.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiosink.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiosource.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qcamera.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qcameradevice.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qimagecapture.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediacapturesession.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediadevices.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaenumdebug.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaformat.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediametadata.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaplayer.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediarecorder.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediatimerange.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qsoundeffect.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimedia-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaglobal.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaversion.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideoframe.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideoframeformat.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideosink.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qwavedecoder.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/QVideoWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/qtmultimediawidgetdefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/qvideowidget.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QSerialPort \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QNetworkAccessManager \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QNetworkRequest \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QSslConfiguration \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QSslPreSharedKeyAuthenticator \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QtNetwork \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QtNetworkDepends \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qabstractnetworkcache.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qabstractsocket.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qauthenticator.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qdnslookup.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qdtls.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhostaddress.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhostinfo.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhstspolicy.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhttp2configuration.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhttpmultipart.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qlocalserver.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qlocalsocket.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkaccessmanager.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkcookie.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkcookiejar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkdatagram.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkdiskcache.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkinformation.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkinterface.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkproxy.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkreply.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkrequest.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qocspresponse.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qpassworddigestor.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsctpserver.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsctpsocket.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qssl.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcertificate.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcertificateextension.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcipher.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslconfiguration.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qssldiffiehellmanparameters.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslellipticcurve.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslerror.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslkey.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslpresharedkeyauthenticator.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslsocket.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtcpserver.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtcpsocket.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetwork-config.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkglobal.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkversion.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qudpsocket.h \
   /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QSerialPortInfo \
+  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QtSerialPort \
+  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QtSerialPortDepends \
   /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialport.h \
   /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportinfo.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qtserialportversion.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QCommonStyle \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFileDialog \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHeaderView \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMessageBox \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollerProperties \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStyle \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgets \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgetsDepends \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \

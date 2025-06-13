@@ -1,5 +1,4 @@
 #include "controller/uartcontroller.h"
-#include <QDebug>
 
 UARTController::UARTController(QObject *parent)
     : QObject(parent)

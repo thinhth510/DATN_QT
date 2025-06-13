@@ -5,9 +5,11 @@
 #ifndef PLAYLIST_H
 #define PLAYLIST_H
 
-#include <QString>
-#include <QList>
-#include <QDateTime>
+#include <QtCore>
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QJsonObject>
 #include "mediafile.h"
 
 /**

@@ -29,11 +29,12 @@ public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QLabel *label_File_Name;
+    QSpacerItem *verticalSpacer;
     QHBoxLayout *timeLayout;
     QLabel *label_Current_Time;
     QSlider *horizontalSlider_Duration;
     QLabel *label_Total_Time;
-    QSpacerItem *verticalSpacer;
+    QSpacerItem *verticalSpacer_2;
     QHBoxLayout *controlsLayout;
     QPushButton *pushButton_Seek_Backward;
     QPushButton *pushButton_Play_Pause;
@@ -49,15 +50,21 @@ public:
         if (AudioView->objectName().isEmpty())
             AudioView->setObjectName("AudioView");
         AudioView->resize(1024, 600);
-        AudioView->setStyleSheet(QString::fromUtf8("background-color : rgb(52,51,64);"));
+        AudioView->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
+"    background-color: rgb(52,51,64);\n"
+"}\n"
+"QLabel {\n"
+"    color: rgb(255,255,255);\n"
+"}"));
         centralwidget = new QWidget(AudioView);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
-        verticalLayout->setSpacing(10);
+        verticalLayout->setSpacing(5);
         verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(10, 10, 10, 10);
+        verticalLayout->setContentsMargins(5, 5, 5, 5);
         label_File_Name = new QLabel(centralwidget);
         label_File_Name->setObjectName("label_File_Name");
+        label_File_Name->setMinimumSize(QSize(0, 40));
         QFont font;
         font.setFamilies({QString::fromUtf8("Ubuntu Sans")});
         font.setPointSize(14);
@@ -66,11 +73,16 @@ public:
         label_File_Name->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "    color: rgb(255,255,255);\n"
 "    border: 2px solid rgb(255,255,255);\n"
+"    border-radius: 5px;\n"
 "    padding: 5px;\n"
 "}"));
         label_File_Name->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout->addWidget(label_File_Name);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
 
         timeLayout = new QHBoxLayout();
         timeLayout->setObjectName("timeLayout");
@@ -82,9 +94,6 @@ public:
         font1.setPointSize(12);
         font1.setBold(true);
         label_Current_Time->setFont(font1);
-        label_Current_Time->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"    color: rgb(255,255,255);\n"
-"}"));
         label_Current_Time->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         timeLayout->addWidget(label_Current_Time);
@@ -111,9 +120,6 @@ public:
         label_Total_Time->setObjectName("label_Total_Time");
         label_Total_Time->setMinimumSize(QSize(80, 40));
         label_Total_Time->setFont(font1);
-        label_Total_Time->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"    color: rgb(255,255,255);\n"
-"}"));
         label_Total_Time->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         timeLayout->addWidget(label_Total_Time);
@@ -121,65 +127,65 @@ public:
 
         verticalLayout->addLayout(timeLayout);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        verticalLayout->addItem(verticalSpacer);
+        verticalLayout->addItem(verticalSpacer_2);
 
         controlsLayout = new QHBoxLayout();
         controlsLayout->setObjectName("controlsLayout");
         pushButton_Seek_Backward = new QPushButton(centralwidget);
         pushButton_Seek_Backward->setObjectName("pushButton_Seek_Backward");
-        pushButton_Seek_Backward->setMinimumSize(QSize(60, 60));
+        pushButton_Seek_Backward->setMinimumSize(QSize(50, 50));
         pushButton_Seek_Backward->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    border: none;\n"
-"    border-radius: 30px;\n"
+"    border-radius: 25px;\n"
 "    background-color: rgb(255,255,255);\n"
 "    color: rgb(52,51,64);\n"
 "    padding: 0px;\n"
 "}"));
-        pushButton_Seek_Backward->setIconSize(QSize(40, 40));
+        pushButton_Seek_Backward->setIconSize(QSize(32, 32));
 
         controlsLayout->addWidget(pushButton_Seek_Backward);
 
         pushButton_Play_Pause = new QPushButton(centralwidget);
         pushButton_Play_Pause->setObjectName("pushButton_Play_Pause");
-        pushButton_Play_Pause->setMinimumSize(QSize(60, 60));
+        pushButton_Play_Pause->setMinimumSize(QSize(50, 50));
         pushButton_Play_Pause->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    border: none;\n"
-"    border-radius: 30px;\n"
+"    border-radius: 25px;\n"
 "    background-color: rgb(255,255,255);\n"
 "    color: rgb(52,51,64);\n"
 "    padding: 0px;\n"
 "}"));
-        pushButton_Play_Pause->setIconSize(QSize(40, 40));
+        pushButton_Play_Pause->setIconSize(QSize(32, 32));
 
         controlsLayout->addWidget(pushButton_Play_Pause);
 
         pushButton_Stop = new QPushButton(centralwidget);
         pushButton_Stop->setObjectName("pushButton_Stop");
-        pushButton_Stop->setMinimumSize(QSize(60, 60));
+        pushButton_Stop->setMinimumSize(QSize(50, 50));
         pushButton_Stop->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    border: none;\n"
-"    border-radius: 30px;\n"
+"    border-radius: 25px;\n"
 "    background-color: rgb(255,255,255);\n"
 "    color: rgb(52,51,64);\n"
 "    padding: 0px;\n"
 "}"));
-        pushButton_Stop->setIconSize(QSize(40, 40));
+        pushButton_Stop->setIconSize(QSize(32, 32));
 
         controlsLayout->addWidget(pushButton_Stop);
 
         pushButton_Seek_Forward = new QPushButton(centralwidget);
         pushButton_Seek_Forward->setObjectName("pushButton_Seek_Forward");
-        pushButton_Seek_Forward->setMinimumSize(QSize(60, 60));
+        pushButton_Seek_Forward->setMinimumSize(QSize(50, 50));
         pushButton_Seek_Forward->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    border: none;\n"
-"    border-radius: 30px;\n"
+"    border-radius: 25px;\n"
 "    background-color: rgb(255,255,255);\n"
 "    color: rgb(52,51,64);\n"
 "    padding: 0px;\n"
 "}"));
-        pushButton_Seek_Forward->setIconSize(QSize(40, 40));
+        pushButton_Seek_Forward->setIconSize(QSize(32, 32));
 
         controlsLayout->addWidget(pushButton_Seek_Forward);
 
@@ -189,15 +195,15 @@ public:
 
         pushButton_Volume = new QPushButton(centralwidget);
         pushButton_Volume->setObjectName("pushButton_Volume");
-        pushButton_Volume->setMinimumSize(QSize(60, 60));
+        pushButton_Volume->setMinimumSize(QSize(50, 50));
         pushButton_Volume->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    border: none;\n"
-"    border-radius: 30px;\n"
+"    border-radius: 25px;\n"
 "    background-color: rgb(255,255,255);\n"
 "    color: rgb(52,51,64);\n"
 "    padding: 0px;\n"
 "}"));
-        pushButton_Volume->setIconSize(QSize(40, 40));
+        pushButton_Volume->setIconSize(QSize(32, 32));
 
         controlsLayout->addWidget(pushButton_Volume);
 

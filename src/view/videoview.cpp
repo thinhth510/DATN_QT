@@ -1,6 +1,3 @@
-#include <QStyle>
-#include <QFileInfo>
-#include <QTime>
 #include "view/videoview.h"
 #include "ui_videoview.h"
 
@@ -56,6 +53,11 @@ VideoView::VideoView(const QString &videoPath, QWidget *parent)
 
     // Khởi tạo slider thời gian
     ui->horizontalSlider_Duration->setRange(0, 0);
+
+    // Thêm phím tắt F1 để chuyển đổi full screen
+    QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F1), this);
+    connect(fullScreenShortcut, &QShortcut::activated, this, &VideoView::toggleFullScreen);
+    showFullScreen();
 }
 
 VideoView::~VideoView() {

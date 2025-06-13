@@ -5,12 +5,14 @@
 #ifndef MEDIAFILE_H
 #define MEDIAFILE_H
 
+#include <QtCore>
+#include <QtMultimedia>
+#include <QFileInfo>
+#include <QEventLoop>
 #include <QString>
 #include <QDateTime>
-#include <QFileInfo>
 #include <QMediaPlayer>
 #include <QMediaMetaData>
-#include <QEventLoop>
 #include <QUrl>
 
 /**

@@ -1,9 +1,9 @@
 #ifndef MEDIACONTROLLER_H
 #define MEDIACONTROLLER_H
 
-#include <QObject>
-#include <QMediaPlayer>
-#include <QAudioOutput>
+#include <QtCore>
+#include <QtMultimedia>
+#include <QtWidgets>
 #include <QVideoWidget>
 
 class MediaController : public QObject
@@ -14,16 +14,17 @@ public:
     explicit MediaController(QObject *parent = nullptr);
     ~MediaController();
 
+    // Getters
     QMediaPlayer* getPlayer() const;
     QAudioOutput* getAudioOutput() const;
     bool isPaused() const;
 
-    // Thiết lập nguồn media (audio hoặc video)
+    // Media Source Control
     void setSource(const QUrl &url);
     void setMedia(const QUrl &url);  // Alias for setSource
     void setVideoOutput(QVideoWidget *videoWidget);
 
-    // Các chức năng điều khiển media
+    // Media Playback Control
     void play();
     void pause();
     void stop();
@@ -41,6 +42,7 @@ private slots:
     void handlePlaybackStateChanged(QMediaPlayer::PlaybackState state);
 
 private:
+    // Media Components
     QMediaPlayer *m_player;
     QAudioOutput *m_audioOutput;
     bool m_isPaused;
