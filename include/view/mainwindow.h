@@ -64,6 +64,8 @@ private slots:
      */
     void on_actionOpen_Video_triggered();
     
+    void on_actionScan_USB_triggered();
+
     // Browse Media Files
     /**
      * @brief Mở dialog cho phép chọn thư mục chứa media

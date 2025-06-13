@@ -1,4 +1,4 @@
-#include "model/mediafile.h"
+#include "../../include/model/mediafile.h"
 
 MediaFile::MediaFile(const QString &filePath)
     : m_filePath(filePath)

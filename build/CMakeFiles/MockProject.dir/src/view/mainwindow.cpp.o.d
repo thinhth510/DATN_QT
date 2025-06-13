@@ -1,7 +1,7 @@
 CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o: \
  /home/d1fficult/Mock\ Project/MockProject/src/view/mainwindow.cpp \
  /usr/include/stdc-predef.h \
- /home/d1fficult/Mock\ Project/MockProject/include/view/mainwindow.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgets \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgetsDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
@@ -1024,7 +1024,7 @@ CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsversion.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
- /home/d1fficult/Mock\ Project/MockProject/include/view/videoview.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/videoview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/QtMultimediaWidgets \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/QtMultimediaWidgetsDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimedia \
@@ -1143,9 +1143,9 @@ CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/qtmultimediawidgetdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/qvideowidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimediaWidgets/qtmultimediawidgetsversion.h \
- /home/d1fficult/Mock\ Project/MockProject/include/view/../controller/mediacontroller.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/../controller/mediacontroller.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimedia \
- /home/d1fficult/Mock\ Project/MockProject/include/view/../model/uartreceiver.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/../model/uartreceiver.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QtSerialPort \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QtSerialPortDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
@@ -1153,11 +1153,11 @@ CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qtserialportversion.h \
- /home/d1fficult/Mock\ Project/MockProject/include/view/audioview.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/audioview.h \
  /home/d1fficult/Mock\ Project/MockProject/include/controller/mediacontroller.h \
- /home/d1fficult/Mock\ Project/MockProject/include/view/../model/playlist.h \
- /home/d1fficult/Mock\ Project/MockProject/include/view/../model/mediafile.h \
- /home/d1fficult/Mock\ Project/MockProject/include/view/playlistview.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/../model/playlist.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/../model/mediafile.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/playlistview.h \
  /home/d1fficult/Mock\ Project/MockProject/build/MockProject_autogen/include/ui_mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QIcon \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
@@ -1176,8 +1176,5 @@ CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTreeView \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
- /home/d1fficult/Mock\ Project/MockProject/include/view/playlistview.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFileDialog \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMessageBox \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QShortcut
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/playlistview.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/model/usbscannermodel.h

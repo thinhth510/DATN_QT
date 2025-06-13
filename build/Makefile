@@ -355,6 +355,30 @@ src/model/uartreceiver.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.s
 .PHONY : src/model/uartreceiver.cpp.s
 
+src/model/usbscannermodel.o: src/model/usbscannermodel.cpp.o
+.PHONY : src/model/usbscannermodel.o
+
+# target to build an object file
+src/model/usbscannermodel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/usbscannermodel.cpp.o
+.PHONY : src/model/usbscannermodel.cpp.o
+
+src/model/usbscannermodel.i: src/model/usbscannermodel.cpp.i
+.PHONY : src/model/usbscannermodel.i
+
+# target to preprocess a source file
+src/model/usbscannermodel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/usbscannermodel.cpp.i
+.PHONY : src/model/usbscannermodel.cpp.i
+
+src/model/usbscannermodel.s: src/model/usbscannermodel.cpp.s
+.PHONY : src/model/usbscannermodel.s
+
+# target to generate assembly for a file
+src/model/usbscannermodel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/usbscannermodel.cpp.s
+.PHONY : src/model/usbscannermodel.cpp.s
+
 src/view/audioview.o: src/view/audioview.cpp.o
 .PHONY : src/view/audioview.o
 
@@ -486,6 +510,9 @@ help:
 	@echo "... src/model/uartreceiver.o"
 	@echo "... src/model/uartreceiver.i"
 	@echo "... src/model/uartreceiver.s"
+	@echo "... src/model/usbscannermodel.o"
+	@echo "... src/model/usbscannermodel.i"
+	@echo "... src/model/usbscannermodel.s"
 	@echo "... src/view/audioview.o"
 	@echo "... src/view/audioview.i"
 	@echo "... src/view/audioview.s"

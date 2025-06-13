@@ -37,6 +37,7 @@ set(PROJECT_SOURCES
     src/model/mediafile.cpp
     src/model/playlist.cpp
     src/model/uartreceiver.cpp
+    src/model/usbscannermodel.cpp
 
     # View headers
     include/view/mainwindow.h
@@ -52,6 +53,7 @@ set(PROJECT_SOURCES
     include/model/mediafile.h
     include/model/playlist.h
     include/model/uartreceiver.h
+    include/model/usbscannermodel.h
 
     # UI files
     src/view/mainwindow.ui

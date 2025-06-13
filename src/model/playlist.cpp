@@ -1,4 +1,4 @@
-#include "model/playlist.h"
+#include "../../include/model/playlist.h"
 
 Playlist::Playlist(const QString &name)
     : m_name(name)

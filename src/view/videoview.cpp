@@ -1,4 +1,4 @@
-#include "view/videoview.h"
+#include "../../include/view/videoview.h"
 #include "ui_videoview.h"
 
 VideoView::VideoView(const QString &videoPath, QWidget *parent)

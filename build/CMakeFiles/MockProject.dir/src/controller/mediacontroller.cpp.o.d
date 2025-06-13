@@ -1,7 +1,7 @@
 CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o: \
  /home/d1fficult/Mock\ Project/MockProject/src/controller/mediacontroller.cpp \
  /usr/include/stdc-predef.h \
- /home/d1fficult/Mock\ Project/MockProject/include/controller/mediacontroller.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/controller/../../include/controller/mediacontroller.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \

@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/d1fficult/Mock Project/MockProject/src/model/mediafile.cpp" "CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o" "gcc" "CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o.d"
   "/home/d1fficult/Mock Project/MockProject/src/model/playlist.cpp" "CMakeFiles/MockProject.dir/src/model/playlist.cpp.o" "gcc" "CMakeFiles/MockProject.dir/src/model/playlist.cpp.o.d"
   "/home/d1fficult/Mock Project/MockProject/src/model/uartreceiver.cpp" "CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o" "gcc" "CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o.d"
+  "/home/d1fficult/Mock Project/MockProject/src/model/usbscannermodel.cpp" "CMakeFiles/MockProject.dir/src/model/usbscannermodel.cpp.o" "gcc" "CMakeFiles/MockProject.dir/src/model/usbscannermodel.cpp.o.d"
   "/home/d1fficult/Mock Project/MockProject/src/view/audioview.cpp" "CMakeFiles/MockProject.dir/src/view/audioview.cpp.o" "gcc" "CMakeFiles/MockProject.dir/src/view/audioview.cpp.o.d"
   "/home/d1fficult/Mock Project/MockProject/src/view/mainwindow.cpp" "CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o" "gcc" "CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o.d"
   "/home/d1fficult/Mock Project/MockProject/src/view/playlistview.cpp" "CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o" "gcc" "CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o.d"

@@ -1,4 +1,4 @@
-#include "view/audioview.h"
+#include "../../include/view/audioview.h"
 #include "ui_audioview.h"
 
 AudioView::AudioView(const QString &audioPath, QWidget *parent)

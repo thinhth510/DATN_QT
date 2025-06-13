@@ -1,10 +1,9 @@
-#include "view/mainwindow.h"
+#include "../../include/view/mainwindow.h"
 #include "ui_mainwindow.h"
-#include "view/playlistview.h"
-#include <QFileDialog>
-#include <QMessageBox>
-#include <QDebug>
-#include <QShortcut>
+#include "../../include/view/playlistview.h"
+#include "../../include/model/usbscannermodel.h"
+#include <QtWidgets> 
+#include <QtCore> 
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -161,6 +160,43 @@ void MainWindow::filterMediaFiles(const QString &filter)
     m_fileModel->setNameFilters(filters);
 }
 
+void MainWindow::on_actionScan_USB_triggered()
+{
+    USBScannerModel *scanner = new USBScannerModel(this);
+    
+    // Connect signals
+    connect(scanner, &USBScannerModel::scanCompleted, this, [this](const QStringList &mediaFiles) {
+        if (mediaFiles.isEmpty()) {
+            QMessageBox::information(this, tr("Scan USB"),
+                                   tr("No media files found in USB drives."));
+            return;
+        }
+
+        // Create a temporary directory to show the files
+        QString tempPath = QDir::tempPath() + "/usb_media";
+        QDir().mkpath(tempPath);
+        
+        // Set the root path to the temporary directory
+        m_currentMediaPath = tempPath;
+        m_fileModel->setRootPath(tempPath);
+        ui->mediaTreeView->setRootIndex(m_fileModel->index(tempPath));
+        
+        // Add all found media files to the model
+        for (const QString &filePath : mediaFiles) {
+            QFileInfo fileInfo(filePath);
+            QString fileName = fileInfo.fileName();
+            QFile::copy(filePath, tempPath + "/" + fileName);
+        }
+    });
+
+    connect(scanner, &USBScannerModel::scanError, this, [this](const QString &error) {
+        QMessageBox::warning(this, tr("Scan USB"), error);
+    });
+
+    // Start scanning
+    scanner->scanForMediaFiles();
+}
+
 void MainWindow::on_actionNewPlaylist_triggered()
 {
     bool ok;
@@ -294,6 +330,7 @@ void MainWindow::toggleFullScreen()
         showFullScreen();
     }
 }
+
 
 
 

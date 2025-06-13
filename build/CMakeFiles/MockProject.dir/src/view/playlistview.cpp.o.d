@@ -1,7 +1,7 @@
 CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o: \
  /home/d1fficult/Mock\ Project/MockProject/src/view/playlistview.cpp \
  /usr/include/stdc-predef.h \
- /home/d1fficult/Mock\ Project/MockProject/include/view/playlistview.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/playlistview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgets \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgetsDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
@@ -1131,10 +1131,10 @@ CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideosink.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qwavedecoder.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaversion.h \
- /home/d1fficult/Mock\ Project/MockProject/include/view/../model/playlist.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/../model/playlist.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
- /home/d1fficult/Mock\ Project/MockProject/include/view/../model/mediafile.h \
- /home/d1fficult/Mock\ Project/MockProject/include/view/../model/uartreceiver.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/../model/mediafile.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/view/../../include/view/../model/uartreceiver.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QtSerialPort \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QtSerialPortDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \

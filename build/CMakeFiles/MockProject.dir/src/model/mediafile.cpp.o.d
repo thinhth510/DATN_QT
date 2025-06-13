@@ -1,7 +1,7 @@
 CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o: \
  /home/d1fficult/Mock\ Project/MockProject/src/model/mediafile.cpp \
  /usr/include/stdc-predef.h \
- /home/d1fficult/Mock\ Project/MockProject/include/model/mediafile.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/model/../../include/model/mediafile.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \

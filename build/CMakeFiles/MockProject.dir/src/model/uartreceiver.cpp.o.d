@@ -1,7 +1,7 @@
 CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o: \
  /home/d1fficult/Mock\ Project/MockProject/src/model/uartreceiver.cpp \
  /usr/include/stdc-predef.h \
- /home/d1fficult/Mock\ Project/MockProject/include/model/uartreceiver.h \
+ /home/d1fficult/Mock\ Project/MockProject/src/model/../../include/model/uartreceiver.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
@@ -662,5 +662,4 @@ CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialport.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportinfo.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qtserialportversion.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug
+ /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qtserialportversion.h

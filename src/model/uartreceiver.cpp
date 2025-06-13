@@ -1,5 +1,4 @@
-#include "model/uartreceiver.h"
-#include <QDebug>
+#include "../../include/model/uartreceiver.h"
 
 UARTReceiver::UARTReceiver(QObject *parent)
     : QObject(parent)

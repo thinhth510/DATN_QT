@@ -1164,6 +1164,8 @@ CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o: \
  /home/d1fficult/Mock\ Project/MockProject/include/controller/mediacontroller.h \
  /home/d1fficult/Mock\ Project/MockProject/build/MockProject_autogen/Q6AU6LSD6J/moc_uartreceiver.cpp \
  /home/d1fficult/Mock\ Project/MockProject/build/MockProject_autogen/Q6AU6LSD6J/../../../include/model/uartreceiver.h \
+ /home/d1fficult/Mock\ Project/MockProject/build/MockProject_autogen/Q6AU6LSD6J/moc_usbscannermodel.cpp \
+ /home/d1fficult/Mock\ Project/MockProject/build/MockProject_autogen/Q6AU6LSD6J/../../../include/model/usbscannermodel.h \
  /home/d1fficult/Mock\ Project/MockProject/build/MockProject_autogen/75UR3EJMK3/moc_audioview.cpp \
  /home/d1fficult/Mock\ Project/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/audioview.h \
  /home/d1fficult/Mock\ Project/MockProject/build/MockProject_autogen/75UR3EJMK3/moc_mainwindow.cpp \

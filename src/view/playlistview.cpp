@@ -1,4 +1,4 @@
-#include "view/playlistview.h"
+#include "../../include/view/playlistview.h"
 #include "ui_playlistview.h"
 
 PlaylistView::PlaylistView(Playlist *playlist, QWidget *parent)

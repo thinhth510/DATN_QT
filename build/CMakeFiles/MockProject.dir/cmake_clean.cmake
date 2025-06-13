@@ -16,6 +16,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MockProject.dir/src/model/playlist.cpp.o.d"
   "CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o"
   "CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o.d"
+  "CMakeFiles/MockProject.dir/src/model/usbscannermodel.cpp.o"
+  "CMakeFiles/MockProject.dir/src/model/usbscannermodel.cpp.o.d"
   "CMakeFiles/MockProject.dir/src/view/audioview.cpp.o"
   "CMakeFiles/MockProject.dir/src/view/audioview.cpp.o.d"
   "CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o"

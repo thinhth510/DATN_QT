@@ -1,4 +1,4 @@
-#include "controller/uartcontroller.h"
+#include "../../include/controller/uartcontroller.h"
 
 UARTController::UARTController(QObject *parent)
     : QObject(parent)

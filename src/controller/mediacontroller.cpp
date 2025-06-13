@@ -1,4 +1,4 @@
-#include "controller/mediacontroller.h"
+#include "../../include/controller/mediacontroller.h"
 
 MediaController::MediaController(QObject *parent)
     : QObject(parent),
