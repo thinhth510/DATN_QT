@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(VS_MockProject VERSION 0.1 LANGUAGES CXX)
+project(MockProject VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -61,29 +61,29 @@ set(PROJECT_SOURCES
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(VS_MockProject
+    qt_add_executable(MockProject
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
 else()
     if(ANDROID)
-        add_library(VS_MockProject SHARED
+        add_library(MockProject SHARED
             ${PROJECT_SOURCES}
         )
     else()
-        add_executable(VS_MockProject
+        add_executable(MockProject
             ${PROJECT_SOURCES}
         )
     endif()
 endif()
 
-target_include_directories(VS_MockProject PRIVATE
+target_include_directories(MockProject PRIVATE
     ${CMAKE_SOURCE_DIR}
     ${CMAKE_SOURCE_DIR}/include
     ${CMAKE_SOURCE_DIR}/src
 )
 
-target_link_libraries(VS_MockProject PRIVATE
+target_link_libraries(MockProject PRIVATE
     Qt${QT_VERSION_MAJOR}::Core
     Qt${QT_VERSION_MAJOR}::Gui
     Qt${QT_VERSION_MAJOR}::Widgets
@@ -93,10 +93,10 @@ target_link_libraries(VS_MockProject PRIVATE
 )
 
 if(${QT_VERSION} VERSION_LESS 6.1.0)
-    set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.VS_MockProject)
+    set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.MockProject)
 endif()
 
-set_target_properties(VS_MockProject PROPERTIES
+set_target_properties(MockProject PROPERTIES
     ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -105,12 +105,12 @@ set_target_properties(VS_MockProject PROPERTIES
 )
 
 include(GNUInstallDirs)
-install(TARGETS VS_MockProject
+install(TARGETS MockProject
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(VS_MockProject)
+    qt_finalize_executable(MockProject)
 endif()

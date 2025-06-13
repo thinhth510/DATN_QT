@@ -5,23 +5,14 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-// Qt Framework includes
-#include <QMainWindow>
-#include <QtCore>      // Các chức năng cơ bản của Qt
-#include <QtWidgets>   // Các widget của Qt
-#include <QtGui>       // Các thành phần giao diện
-#include <QStringListModel>  // Model cho danh sách chuỗi
-#include <QCloseEvent>      // Xử lý sự kiện đóng cửa sổ
-#include <QFileDialog>
-#include <QMessageBox>
-#include <QDebug>
-#include <QShortcut>
+#include <QtWidgets> 
+#include <QtCore> 
+#include <QtGui>
 
-// Local includes
-#include "videoview.h"      // Giao diện xem video
-#include "audioview.h"      // Giao diện nghe nhạc
-#include "model/playlist.h"       // Quản lý playlist
-#include "playlistview.h"   // Giao diện playlist
+#include "videoview.h"      
+#include "audioview.h"      
+#include "../model/playlist.h"       
+#include "playlistview.h"   
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

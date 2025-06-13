@@ -6,10 +6,6 @@
 #define PLAYLIST_H
 
 #include <QtCore>
-#include <QFile>
-#include <QJsonDocument>
-#include <QJsonArray>
-#include <QJsonObject>
 #include "mediafile.h"
 
 /**

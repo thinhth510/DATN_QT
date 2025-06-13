@@ -3,11 +3,6 @@
 
 #include <QtCore>
 #include <QtSerialPort>
-#include <QSerialPortInfo>
-#include <QString>
-#include <QList>
-#include <QTimer>
-#include <QDebug>
 
 class UARTReceiver : public QObject
 {

@@ -1,8 +1,8 @@
-/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles/VS_MockProject.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles/edit_cache.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles/rebuild_cache.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles/list_install_components.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles/install.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles/install/local.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles/install/strip.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/CMakeFiles/VS_MockProject_autogen.dir
+/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/MockProject.dir
+/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/edit_cache.dir
+/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/rebuild_cache.dir
+/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/list_install_components.dir
+/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/install.dir
+/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/install/local.dir
+/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/install/strip.dir
+/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/MockProject_autogen.dir

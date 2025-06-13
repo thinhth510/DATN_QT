@@ -1,9 +1,0 @@
-/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/VS_MockProject.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/edit_cache.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/rebuild_cache.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/list_install_components.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/install.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/install/local.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/install/strip.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/VS_MockProject_autogen_timestamp_deps.dir
-/home/d1fficult/Mock Project/VS_MockProject/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/VS_MockProject_autogen.dir

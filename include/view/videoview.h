@@ -2,7 +2,8 @@
 #define VIDEOVIEW_H
 
 #include <QtWidgets>
-#include "controller/mediacontroller.h"
+#include <QtMultimediaWidgets>
+#include "../controller/mediacontroller.h"
 #include "../model/uartreceiver.h"
 
 namespace Ui {

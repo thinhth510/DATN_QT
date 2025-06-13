@@ -3,14 +3,9 @@
 
 #include <QtWidgets>
 #include <QtMultimedia>
-#include "model/playlist.h"
+
+#include "../model/playlist.h"
 #include "../model/uartreceiver.h"
-#include <QMainWindow>
-#include <QAudioOutput>
-#include <QWidget>
-#include <QStandardItemModel>
-#include <QHeaderView>
-#include <QShortcut>
 
 namespace Ui {
 class PlaylistView;

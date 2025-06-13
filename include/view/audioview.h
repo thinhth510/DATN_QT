@@ -1,12 +1,7 @@
 #ifndef AUDIOVIEW_H
 #define AUDIOVIEW_H
 
-#include <QMainWindow>
 #include <QtWidgets>
-#include <QStyle>
-#include <QFileInfo>
-#include <QTime>
-#include <QShortcut>
 #include "controller/mediacontroller.h"
 #include "../model/uartreceiver.h"
 

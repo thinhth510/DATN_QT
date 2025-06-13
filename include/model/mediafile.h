@@ -7,13 +7,6 @@
 
 #include <QtCore>
 #include <QtMultimedia>
-#include <QFileInfo>
-#include <QEventLoop>
-#include <QString>
-#include <QDateTime>
-#include <QMediaPlayer>
-#include <QMediaMetaData>
-#include <QUrl>
 
 /**
  * @class MediaFile

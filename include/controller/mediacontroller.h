@@ -3,8 +3,8 @@
 
 #include <QtCore>
 #include <QtMultimedia>
+#include <QtMultimediaWidgets>
 #include <QtWidgets>
-#include <QVideoWidget>
 
 class MediaController : public QObject
 {
