@@ -40,6 +40,7 @@ public:
     QAction *actionNewPlaylist;
     QAction *actionDeletePlaylist;
     QAction *actionSavePlaylist;
+    QAction *actionScan_USB;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
     QSplitter *splitter;
@@ -83,6 +84,8 @@ public:
         actionDeletePlaylist->setObjectName(QString::fromUtf8("actionDeletePlaylist"));
         actionSavePlaylist = new QAction(MainWindow);
         actionSavePlaylist->setObjectName(QString::fromUtf8("actionSavePlaylist"));
+        actionScan_USB = new QAction(MainWindow);
+        actionScan_USB->setObjectName(QString::fromUtf8("actionScan_USB"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -173,7 +176,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1024, 20));
+        menubar->setGeometry(QRect(0, 0, 1024, 22));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuPlaylist = new QMenu(menubar);
@@ -186,6 +189,7 @@ public:
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuPlaylist->menuAction());
         menuFile->addAction(actionBrowseFolder);
+        menuFile->addAction(actionScan_USB);
         menuFile->addSeparator();
         menuFile->addAction(actionOpen_Audio);
         menuFile->addAction(actionOpen_Video);
@@ -208,6 +212,7 @@ public:
         actionNewPlaylist->setText(QCoreApplication::translate("MainWindow", "New Playlist", nullptr));
         actionDeletePlaylist->setText(QCoreApplication::translate("MainWindow", "Delete Playlist", nullptr));
         actionSavePlaylist->setText(QCoreApplication::translate("MainWindow", "Save Playlist", nullptr));
+        actionScan_USB->setText(QCoreApplication::translate("MainWindow", "Scan USB", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Media Browser", nullptr));
         searchLineEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "Search media files...", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Playlists", nullptr));

@@ -172,20 +172,32 @@ void MainWindow::on_actionScan_USB_triggered()
             return;
         }
 
-        // Create a temporary directory to show the files
+        // Create a temporary directory to show the files via symbolic links
         QString tempPath = QDir::tempPath() + "/usb_media";
-        QDir().mkpath(tempPath);
+        QDir tempDir(tempPath);
+        if (!tempDir.exists()) {
+            QDir().mkpath(tempPath);
+        }
         
+        // Clear previous contents of the temp directory to avoid stale links/files
+        for (const QFileInfo &entry : tempDir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot)) {
+            QFile::remove(entry.absoluteFilePath());
+        }
+
         // Set the root path to the temporary directory
         m_currentMediaPath = tempPath;
         m_fileModel->setRootPath(tempPath);
         ui->mediaTreeView->setRootIndex(m_fileModel->index(tempPath));
-        
-        // Add all found media files to the model
+
+        // Create symbolic links to the found media files in the temporary directory
         for (const QString &filePath : mediaFiles) {
             QFileInfo fileInfo(filePath);
-            QString fileName = fileInfo.fileName();
-            QFile::copy(filePath, tempPath + "/" + fileName);
+            QString linkPath = tempPath + "/" + fileInfo.fileName();
+            if (!QFile::exists(linkPath)) { // Avoid creating duplicate links
+                if (!QFile::link(filePath, linkPath)) {
+                    qDebug() << "Failed to create symbolic link for:" << filePath << "to" << linkPath;
+                }
+            }
         }
     });
 
