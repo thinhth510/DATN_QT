@@ -125,7 +125,7 @@ void MediaFile::loadMetadata()
     // Get metadata
     const QMediaMetaData &metadata = player.metaData();
     m_title = metadata.stringValue(QMediaMetaData::Title);
-    m_artist = metadata.stringValue(QMediaMetaData::ContributingArtist);
+    m_artist = metadata.stringValue(QMediaMetaData::AlbumArtist);
     m_album = metadata.stringValue(QMediaMetaData::AlbumTitle);
     m_duration = player.duration();
 
