@@ -8,9 +8,6 @@ UARTReceiver::UARTReceiver(QObject *parent)
 
     connect(serialPort, &QSerialPort::readyRead, this, &UARTReceiver::handleReadyRead);
     connect(serialPort, &QSerialPort::errorOccurred, this, &UARTReceiver::handleError);
-
-    bufferTimer.setSingleShot(true);
-    connect(&bufferTimer, &QTimer::timeout, this, &UARTReceiver::processBufferedData);
 }
 
 UARTReceiver::~UARTReceiver()
@@ -24,8 +21,11 @@ bool UARTReceiver::startListening(const QString &portName, int baudRate)
         serialPort->close();
     }
 
-    serialPort->setPortName(portName);
-    serialPort->setBaudRate(baudRate);
+    QString actualPortName = portName.isEmpty() ? "/dev/ttyACM0" : portName;
+    int actualBaudRate = (baudRate == 0) ? 9600 : baudRate;
+
+    serialPort->setPortName(actualPortName);
+    serialPort->setBaudRate(actualBaudRate);
     serialPort->setDataBits(QSerialPort::Data8);
     serialPort->setParity(QSerialPort::NoParity);
     serialPort->setStopBits(QSerialPort::OneStop);
@@ -33,12 +33,12 @@ bool UARTReceiver::startListening(const QString &portName, int baudRate)
 
     if (!serialPort->open(QIODevice::ReadOnly)) {
         emit errorOccurred(tr("Failed to open port %1: %2")
-                          .arg(portName)
+                          .arg(actualPortName)
                           .arg(serialPort->errorString()));
         return false;
     }
 
-    qDebug() << "Started listening on port" << portName;
+    qDebug() << "Started listening on port" << actualPortName;
     return true;
 }
 
@@ -52,25 +52,22 @@ void UARTReceiver::stopListening()
 
 void UARTReceiver::handleReadyRead()
 {
-    QByteArray newData = serialPort->readAll();
-    uartBuffer.append(newData);
+    uartBuffer.append(serialPort->readAll());
+    while (uartBuffer.contains('\n')) {
+        int newlineIndex = uartBuffer.indexOf('\n');
+        QByteArray commandData = uartBuffer.left(newlineIndex).trimmed();
+        uartBuffer.remove(0, newlineIndex + 1);
 
-    // Đợi 50ms để tích lũy đủ dữ liệu
-    if (!bufferTimer.isActive())
-        bufferTimer.start(50);
+        QString command = QString::fromUtf8(commandData);
+        if (!command.isEmpty()) {
+            processCommand(command);
+        }
+    }
 }
 
 void UARTReceiver::processBufferedData()
 {
-    if (uartBuffer.isEmpty())
-        return;
-
-    QString command = QString::fromUtf8(uartBuffer).trimmed();
-    uartBuffer.clear();
-
-    if (!command.isEmpty()) {
-        processCommand(command);
-    }
+    // No longer needed as handleReadyRead processes data by newline
 }
 
 void UARTReceiver::handleError(QSerialPort::SerialPortError error)
