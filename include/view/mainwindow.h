@@ -125,6 +125,10 @@ private slots:
 
     void toggleFullScreen();
 
+    void on_actionToggle_Fullscreen_triggered();
+
+    void on_actionExit_App_triggered();
+
 private:
     // UI Components
     Ui::MainWindow *ui;                   // Con trỏ đến UI được tạo bởi Qt Designer

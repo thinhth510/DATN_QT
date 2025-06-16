@@ -14,7 +14,6 @@
  mdp:/home/d1fficult/DATN/MockProject/include/controller/uartcontroller.h
  mdp:/home/d1fficult/DATN/MockProject/build/MockProject_autogen/moc_predefs.h
  mdp:/home/d1fficult/DATN/MockProject/include/controller/mediacontroller.h
- mdp:/home/d1fficult/DATN/MockProject/include/model/mediafile.h
  mdp:/home/d1fficult/DATN/MockProject/include/model/uartreceiver.h
  mdp:/home/d1fficult/DATN/MockProject/include/view/audioview.h
  mdp:/home/d1fficult/DATN/MockProject/include/view/videoview.h
@@ -665,7 +664,6 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindow.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h
- mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimedia
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimediaDepends
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h
@@ -2191,7 +2189,6 @@
  mdp:/home/d1fficult/DATN/MockProject/include/view/audioview.h
  mdp:/home/d1fficult/DATN/MockProject/build/MockProject_autogen/moc_predefs.h
  mdp:/home/d1fficult/DATN/MockProject/include/controller/mediacontroller.h
- mdp:/home/d1fficult/DATN/MockProject/include/model/mediafile.h
  mdp:/home/d1fficult/DATN/MockProject/include/model/uartreceiver.h
  mdp:/usr/include/GL/gl.h
  mdp:/usr/include/alloca.h
@@ -2840,7 +2837,6 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindow.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h
- mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimedia
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimediaDepends
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h
@@ -4764,7 +4760,6 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindow.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h
- mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimedia
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimediaDepends
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h

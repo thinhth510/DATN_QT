@@ -217,6 +217,7 @@ void PlaylistView::on_stopButton_clicked()
     m_player->stop();
     m_isPlaying = false;
     ui->stopButton->setIcon(style()->standardIcon(QStyle::SP_MediaStop));
+    this->close();
 }
 
 void PlaylistView::on_volumeSlider_valueChanged(int value)

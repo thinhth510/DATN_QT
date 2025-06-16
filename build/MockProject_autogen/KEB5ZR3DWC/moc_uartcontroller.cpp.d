@@ -1,7 +1,6 @@
 /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/moc_uartcontroller.cpp: /home/d1fficult/DATN/MockProject/include/controller/uartcontroller.h \
   /home/d1fficult/DATN/MockProject/build/MockProject_autogen/moc_predefs.h \
   /home/d1fficult/DATN/MockProject/include/controller/mediacontroller.h \
-  /home/d1fficult/DATN/MockProject/include/model/mediafile.h \
   /home/d1fficult/DATN/MockProject/include/model/uartreceiver.h \
   /home/d1fficult/DATN/MockProject/include/view/audioview.h \
   /home/d1fficult/DATN/MockProject/include/view/videoview.h \
@@ -652,7 +651,6 @@
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindow.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimedia \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimediaDepends \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h \

@@ -342,7 +342,14 @@ void MainWindow::toggleFullScreen()
     }
 }
 
+void MainWindow::on_actionToggle_Fullscreen_triggered()
+{
+    MainWindow::toggleFullScreen();
+}
 
 
-
+void MainWindow::on_actionExit_App_triggered()
+{
+    this -> close();
+}
 

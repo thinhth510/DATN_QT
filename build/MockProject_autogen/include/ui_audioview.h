@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -29,9 +28,6 @@ class Ui_AudioView
 public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
-    QGroupBox *groupBox;
-    QVBoxLayout *verticalLayout_2;
-    QLabel *label_Cover_Art;
     QLabel *label_File_Name;
     QHBoxLayout *timeLayout;
     QLabel *label_Current_Time;
@@ -64,30 +60,6 @@ public:
         verticalLayout->setSpacing(5);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(5, 5, 5, 5);
-        groupBox = new QGroupBox(centralwidget);
-        groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setMinimumSize(QSize(0, 100));
-        groupBox->setMaximumSize(QSize(16777215, 16777215));
-        groupBox->setStyleSheet(QString::fromUtf8("QGroupBox {\n"
-"    border: 1px solid rgb(255,255,255);\n"
-"    border-radius: 5px;\n"
-"}"));
-        verticalLayout_2 = new QVBoxLayout(groupBox);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        label_Cover_Art = new QLabel(groupBox);
-        label_Cover_Art->setObjectName(QString::fromUtf8("label_Cover_Art"));
-        label_Cover_Art->setMinimumSize(QSize(200, 200));
-        label_Cover_Art->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"    border: 2px solid rgb(255,255,255);\n"
-"    border-radius: 5px;\n"
-"}"));
-        label_Cover_Art->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        verticalLayout_2->addWidget(label_Cover_Art);
-
-
-        verticalLayout->addWidget(groupBox);
-
         label_File_Name = new QLabel(centralwidget);
         label_File_Name->setObjectName(QString::fromUtf8("label_File_Name"));
         label_File_Name->setMinimumSize(QSize(0, 40));
@@ -260,8 +232,6 @@ public:
     void retranslateUi(QMainWindow *AudioView)
     {
         AudioView->setWindowTitle(QCoreApplication::translate("AudioView", "Audio Player", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("AudioView", "GroupBox", nullptr));
-        label_Cover_Art->setText(QString());
         label_File_Name->setText(QCoreApplication::translate("AudioView", "FILE NAME", nullptr));
         label_Current_Time->setText(QCoreApplication::translate("AudioView", "00:00:00", nullptr));
         label_Total_Time->setText(QCoreApplication::translate("AudioView", "00:00:00", nullptr));

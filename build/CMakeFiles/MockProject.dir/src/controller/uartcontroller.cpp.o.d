@@ -1152,6 +1152,4 @@ CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qtserialportversion.h \
- /home/d1fficult/DATN/MockProject/src/controller/../../include/controller/../view/audioview.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData \
- /home/d1fficult/DATN/MockProject/src/controller/../../include/controller/../view/../model/mediafile.h
+ /home/d1fficult/DATN/MockProject/src/controller/../../include/controller/../view/audioview.h

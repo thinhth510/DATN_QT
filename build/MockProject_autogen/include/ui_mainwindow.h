@@ -41,6 +41,8 @@ public:
     QAction *actionDeletePlaylist;
     QAction *actionSavePlaylist;
     QAction *actionScan_USB;
+    QAction *actionExit_App;
+    QAction *actionToggle_Fullscreen;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
     QSplitter *splitter;
@@ -64,6 +66,7 @@ public:
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuPlaylist;
+    QMenu *menuView;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -86,6 +89,10 @@ public:
         actionSavePlaylist->setObjectName(QString::fromUtf8("actionSavePlaylist"));
         actionScan_USB = new QAction(MainWindow);
         actionScan_USB->setObjectName(QString::fromUtf8("actionScan_USB"));
+        actionExit_App = new QAction(MainWindow);
+        actionExit_App->setObjectName(QString::fromUtf8("actionExit_App"));
+        actionToggle_Fullscreen = new QAction(MainWindow);
+        actionToggle_Fullscreen->setObjectName(QString::fromUtf8("actionToggle_Fullscreen"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -181,11 +188,14 @@ public:
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuPlaylist = new QMenu(menubar);
         menuPlaylist->setObjectName(QString::fromUtf8("menuPlaylist"));
+        menuView = new QMenu(menubar);
+        menuView->setObjectName(QString::fromUtf8("menuView"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
+        menubar->addAction(menuView->menuAction());
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuPlaylist->menuAction());
         menuFile->addAction(actionBrowseFolder);
@@ -197,6 +207,8 @@ public:
         menuPlaylist->addAction(actionDeletePlaylist);
         menuPlaylist->addSeparator();
         menuPlaylist->addAction(actionSavePlaylist);
+        menuView->addAction(actionToggle_Fullscreen);
+        menuView->addAction(actionExit_App);
 
         retranslateUi(MainWindow);
 
@@ -213,6 +225,8 @@ public:
         actionDeletePlaylist->setText(QCoreApplication::translate("MainWindow", "Delete Playlist", nullptr));
         actionSavePlaylist->setText(QCoreApplication::translate("MainWindow", "Save Playlist", nullptr));
         actionScan_USB->setText(QCoreApplication::translate("MainWindow", "Scan USB", nullptr));
+        actionExit_App->setText(QCoreApplication::translate("MainWindow", "Exit App", nullptr));
+        actionToggle_Fullscreen->setText(QCoreApplication::translate("MainWindow", "Toggle Fullscreen", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Media Browser", nullptr));
         searchLineEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "Search media files...", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Playlists", nullptr));
@@ -223,6 +237,7 @@ public:
         playButton->setText(QCoreApplication::translate("MainWindow", "Play", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuPlaylist->setTitle(QCoreApplication::translate("MainWindow", "Playlist", nullptr));
+        menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
     } // retranslateUi
 
 };
