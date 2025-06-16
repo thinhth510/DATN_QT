@@ -1,13 +1,13 @@
-#ifndef USBSCANNERMODEL_H
-#define USBSCANNERMODEL_H
+#ifndef USBSCANNER_H
+#define USBSCANNER_H
 
 #include <QtCore> 
-class USBScannerModel : public QObject
+class USBScanner : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit USBScannerModel(QObject *parent = nullptr);
+    explicit USBScanner(QObject *parent = nullptr);
     QStringList scanForMediaFiles();
 
 signals:
@@ -20,4 +20,4 @@ private:
     bool isMediaFile(const QString &filename);
 };
 
-#endif // USBSCANNERMODEL_H 
+#endif // USBSCANNER_H 

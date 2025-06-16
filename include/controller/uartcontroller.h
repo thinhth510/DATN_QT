@@ -2,6 +2,7 @@
 #define UARTCONTROLLER_H
 
 #include <QtCore>
+
 #include "../view/videoview.h"
 #include "../view/audioview.h"
 

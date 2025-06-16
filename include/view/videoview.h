@@ -3,6 +3,7 @@
 
 #include <QtWidgets>
 #include <QtMultimediaWidgets>
+
 #include "../controller/mediacontroller.h"
 #include "../model/uartreceiver.h"
 

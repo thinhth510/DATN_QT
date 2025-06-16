@@ -1,11 +1,11 @@
-#include "../../include/model/usbscannermodel.h"
+#include "../../include/model/usbscanner.h"
 
-USBScannerModel::USBScannerModel(QObject *parent)
+USBScanner::USBScanner(QObject *parent)
     : QObject(parent)
 {
 }
 
-QStringList USBScannerModel::scanForMediaFiles()
+QStringList USBScanner::scanForMediaFiles()
 {
     QStringList allMediaFiles;
     QStringList usbDrives = findUSBDrives();
@@ -23,7 +23,7 @@ QStringList USBScannerModel::scanForMediaFiles()
     return allMediaFiles;
 }
 
-QStringList USBScannerModel::findUSBDrives()
+QStringList USBScanner::findUSBDrives()
 {
     QStringList usbDrives;
     const QList<QStorageInfo> drives = QStorageInfo::mountedVolumes();
@@ -42,7 +42,7 @@ QStringList USBScannerModel::findUSBDrives()
     return usbDrives;
 }
 
-QStringList USBScannerModel::scanDirectoryForMedia(const QString &path)
+QStringList USBScanner::scanDirectoryForMedia(const QString &path)
 {
     QStringList mediaFiles;
     QDir dir(path);
@@ -62,7 +62,7 @@ QStringList USBScannerModel::scanDirectoryForMedia(const QString &path)
     return mediaFiles;
 }
 
-bool USBScannerModel::isMediaFile(const QString &filename)
+bool USBScanner::isMediaFile(const QString &filename)
 {
     QStringList mediaExtensions = {".mp3", ".mp4", ".wav", ".avi"};
     return std::any_of(mediaExtensions.begin(), mediaExtensions.end(),

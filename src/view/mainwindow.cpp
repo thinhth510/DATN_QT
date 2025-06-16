@@ -1,9 +1,6 @@
 #include "../../include/view/mainwindow.h"
 #include "ui_mainwindow.h"
-#include "../../include/view/playlistview.h"
-#include "../../include/model/usbscannermodel.h"
-#include <QtWidgets> 
-#include <QtCore> 
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -162,10 +159,10 @@ void MainWindow::filterMediaFiles(const QString &filter)
 
 void MainWindow::on_actionScan_USB_triggered()
 {
-    USBScannerModel *scanner = new USBScannerModel(this);
+    USBScanner *scanner = new USBScanner(this);
     
     // Connect signals
-    connect(scanner, &USBScannerModel::scanCompleted, this, [this](const QStringList &mediaFiles) {
+    connect(scanner, &USBScanner::scanCompleted, this, [this](const QStringList &mediaFiles) {
         if (mediaFiles.isEmpty()) {
             QMessageBox::information(this, tr("Scan USB"),
                                    tr("No media files found in USB drives."));
@@ -201,7 +198,7 @@ void MainWindow::on_actionScan_USB_triggered()
         }
     });
 
-    connect(scanner, &USBScannerModel::scanError, this, [this](const QString &error) {
+    connect(scanner, &USBScanner::scanError, this, [this](const QString &error) {
         QMessageBox::warning(this, tr("Scan USB"), error);
     });
 
@@ -320,11 +317,13 @@ void MainWindow::on_actionOpen_Video_triggered()
 void MainWindow::on_playButton_clicked()
 {
     if (m_currentPlaylist) {
-        // Tạo một PlaylistView mới cho playlist hiện tại
+        // Nếu PlaylistView đã tồn tại, đóng nó
         if (m_playlistView) {
             m_playlistView->close();
-            delete m_playlistView;
+            // Không cần delete vì Qt::WA_DeleteOnClose sẽ tự động xử lý
         }
+        
+        // Tạo PlaylistView mới
         m_playlistView = new PlaylistView(m_currentPlaylist, this);
         m_playlistView->setAttribute(Qt::WA_DeleteOnClose);
         m_playlistView->show();

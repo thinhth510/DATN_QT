@@ -10,9 +10,11 @@
 #include <QtGui>
 
 #include "videoview.h"      
-#include "audioview.h"      
-#include "../model/playlist.h"       
-#include "playlistview.h"   
+#include "audioview.h"         
+#include "playlistview.h" 
+  
+#include "../model/playlist.h"  
+#include "../model/usbscanner.h"  
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -128,11 +130,9 @@ private:
     Ui::MainWindow *ui;                   // Con trỏ đến UI được tạo bởi Qt Designer
     QFileSystemModel *m_fileModel;        // Model quản lý file system
     QStringListModel *m_playlistModel;    // Model quản lý danh sách trong playlist
-    PlaylistView *m_playlistView;         // View hiển thị playlist
-
-    // Data
     QList<Playlist> m_playlists;          // Danh sách các playlist
     Playlist *m_currentPlaylist;          // Con trỏ đến playlist hiện tại
+    QPointer<PlaylistView> m_playlistView;         // View hiển thị playlist
     QString m_currentMediaPath;           // Đường dẫn thư mục media hiện tại
 
     // Setup Methods

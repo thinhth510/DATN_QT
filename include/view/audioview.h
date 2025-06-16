@@ -2,7 +2,8 @@
 #define AUDIOVIEW_H
 
 #include <QtWidgets>
-#include "controller/mediacontroller.h"
+
+#include "../controller/mediacontroller.h"
 #include "../model/uartreceiver.h"
 
 namespace Ui {
