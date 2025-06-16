@@ -655,6 +655,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindow.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimedia \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimediaDepends \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h \

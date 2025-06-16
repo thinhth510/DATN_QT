@@ -1022,6 +1022,10 @@ CMakeFiles/MockProject.dir/src/view/audioview.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidgetaction.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwizard.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediametadata.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimedia-config.h \
  /home/d1fficult/DATN/MockProject/src/view/../../include/view/../controller/mediacontroller.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QtMultimedia \
@@ -1096,9 +1100,7 @@ CMakeFiles/MockProject.dir/src/view/audioview.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qudpsocket.h \
  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkversion.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimedia-config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudiobuffer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudio.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qaudioformat.h \
@@ -1122,7 +1124,6 @@ CMakeFiles/MockProject.dir/src/view/audioview.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediadevices.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaenumdebug.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaformat.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediametadata.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaplayer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediarecorder.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediametadata.h \
@@ -1151,8 +1152,10 @@ CMakeFiles/MockProject.dir/src/view/audioview.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qtserialportversion.h \
+ /home/d1fficult/DATN/MockProject/src/view/../../include/view/../model/mediafile.h \
  /home/d1fficult/DATN/MockProject/build/MockProject_autogen/include/ui_audioview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGroupBox \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \

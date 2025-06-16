@@ -55,12 +55,12 @@ void PlaylistView::setupUI()
     
     // Set column widths
     ui->playlistView->header()->resizeSection(0, 200); // Title
-    ui->playlistView->header()->resizeSection(1, 150); // Artist
+    ui->playlistView->header()->resizeSection(1, 260); // Artist
     ui->playlistView->header()->resizeSection(2, 150); // Album
     ui->playlistView->header()->resizeSection(3, 150); // Composer
-    ui->playlistView->header()->resizeSection(4, 150); // Genre
-    ui->playlistView->header()->resizeSection(5, 100);  // Duration
-    ui->playlistView->header()->resizeSection(6, 100);  // Size
+    ui->playlistView->header()->resizeSection(4, 100); // Genre
+    ui->playlistView->header()->resizeSection(5, 80);  // Duration
+    ui->playlistView->header()->resizeSection(6, 80);  // Size
 
     // Thiết lập icons và kích thước cho các buttons
     QSize iconSize(32, 32);

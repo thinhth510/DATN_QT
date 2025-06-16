@@ -954,4 +954,5 @@ CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideoframeformat.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideosink.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qwavedecoder.h \
- /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaversion.h
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug

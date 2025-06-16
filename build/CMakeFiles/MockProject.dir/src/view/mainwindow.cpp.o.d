@@ -1154,6 +1154,8 @@ CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qtserialportversion.h \
  /home/d1fficult/DATN/MockProject/src/view/../../include/view/audioview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData \
+ /home/d1fficult/DATN/MockProject/src/view/../../include/view/../model/mediafile.h \
  /home/d1fficult/DATN/MockProject/src/view/../../include/view/playlistview.h \
  /home/d1fficult/DATN/MockProject/src/view/../../include/view/../model/playlist.h \
  /home/d1fficult/DATN/MockProject/src/view/../../include/view/../model/mediafile.h \

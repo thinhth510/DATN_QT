@@ -1161,6 +1161,8 @@ CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qtserialportversion.h \
  /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/../../../include/controller/../view/audioview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaMetaData \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/../../../include/controller/../view/../model/mediafile.h \
  /home/d1fficult/DATN/MockProject/build/MockProject_autogen/Q6AU6LSD6J/moc_uartreceiver.cpp \
  /home/d1fficult/DATN/MockProject/build/MockProject_autogen/Q6AU6LSD6J/../../../include/model/uartreceiver.h \
  /home/d1fficult/DATN/MockProject/build/MockProject_autogen/Q6AU6LSD6J/moc_usbscanner.cpp \

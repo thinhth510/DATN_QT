@@ -141,7 +141,9 @@ bool Playlist::save() const
         fileObj["title"] = file.title();
         fileObj["artist"] = file.artist();
         fileObj["album"] = file.album();
+        fileObj["composer"] = file.composer();
         fileObj["duration"] = file.duration();
+        fileObj["genre"] = file.genre();
         files.append(fileObj);
     }
     json["files"] = files;

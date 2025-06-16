@@ -138,9 +138,10 @@ void MediaFile::loadMetadata()
     m_title = metadata.stringValue(QMediaMetaData::Title);
     m_artist = metadata.stringValue(QMediaMetaData::AlbumArtist);
     m_album = metadata.stringValue(QMediaMetaData::AlbumTitle);
-    m_composer = metadata.stringValue(QMediaMetaData::Composer);
+    m_composer = metadata.stringValue(QMediaMetaData::ContributingArtist);
     m_genre = metadata.stringValue(QMediaMetaData::Genre);
     m_duration = player.duration();
+    qDebug() << "Loaded metadata for file:" << m_filePath << ", Composer:" << m_composer;
     m_isValid = true;
 }
 
