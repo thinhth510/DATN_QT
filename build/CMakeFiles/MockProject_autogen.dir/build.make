@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/d1fficult/Mock Project/MockProject"
+CMAKE_SOURCE_DIR = /home/d1fficult/DATN/MockProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/d1fficult/Mock Project/MockProject/build"
+CMAKE_BINARY_DIR = /home/d1fficult/DATN/MockProject/build
 
 # Utility rule file for MockProject_autogen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/MockProject_autogen.dir/compiler_depend.make
 include CMakeFiles/MockProject_autogen.dir/progress.make
 
 CMakeFiles/MockProject_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/d1fficult/Mock Project/MockProject/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target MockProject"
-	/usr/bin/cmake -E cmake_autogen "/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/MockProject_autogen.dir/AutogenInfo.json" ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target MockProject"
+	/usr/bin/cmake -E cmake_autogen /home/d1fficult/DATN/MockProject/build/CMakeFiles/MockProject_autogen.dir/AutogenInfo.json ""
 
 MockProject_autogen: CMakeFiles/MockProject_autogen
 MockProject_autogen: CMakeFiles/MockProject_autogen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/MockProject_autogen.dir/clean:
 .PHONY : CMakeFiles/MockProject_autogen.dir/clean
 
 CMakeFiles/MockProject_autogen.dir/depend:
-	cd "/home/d1fficult/Mock Project/MockProject/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/d1fficult/Mock Project/MockProject" "/home/d1fficult/Mock Project/MockProject" "/home/d1fficult/Mock Project/MockProject/build" "/home/d1fficult/Mock Project/MockProject/build" "/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/MockProject_autogen.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/d1fficult/DATN/MockProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/d1fficult/DATN/MockProject /home/d1fficult/DATN/MockProject /home/d1fficult/DATN/MockProject/build /home/d1fficult/DATN/MockProject/build /home/d1fficult/DATN/MockProject/build/CMakeFiles/MockProject_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MockProject_autogen.dir/depend
 

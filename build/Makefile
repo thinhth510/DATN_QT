@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/d1fficult/Mock Project/MockProject"
+CMAKE_SOURCE_DIR = /home/d1fficult/DATN/MockProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/d1fficult/Mock Project/MockProject/build"
+CMAKE_BINARY_DIR = /home/d1fficult/DATN/MockProject/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/d1fficult/Mock Project/MockProject/build/CMakeFiles" "/home/d1fficult/Mock Project/MockProject/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/d1fficult/DATN/MockProject/build/CMakeFiles /home/d1fficult/DATN/MockProject/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/d1fficult/Mock Project/MockProject/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/d1fficult/DATN/MockProject/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -211,6 +211,270 @@ MockProject_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.s
 .PHONY : MockProject_autogen/mocs_compilation.cpp.s
 
+src/controller/mediacontroller.o: src/controller/mediacontroller.cpp.o
+.PHONY : src/controller/mediacontroller.o
+
+# target to build an object file
+src/controller/mediacontroller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o
+.PHONY : src/controller/mediacontroller.cpp.o
+
+src/controller/mediacontroller.i: src/controller/mediacontroller.cpp.i
+.PHONY : src/controller/mediacontroller.i
+
+# target to preprocess a source file
+src/controller/mediacontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.i
+.PHONY : src/controller/mediacontroller.cpp.i
+
+src/controller/mediacontroller.s: src/controller/mediacontroller.cpp.s
+.PHONY : src/controller/mediacontroller.s
+
+# target to generate assembly for a file
+src/controller/mediacontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.s
+.PHONY : src/controller/mediacontroller.cpp.s
+
+src/controller/uartcontroller.o: src/controller/uartcontroller.cpp.o
+.PHONY : src/controller/uartcontroller.o
+
+# target to build an object file
+src/controller/uartcontroller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o
+.PHONY : src/controller/uartcontroller.cpp.o
+
+src/controller/uartcontroller.i: src/controller/uartcontroller.cpp.i
+.PHONY : src/controller/uartcontroller.i
+
+# target to preprocess a source file
+src/controller/uartcontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.i
+.PHONY : src/controller/uartcontroller.cpp.i
+
+src/controller/uartcontroller.s: src/controller/uartcontroller.cpp.s
+.PHONY : src/controller/uartcontroller.s
+
+# target to generate assembly for a file
+src/controller/uartcontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.s
+.PHONY : src/controller/uartcontroller.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/model/mediafile.o: src/model/mediafile.cpp.o
+.PHONY : src/model/mediafile.o
+
+# target to build an object file
+src/model/mediafile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o
+.PHONY : src/model/mediafile.cpp.o
+
+src/model/mediafile.i: src/model/mediafile.cpp.i
+.PHONY : src/model/mediafile.i
+
+# target to preprocess a source file
+src/model/mediafile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/mediafile.cpp.i
+.PHONY : src/model/mediafile.cpp.i
+
+src/model/mediafile.s: src/model/mediafile.cpp.s
+.PHONY : src/model/mediafile.s
+
+# target to generate assembly for a file
+src/model/mediafile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/mediafile.cpp.s
+.PHONY : src/model/mediafile.cpp.s
+
+src/model/playlist.o: src/model/playlist.cpp.o
+.PHONY : src/model/playlist.o
+
+# target to build an object file
+src/model/playlist.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/playlist.cpp.o
+.PHONY : src/model/playlist.cpp.o
+
+src/model/playlist.i: src/model/playlist.cpp.i
+.PHONY : src/model/playlist.i
+
+# target to preprocess a source file
+src/model/playlist.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/playlist.cpp.i
+.PHONY : src/model/playlist.cpp.i
+
+src/model/playlist.s: src/model/playlist.cpp.s
+.PHONY : src/model/playlist.s
+
+# target to generate assembly for a file
+src/model/playlist.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/playlist.cpp.s
+.PHONY : src/model/playlist.cpp.s
+
+src/model/uartreceiver.o: src/model/uartreceiver.cpp.o
+.PHONY : src/model/uartreceiver.o
+
+# target to build an object file
+src/model/uartreceiver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o
+.PHONY : src/model/uartreceiver.cpp.o
+
+src/model/uartreceiver.i: src/model/uartreceiver.cpp.i
+.PHONY : src/model/uartreceiver.i
+
+# target to preprocess a source file
+src/model/uartreceiver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.i
+.PHONY : src/model/uartreceiver.cpp.i
+
+src/model/uartreceiver.s: src/model/uartreceiver.cpp.s
+.PHONY : src/model/uartreceiver.s
+
+# target to generate assembly for a file
+src/model/uartreceiver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.s
+.PHONY : src/model/uartreceiver.cpp.s
+
+src/model/usbscanner.o: src/model/usbscanner.cpp.o
+.PHONY : src/model/usbscanner.o
+
+# target to build an object file
+src/model/usbscanner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.o
+.PHONY : src/model/usbscanner.cpp.o
+
+src/model/usbscanner.i: src/model/usbscanner.cpp.i
+.PHONY : src/model/usbscanner.i
+
+# target to preprocess a source file
+src/model/usbscanner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.i
+.PHONY : src/model/usbscanner.cpp.i
+
+src/model/usbscanner.s: src/model/usbscanner.cpp.s
+.PHONY : src/model/usbscanner.s
+
+# target to generate assembly for a file
+src/model/usbscanner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.s
+.PHONY : src/model/usbscanner.cpp.s
+
+src/view/audioview.o: src/view/audioview.cpp.o
+.PHONY : src/view/audioview.o
+
+# target to build an object file
+src/view/audioview.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/audioview.cpp.o
+.PHONY : src/view/audioview.cpp.o
+
+src/view/audioview.i: src/view/audioview.cpp.i
+.PHONY : src/view/audioview.i
+
+# target to preprocess a source file
+src/view/audioview.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/audioview.cpp.i
+.PHONY : src/view/audioview.cpp.i
+
+src/view/audioview.s: src/view/audioview.cpp.s
+.PHONY : src/view/audioview.s
+
+# target to generate assembly for a file
+src/view/audioview.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/audioview.cpp.s
+.PHONY : src/view/audioview.cpp.s
+
+src/view/mainwindow.o: src/view/mainwindow.cpp.o
+.PHONY : src/view/mainwindow.o
+
+# target to build an object file
+src/view/mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o
+.PHONY : src/view/mainwindow.cpp.o
+
+src/view/mainwindow.i: src/view/mainwindow.cpp.i
+.PHONY : src/view/mainwindow.i
+
+# target to preprocess a source file
+src/view/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.i
+.PHONY : src/view/mainwindow.cpp.i
+
+src/view/mainwindow.s: src/view/mainwindow.cpp.s
+.PHONY : src/view/mainwindow.s
+
+# target to generate assembly for a file
+src/view/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.s
+.PHONY : src/view/mainwindow.cpp.s
+
+src/view/playlistview.o: src/view/playlistview.cpp.o
+.PHONY : src/view/playlistview.o
+
+# target to build an object file
+src/view/playlistview.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o
+.PHONY : src/view/playlistview.cpp.o
+
+src/view/playlistview.i: src/view/playlistview.cpp.i
+.PHONY : src/view/playlistview.i
+
+# target to preprocess a source file
+src/view/playlistview.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/playlistview.cpp.i
+.PHONY : src/view/playlistview.cpp.i
+
+src/view/playlistview.s: src/view/playlistview.cpp.s
+.PHONY : src/view/playlistview.s
+
+# target to generate assembly for a file
+src/view/playlistview.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/playlistview.cpp.s
+.PHONY : src/view/playlistview.cpp.s
+
+src/view/videoview.o: src/view/videoview.cpp.o
+.PHONY : src/view/videoview.o
+
+# target to build an object file
+src/view/videoview.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/videoview.cpp.o
+.PHONY : src/view/videoview.cpp.o
+
+src/view/videoview.i: src/view/videoview.cpp.i
+.PHONY : src/view/videoview.i
+
+# target to preprocess a source file
+src/view/videoview.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/videoview.cpp.i
+.PHONY : src/view/videoview.cpp.i
+
+src/view/videoview.s: src/view/videoview.cpp.s
+.PHONY : src/view/videoview.s
+
+# target to generate assembly for a file
+src/view/videoview.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MockProject.dir/build.make CMakeFiles/MockProject.dir/src/view/videoview.cpp.s
+.PHONY : src/view/videoview.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -228,6 +492,39 @@ help:
 	@echo "... MockProject_autogen/mocs_compilation.o"
 	@echo "... MockProject_autogen/mocs_compilation.i"
 	@echo "... MockProject_autogen/mocs_compilation.s"
+	@echo "... src/controller/mediacontroller.o"
+	@echo "... src/controller/mediacontroller.i"
+	@echo "... src/controller/mediacontroller.s"
+	@echo "... src/controller/uartcontroller.o"
+	@echo "... src/controller/uartcontroller.i"
+	@echo "... src/controller/uartcontroller.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/model/mediafile.o"
+	@echo "... src/model/mediafile.i"
+	@echo "... src/model/mediafile.s"
+	@echo "... src/model/playlist.o"
+	@echo "... src/model/playlist.i"
+	@echo "... src/model/playlist.s"
+	@echo "... src/model/uartreceiver.o"
+	@echo "... src/model/uartreceiver.i"
+	@echo "... src/model/uartreceiver.s"
+	@echo "... src/model/usbscanner.o"
+	@echo "... src/model/usbscanner.i"
+	@echo "... src/model/usbscanner.s"
+	@echo "... src/view/audioview.o"
+	@echo "... src/view/audioview.i"
+	@echo "... src/view/audioview.s"
+	@echo "... src/view/mainwindow.o"
+	@echo "... src/view/mainwindow.i"
+	@echo "... src/view/mainwindow.s"
+	@echo "... src/view/playlistview.o"
+	@echo "... src/view/playlistview.i"
+	@echo "... src/view/playlistview.s"
+	@echo "... src/view/videoview.o"
+	@echo "... src/view/videoview.i"
+	@echo "... src/view/videoview.s"
 .PHONY : help
 
 

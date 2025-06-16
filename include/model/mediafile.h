@@ -46,6 +46,8 @@ public:
     QString title() const;        ///< Lấy tiêu đề từ metadata
     QString artist() const;       ///< Lấy tên nghệ sĩ từ metadata
     QString album() const;        ///< Lấy tên album từ metadata
+    QString composer() const;
+    QString genre() const;
     qint64 duration() const;      ///< Lấy độ dài (milliseconds)
     QString durationString() const; ///< Lấy độ dài dạng chuỗi (mm:ss)
     qint64 fileSize() const;      ///< Lấy kích thước file (bytes)
@@ -75,6 +77,8 @@ private:
     QString m_title;          ///< Tiêu đề từ metadata
     QString m_artist;         ///< Tên nghệ sĩ từ metadata
     QString m_album;          ///< Tên album từ metadata
+    QString m_composer;       ///< Tên composer từ metadata
+    QString m_genre;          ///< Thể loại từ metadata
     qint64 m_duration;        ///< Độ dài (milliseconds)
     qint64 m_fileSize;        ///< Kích thước file (bytes)
     Type m_type;             ///< Loại file (Audio/Video)

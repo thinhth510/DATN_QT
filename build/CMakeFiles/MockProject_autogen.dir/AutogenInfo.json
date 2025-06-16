@@ -1,15 +1,15 @@
 {
-	"BUILD_DIR" : "/home/d1fficult/Mock Project/MockProject/build/MockProject_autogen",
-	"CMAKE_BINARY_DIR" : "/home/d1fficult/Mock Project/MockProject/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/d1fficult/Mock Project/MockProject/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/d1fficult/Mock Project/MockProject",
+	"BUILD_DIR" : "/home/d1fficult/DATN/MockProject/build/MockProject_autogen",
+	"CMAKE_BINARY_DIR" : "/home/d1fficult/DATN/MockProject/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/d1fficult/DATN/MockProject/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/d1fficult/DATN/MockProject",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/d1fficult/Mock Project/MockProject/CMakeLists.txt",
+		"/home/d1fficult/DATN/MockProject/CMakeLists.txt",
 		"/usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in",
-		"/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/3.22.1/CMakeSystem.cmake",
+		"/home/d1fficult/DATN/MockProject/build/CMakeFiles/3.22.1/CMakeSystem.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeUnixFindMake.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake",
@@ -57,7 +57,7 @@
 		"/usr/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake",
 		"/usr/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake",
+		"/home/d1fficult/DATN/MockProject/build/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake",
@@ -82,7 +82,7 @@
 		"/usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake",
 		"/usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake",
+		"/home/d1fficult/DATN/MockProject/build/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake",
@@ -480,13 +480,75 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6SerialPort/Qt6SerialPortVersionlessTargets.cmake",
 		"/usr/share/cmake-3.22/Modules/GNUInstallDirs.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/d1fficult/Mock Project/MockProject",
+	"CMAKE_SOURCE_DIR" : "/home/d1fficult/DATN/MockProject",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"/home/d1fficult/DATN/MockProject/include/controller/mediacontroller.h",
+			"MU",
+			"KEB5ZR3DWC/moc_mediacontroller.cpp",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/include/controller/uartcontroller.h",
+			"MU",
+			"KEB5ZR3DWC/moc_uartcontroller.cpp",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/include/model/mediafile.h",
+			"MU",
+			"Q6AU6LSD6J/moc_mediafile.cpp",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/include/model/playlist.h",
+			"MU",
+			"Q6AU6LSD6J/moc_playlist.cpp",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/include/model/uartreceiver.h",
+			"MU",
+			"Q6AU6LSD6J/moc_uartreceiver.cpp",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/include/model/usbscanner.h",
+			"MU",
+			"Q6AU6LSD6J/moc_usbscanner.cpp",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/include/view/audioview.h",
+			"MU",
+			"75UR3EJMK3/moc_audioview.cpp",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/include/view/mainwindow.h",
+			"MU",
+			"75UR3EJMK3/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/include/view/playlistview.h",
+			"MU",
+			"75UR3EJMK3/moc_playlistview.cpp",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/include/view/videoview.h",
+			"MU",
+			"75UR3EJMK3/moc_videoview.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/d1fficult/Mock Project/MockProject/build/MockProject_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/d1fficult/Mock Project/MockProject/build/MockProject_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/d1fficult/DATN/MockProject/build/MockProject_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/d1fficult/DATN/MockProject/build/MockProject_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
@@ -507,9 +569,9 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/d1fficult/Mock Project/MockProject",
-		"/home/d1fficult/Mock Project/MockProject/include",
-		"/home/d1fficult/Mock Project/MockProject/src",
+		"/home/d1fficult/DATN/MockProject",
+		"/home/d1fficult/DATN/MockProject/include",
+		"/home/d1fficult/DATN/MockProject/src",
 		"/usr/include/x86_64-linux-gnu/qt6/QtCore",
 		"/usr/include/x86_64-linux-gnu/qt6",
 		"/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++",
@@ -538,18 +600,59 @@
 		"-c",
 		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/d1fficult/Mock Project/MockProject/build/MockProject_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/d1fficult/DATN/MockProject/build/MockProject_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 6,
-	"PARSE_CACHE_FILE" : "/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/MockProject_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/d1fficult/DATN/MockProject/build/CMakeFiles/MockProject_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 2,
-	"SETTINGS_FILE" : "/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/MockProject_autogen.dir/AutogenUsed.txt",
-	"SOURCES" : [],
+	"SETTINGS_FILE" : "/home/d1fficult/DATN/MockProject/build/CMakeFiles/MockProject_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/d1fficult/DATN/MockProject/src/controller/mediacontroller.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/src/controller/uartcontroller.cpp",
+			"MU",
+			null
+		],
+		[ "/home/d1fficult/DATN/MockProject/src/main.cpp", "MU", null ],
+		[
+			"/home/d1fficult/DATN/MockProject/src/model/mediafile.cpp",
+			"MU",
+			null
+		],
+		[ "/home/d1fficult/DATN/MockProject/src/model/playlist.cpp", "MU", null ],
+		[
+			"/home/d1fficult/DATN/MockProject/src/model/uartreceiver.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/src/model/usbscanner.cpp",
+			"MU",
+			null
+		],
+		[ "/home/d1fficult/DATN/MockProject/src/view/audioview.cpp", "MU", null ],
+		[
+			"/home/d1fficult/DATN/MockProject/src/view/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/d1fficult/DATN/MockProject/src/view/playlistview.cpp",
+			"MU",
+			null
+		],
+		[ "/home/d1fficult/DATN/MockProject/src/view/videoview.cpp", "MU", null ]
+	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : [],

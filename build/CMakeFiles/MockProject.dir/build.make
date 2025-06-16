@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/d1fficult/Mock Project/MockProject"
+CMAKE_SOURCE_DIR = /home/d1fficult/DATN/MockProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/d1fficult/Mock Project/MockProject/build"
+CMAKE_BINARY_DIR = /home/d1fficult/DATN/MockProject/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MockProject.dir/depend.make
@@ -72,25 +72,201 @@ include CMakeFiles/MockProject.dir/flags.make
 CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o: CMakeFiles/MockProject.dir/flags.make
 CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o: MockProject_autogen/mocs_compilation.cpp
 CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/d1fficult/Mock Project/MockProject/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o -MF CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o -c "/home/d1fficult/Mock Project/MockProject/build/MockProject_autogen/mocs_compilation.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o -MF CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o -c /home/d1fficult/DATN/MockProject/build/MockProject_autogen/mocs_compilation.cpp
 
 CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/d1fficult/Mock Project/MockProject/build/MockProject_autogen/mocs_compilation.cpp" > CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/build/MockProject_autogen/mocs_compilation.cpp > CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/d1fficult/Mock Project/MockProject/build/MockProject_autogen/mocs_compilation.cpp" -o CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/build/MockProject_autogen/mocs_compilation.cpp -o CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.s
+
+CMakeFiles/MockProject.dir/src/main.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/MockProject.dir/src/main.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MockProject.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/main.cpp.o -MF CMakeFiles/MockProject.dir/src/main.cpp.o.d -o CMakeFiles/MockProject.dir/src/main.cpp.o -c /home/d1fficult/DATN/MockProject/src/main.cpp
+
+CMakeFiles/MockProject.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/main.cpp > CMakeFiles/MockProject.dir/src/main.cpp.i
+
+CMakeFiles/MockProject.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/main.cpp -o CMakeFiles/MockProject.dir/src/main.cpp.s
+
+CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o: ../src/view/mainwindow.cpp
+CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o -MF CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o.d -o CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o -c /home/d1fficult/DATN/MockProject/src/view/mainwindow.cpp
+
+CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/view/mainwindow.cpp > CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.i
+
+CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/view/mainwindow.cpp -o CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.s
+
+CMakeFiles/MockProject.dir/src/view/videoview.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/view/videoview.cpp.o: ../src/view/videoview.cpp
+CMakeFiles/MockProject.dir/src/view/videoview.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MockProject.dir/src/view/videoview.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/view/videoview.cpp.o -MF CMakeFiles/MockProject.dir/src/view/videoview.cpp.o.d -o CMakeFiles/MockProject.dir/src/view/videoview.cpp.o -c /home/d1fficult/DATN/MockProject/src/view/videoview.cpp
+
+CMakeFiles/MockProject.dir/src/view/videoview.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/view/videoview.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/view/videoview.cpp > CMakeFiles/MockProject.dir/src/view/videoview.cpp.i
+
+CMakeFiles/MockProject.dir/src/view/videoview.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/view/videoview.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/view/videoview.cpp -o CMakeFiles/MockProject.dir/src/view/videoview.cpp.s
+
+CMakeFiles/MockProject.dir/src/view/audioview.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/view/audioview.cpp.o: ../src/view/audioview.cpp
+CMakeFiles/MockProject.dir/src/view/audioview.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MockProject.dir/src/view/audioview.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/view/audioview.cpp.o -MF CMakeFiles/MockProject.dir/src/view/audioview.cpp.o.d -o CMakeFiles/MockProject.dir/src/view/audioview.cpp.o -c /home/d1fficult/DATN/MockProject/src/view/audioview.cpp
+
+CMakeFiles/MockProject.dir/src/view/audioview.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/view/audioview.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/view/audioview.cpp > CMakeFiles/MockProject.dir/src/view/audioview.cpp.i
+
+CMakeFiles/MockProject.dir/src/view/audioview.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/view/audioview.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/view/audioview.cpp -o CMakeFiles/MockProject.dir/src/view/audioview.cpp.s
+
+CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o: ../src/view/playlistview.cpp
+CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o -MF CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o.d -o CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o -c /home/d1fficult/DATN/MockProject/src/view/playlistview.cpp
+
+CMakeFiles/MockProject.dir/src/view/playlistview.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/view/playlistview.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/view/playlistview.cpp > CMakeFiles/MockProject.dir/src/view/playlistview.cpp.i
+
+CMakeFiles/MockProject.dir/src/view/playlistview.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/view/playlistview.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/view/playlistview.cpp -o CMakeFiles/MockProject.dir/src/view/playlistview.cpp.s
+
+CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o: ../src/controller/mediacontroller.cpp
+CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o -MF CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o.d -o CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o -c /home/d1fficult/DATN/MockProject/src/controller/mediacontroller.cpp
+
+CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/controller/mediacontroller.cpp > CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.i
+
+CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/controller/mediacontroller.cpp -o CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.s
+
+CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o: ../src/controller/uartcontroller.cpp
+CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o -MF CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o.d -o CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o -c /home/d1fficult/DATN/MockProject/src/controller/uartcontroller.cpp
+
+CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/controller/uartcontroller.cpp > CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.i
+
+CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/controller/uartcontroller.cpp -o CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.s
+
+CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o: ../src/model/mediafile.cpp
+CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o -MF CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o.d -o CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o -c /home/d1fficult/DATN/MockProject/src/model/mediafile.cpp
+
+CMakeFiles/MockProject.dir/src/model/mediafile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/model/mediafile.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/model/mediafile.cpp > CMakeFiles/MockProject.dir/src/model/mediafile.cpp.i
+
+CMakeFiles/MockProject.dir/src/model/mediafile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/model/mediafile.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/model/mediafile.cpp -o CMakeFiles/MockProject.dir/src/model/mediafile.cpp.s
+
+CMakeFiles/MockProject.dir/src/model/playlist.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/model/playlist.cpp.o: ../src/model/playlist.cpp
+CMakeFiles/MockProject.dir/src/model/playlist.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MockProject.dir/src/model/playlist.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/model/playlist.cpp.o -MF CMakeFiles/MockProject.dir/src/model/playlist.cpp.o.d -o CMakeFiles/MockProject.dir/src/model/playlist.cpp.o -c /home/d1fficult/DATN/MockProject/src/model/playlist.cpp
+
+CMakeFiles/MockProject.dir/src/model/playlist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/model/playlist.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/model/playlist.cpp > CMakeFiles/MockProject.dir/src/model/playlist.cpp.i
+
+CMakeFiles/MockProject.dir/src/model/playlist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/model/playlist.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/model/playlist.cpp -o CMakeFiles/MockProject.dir/src/model/playlist.cpp.s
+
+CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o: ../src/model/uartreceiver.cpp
+CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o -MF CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o.d -o CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o -c /home/d1fficult/DATN/MockProject/src/model/uartreceiver.cpp
+
+CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/model/uartreceiver.cpp > CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.i
+
+CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/model/uartreceiver.cpp -o CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.s
+
+CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.o: CMakeFiles/MockProject.dir/flags.make
+CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.o: ../src/model/usbscanner.cpp
+CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.o: CMakeFiles/MockProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.o -MF CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.o.d -o CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.o -c /home/d1fficult/DATN/MockProject/src/model/usbscanner.cpp
+
+CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/d1fficult/DATN/MockProject/src/model/usbscanner.cpp > CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.i
+
+CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/d1fficult/DATN/MockProject/src/model/usbscanner.cpp -o CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.s
 
 # Object files for target MockProject
 MockProject_OBJECTS = \
-"CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o"
+"CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o" \
+"CMakeFiles/MockProject.dir/src/main.cpp.o" \
+"CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o" \
+"CMakeFiles/MockProject.dir/src/view/videoview.cpp.o" \
+"CMakeFiles/MockProject.dir/src/view/audioview.cpp.o" \
+"CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o" \
+"CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o" \
+"CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o" \
+"CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o" \
+"CMakeFiles/MockProject.dir/src/model/playlist.cpp.o" \
+"CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o" \
+"CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.o"
 
 # External object files for target MockProject
 MockProject_EXTERNAL_OBJECTS =
 
 MockProject: CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/main.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/view/mainwindow.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/view/videoview.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/view/audioview.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/view/playlistview.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/controller/mediacontroller.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/controller/uartcontroller.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/model/mediafile.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/model/playlist.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/model/uartreceiver.cpp.o
+MockProject: CMakeFiles/MockProject.dir/src/model/usbscanner.cpp.o
 MockProject: CMakeFiles/MockProject.dir/build.make
 MockProject: /usr/lib/x86_64-linux-gnu/libQt6MultimediaWidgets.so.6.2.4
 MockProject: /usr/lib/x86_64-linux-gnu/libQt6SerialPort.so.6.2.4
@@ -102,7 +278,7 @@ MockProject: /usr/lib/x86_64-linux-gnu/libGLX.so
 MockProject: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 MockProject: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4
 MockProject: CMakeFiles/MockProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/d1fficult/Mock Project/MockProject/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MockProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/d1fficult/DATN/MockProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable MockProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MockProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -114,6 +290,6 @@ CMakeFiles/MockProject.dir/clean:
 .PHONY : CMakeFiles/MockProject.dir/clean
 
 CMakeFiles/MockProject.dir/depend:
-	cd "/home/d1fficult/Mock Project/MockProject/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/d1fficult/Mock Project/MockProject" "/home/d1fficult/Mock Project/MockProject" "/home/d1fficult/Mock Project/MockProject/build" "/home/d1fficult/Mock Project/MockProject/build" "/home/d1fficult/Mock Project/MockProject/build/CMakeFiles/MockProject.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/d1fficult/DATN/MockProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/d1fficult/DATN/MockProject /home/d1fficult/DATN/MockProject /home/d1fficult/DATN/MockProject/build /home/d1fficult/DATN/MockProject/build /home/d1fficult/DATN/MockProject/build/CMakeFiles/MockProject.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MockProject.dir/depend
 

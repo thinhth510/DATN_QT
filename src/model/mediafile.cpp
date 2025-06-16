@@ -42,6 +42,17 @@ QString MediaFile::album() const
     return m_album;
 }
 
+QString MediaFile::composer() const
+{
+    return m_composer;
+}
+
+
+QString MediaFile::genre() const
+{
+    return m_genre;
+}
+
 qint64 MediaFile::duration() const
 {
     return m_duration;
@@ -127,8 +138,9 @@ void MediaFile::loadMetadata()
     m_title = metadata.stringValue(QMediaMetaData::Title);
     m_artist = metadata.stringValue(QMediaMetaData::AlbumArtist);
     m_album = metadata.stringValue(QMediaMetaData::AlbumTitle);
+    m_composer = metadata.stringValue(QMediaMetaData::Composer);
+    m_genre = metadata.stringValue(QMediaMetaData::Genre);
     m_duration = player.duration();
-
     m_isValid = true;
 }
 
