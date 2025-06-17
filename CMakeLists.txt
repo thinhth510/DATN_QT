@@ -18,6 +18,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS
     Multimedia
     MultimediaWidgets
     SerialPort
+    Sql
 )
 
 set(PROJECT_SOURCES
@@ -40,6 +41,10 @@ set(PROJECT_SOURCES
     model/uartreceiver.cpp
     model/usbscanner.cpp
 
+    # Database sources
+    database/database.cpp   
+    database/playlistdao.cpp
+
     # View headers
     view/mainwindow.h
     view/videoview.h
@@ -57,12 +62,17 @@ set(PROJECT_SOURCES
     model/uartreceiver.h
     model/usbscanner.h
 
+    # Database headers
+    database/database.h
+    database/playlistdao.h
+
     # UI files
     view/mainwindow.ui
     view/videoview.ui
     view/audioview.ui
     view/playlistview.ui
 )
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(MockProject
@@ -94,6 +104,7 @@ target_link_libraries(MockProject PRIVATE
     Qt${QT_VERSION_MAJOR}::Multimedia
     Qt${QT_VERSION_MAJOR}::MultimediaWidgets
     Qt${QT_VERSION_MAJOR}::SerialPort
+    Qt${QT_VERSION_MAJOR}::Sql
 )
 
 if(${QT_VERSION} VERSION_LESS 6.1.0)

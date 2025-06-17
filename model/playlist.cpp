@@ -1,7 +1,8 @@
 #include "playlist.h"
 
-Playlist::Playlist(const QString &name)
+Playlist::Playlist(const QString &name, int id)
     : m_name(name)
+    , m_id(id)
     , m_createdAt(QDateTime::currentDateTime())
     , m_modifiedAt(QDateTime::currentDateTime())
 {
@@ -125,63 +126,4 @@ QDateTime Playlist::createdAt() const
 QDateTime Playlist::modifiedAt() const
 {
     return m_modifiedAt;
-}
-
-bool Playlist::save() const
-{
-    QJsonObject json;
-    json["name"] = m_name;
-    json["createdAt"] = m_createdAt.toString(Qt::ISODate);
-    json["modifiedAt"] = m_modifiedAt.toString(Qt::ISODate);
-    
-    QJsonArray files;
-    for (const MediaFile &file : m_mediaFiles) {
-        QJsonObject fileObj;
-        fileObj["path"] = file.filePath();
-        fileObj["title"] = file.title();
-        fileObj["artist"] = file.artist();
-        fileObj["album"] = file.album();
-        fileObj["composer"] = file.composer();
-        fileObj["duration"] = file.duration();
-        fileObj["genre"] = file.genre();
-        files.append(fileObj);
-    }
-    json["files"] = files;
-    
-    QJsonDocument doc(json);
-    QFile file(m_name + ".playlist");
-    if (!file.open(QIODevice::WriteOnly)) {
-        return false;
-    }
-    
-    file.write(doc.toJson());
-    return true;
-}
-
-bool Playlist::load(const QString &filePath)
-{
-    QFile file(filePath);
-    if (!file.open(QIODevice::ReadOnly)) {
-        return false;
-    }
-    
-    QJsonDocument doc = QJsonDocument::fromJson(file.readAll());
-    if (doc.isNull()) {
-        return false;
-    }
-    
-    QJsonObject json = doc.object();
-    m_name = json["name"].toString();
-    m_createdAt = QDateTime::fromString(json["createdAt"].toString(), Qt::ISODate);
-    m_modifiedAt = QDateTime::fromString(json["modifiedAt"].toString(), Qt::ISODate);
-    
-    m_mediaFiles.clear();
-    QJsonArray files = json["files"].toArray();
-    for (const QJsonValue &value : files) {
-        QJsonObject fileObj = value.toObject();
-        QString path = fileObj["path"].toString();
-        addMediaFile(path);
-    }
-    
-    return true;
 } 

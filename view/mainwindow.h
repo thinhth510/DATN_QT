@@ -5,9 +5,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QtWidgets> 
-#include <QtCore> 
-#include <QtGui>
+#include <QtWidgets> // Bao gồm QFileDialog, QMessageBox
+#include <QtCore>
+#include <QtGui> // Bao gồm QScreen, QGuiApplication
+#include <QtSql> // Bao gồm QSqlQuery
 
 #include "videoview.h"      
 #include "audioview.h"         
@@ -16,6 +17,8 @@
   
 #include "../model/playlist.h"  
 #include "../model/usbscanner.h"  
+#include "database/database.h"
+#include "database/playlistdao.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -99,11 +102,6 @@ private slots:
     void on_actionDeletePlaylist_triggered();
     
     /**
-     * @brief Lưu playlist hiện tại
-     */
-    void on_actionSavePlaylist_triggered();
-    
-    /**
      * @brief Xử lý khi chuyển đổi playlist
      * @param index Index của playlist được chọn
      */
@@ -140,6 +138,8 @@ private:
     QPointer<PlaylistView> m_playlistView;         // View hiển thị playlist
     QString m_currentMediaPath;           // Đường dẫn thư mục media hiện tại
     VirtualKeyboard *m_virtualKeyboard;   // Bàn phím ảo
+    Database *m_db;
+    PlaylistDAO *m_playlistDao;
 
     // Setup Methods
     void setupUI();           // Thiết lập giao diện người dùng

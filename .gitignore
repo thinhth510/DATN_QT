@@ -1,4 +1,7 @@
-# Ignore build directory and build artifacts
+# Ignore all database files
+*.db
+
+# Ignore build and other generated files
 build/
 CMakeFiles/
 CMakeCache.txt
@@ -22,7 +25,9 @@ MockProject_autogen/
 !controller/
 !model/
 !view/
+!database/
 !CMakeLists.txt
 !main.cpp
 !README
-!README.md 
+!README.md
+

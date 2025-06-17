@@ -1,9 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QFileDialog>
-#include <QMessageBox>
-#include <QScreen>
-#include <QGuiApplication>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -14,8 +10,16 @@ MainWindow::MainWindow(QWidget *parent)
     , m_currentPlaylist(nullptr)
     , m_playlistView(nullptr)
     , m_virtualKeyboard(nullptr)
+    , m_db(nullptr)
+    , m_playlistDao(nullptr)
 {
     ui->setupUi(this);
+    m_db = new Database("playlist.db");
+    m_db->open();
+    if (!m_db->initSchema()) {
+        qWarning() << "Database schema creation failed!";
+    }
+    m_playlistDao = new PlaylistDAO(m_db);
     setupUI();
     setupMediaBrowser();
     setupPlaylistManager();
@@ -30,7 +34,8 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-    savePlaylists();
+    if (m_playlistDao) delete m_playlistDao;
+    if (m_db) delete m_db;
     delete ui;
     if (m_playlistView) {
         delete m_playlistView;
@@ -245,25 +250,33 @@ void MainWindow::on_actionNewPlaylist_triggered()
                                        "New Playlist", &ok);
     if (ok && !name.isEmpty()) {
         Playlist playlist(name);
-        m_playlists.append(playlist);
-        ui->playlistComboBox->addItem(name);
-        ui->playlistComboBox->setCurrentIndex(ui->playlistComboBox->count() - 1);
+        int playlistId = m_playlistDao->addPlaylist(playlist);
+        loadPlaylists();
+        // Tìm index của playlist vừa tạo
+        int newIndex = -1;
+        for (int i = 0; i < m_playlists.size(); ++i) {
+            if (m_playlists[i].id() == playlistId) {
+                newIndex = i;
+                break;
+            }
+        }
+        if (newIndex != -1) {
+            ui->playlistComboBox->setCurrentIndex(newIndex);
+        }
     }
 }
 
 void MainWindow::on_actionDeletePlaylist_triggered()
 {
     int index = ui->playlistComboBox->currentIndex();
-    if (index >= 0) {
+    if (index >= 0 && index < m_playlists.size()) {
+        int playlistId = m_playlists[index].id();
+        m_playlistDao->removePlaylist(playlistId);
         m_playlists.removeAt(index);
         ui->playlistComboBox->removeItem(index);
         m_playlistModel->setStringList(QStringList());
+        loadPlaylists();
     }
-}
-
-void MainWindow::on_actionSavePlaylist_triggered()
-{
-    savePlaylists();
 }
 
 void MainWindow::on_playlistComboBox_currentIndexChanged(int index)
@@ -286,6 +299,10 @@ void MainWindow::on_addToPlaylistButton_clicked()
     QString filePath = m_fileModel->filePath(index);
     if (!m_fileModel->isDir(index)) {
         m_currentPlaylist->addMediaFile(filePath);
+        // Lưu vào database
+        if (m_currentPlaylist->id() != -1) {
+            m_playlistDao->addMediaFile(m_currentPlaylist->id(), MediaFile(filePath));
+        }
         QStringList fileNames;
         for (const MediaFile &file : m_currentPlaylist->mediaFiles()) {
             fileNames << file.title();
@@ -298,10 +315,18 @@ void MainWindow::on_removeFromPlaylistButton_clicked()
 {
     QModelIndex index = ui->playlistView->currentIndex();
     if (!index.isValid() || m_currentPlaylist == nullptr) return;
-    
     int row = index.row();
     if (row >= 0 && row < m_currentPlaylist->mediaFiles().size()) {
         QString filePath = m_currentPlaylist->mediaFiles()[row].filePath();
+        // Xóa trong database
+        if (m_currentPlaylist->id() != -1) {
+            // Tìm media file id trong database (giả sử chỉ có 1 file trùng path trong playlist)
+            QSqlQuery query(m_db->connection());
+            query.prepare("DELETE FROM media_files WHERE playlist_id=? AND path=?");
+            query.addBindValue(m_currentPlaylist->id());
+            query.addBindValue(filePath);
+            query.exec();
+        }
         m_currentPlaylist->removeMediaFile(filePath);
         QStringList fileNames;
         for (const MediaFile &file : m_currentPlaylist->mediaFiles()) {
@@ -313,12 +338,17 @@ void MainWindow::on_removeFromPlaylistButton_clicked()
 
 void MainWindow::loadPlaylists()
 {
-    // TODO: Implement loading playlists from file/database
-}
-
-void MainWindow::savePlaylists()
-{
-    // TODO: Implement saving playlists to file/database
+    m_playlists = m_playlistDao->getAllPlaylists();
+    ui->playlistComboBox->clear();
+    for (const Playlist &pl : m_playlists) {
+        ui->playlistComboBox->addItem(pl.name());
+    }
+    if (!m_playlists.isEmpty()) {
+        m_currentPlaylist = &m_playlists[0];
+        ui->playlistComboBox->setCurrentIndex(0);
+    } else {
+        m_currentPlaylist = nullptr;
+    }
 }
 
 void MainWindow::on_actionOpen_Audio_triggered()

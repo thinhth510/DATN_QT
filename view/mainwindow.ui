@@ -130,15 +130,6 @@
     <addaction name="actionOpen_Audio"/>
     <addaction name="actionOpen_Video"/>
    </widget>
-   <widget class="QMenu" name="menuPlaylist">
-    <property name="title">
-     <string>Playlist</string>
-    </property>
-    <addaction name="actionNewPlaylist"/>
-    <addaction name="actionDeletePlaylist"/>
-    <addaction name="separator"/>
-    <addaction name="actionSavePlaylist"/>
-   </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
      <string>View</string>
@@ -148,7 +139,6 @@
    </widget>
    <addaction name="menuView"/>
    <addaction name="menuFile"/>
-   <addaction name="menuPlaylist"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOpen_Audio">
@@ -164,21 +154,6 @@
   <action name="actionBrowseFolder">
    <property name="text">
     <string>Browse Folder</string>
-   </property>
-  </action>
-  <action name="actionNewPlaylist">
-   <property name="text">
-    <string>New Playlist</string>
-   </property>
-  </action>
-  <action name="actionDeletePlaylist">
-   <property name="text">
-    <string>Delete Playlist</string>
-   </property>
-  </action>
-  <action name="actionSavePlaylist">
-   <property name="text">
-    <string>Save Playlist</string>
    </property>
   </action>
   <action name="actionScan_USB">

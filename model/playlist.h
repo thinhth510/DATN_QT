@@ -22,8 +22,9 @@ public:
     /**
      * @brief Constructor
      * @param name Tên của playlist
+     * @param id id của playlist trong database
      */
-    Playlist(const QString &name = "");
+    Playlist(const QString &name = "", int id = -1);
     
     /**
      * @brief Destructor
@@ -112,24 +113,17 @@ public:
     QDateTime modifiedAt() const;
 
     // Persistence Operations
-    /**
-     * @brief Lưu playlist vào file
-     * @return true nếu lưu thành công
-     */
-    bool save() const;
-    
-    /**
-     * @brief Load playlist từ file
-     * @param filePath Đường dẫn đến file playlist
-     * @return true nếu load thành công
-     */
-    bool load(const QString &filePath);
+    // (Đã chuyển sang DAO, không còn lưu file ở đây)
+
+    int id() const { return m_id; }
+    void setId(int id) { m_id = id; }
 
 private:
     QString m_name;              ///< Tên của playlist
     QList<MediaFile> m_mediaFiles; ///< Danh sách các file media
     QDateTime m_createdAt;       ///< Thời điểm tạo playlist
     QDateTime m_modifiedAt;      ///< Thời điểm chỉnh sửa cuối
+    int m_id; // id của playlist trong database
 };
 
 #endif // PLAYLIST_H 
