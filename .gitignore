@@ -1,0 +1,28 @@
+# Ignore build directory and build artifacts
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+mockproject_autogen/
+MockProject_autogen/
+*.o
+*.obj
+*.so
+*.a
+*.exe
+*.dll
+*.log
+*.user
+*.pro.user
+*.qmake.stash
+*.autosave
+
+# Keep only these folders and files
+!controller/
+!model/
+!view/
+!CMakeLists.txt
+!main.cpp
+!README
+!README.md 

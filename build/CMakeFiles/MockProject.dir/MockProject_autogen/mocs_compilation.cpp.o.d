@@ -1,7 +1,7 @@
 CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o: \
  /home/d1fficult/DATN/MockProject/build/MockProject_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/moc_mediacontroller.cpp \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NPUKSKGWT2/moc_mediacontroller.cpp \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -117,7 +117,7 @@ CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/../../../include/controller/mediacontroller.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NPUKSKGWT2/../../../controller/mediacontroller.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
@@ -1148,11 +1148,11 @@ CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgets \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QScreen \
  /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QSslError \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/moc_uartcontroller.cpp \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/../../../include/controller/uartcontroller.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/../../../include/controller/../view/videoview.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/../../../include/controller/../view/../controller/mediacontroller.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/../../../include/controller/../view/../model/uartreceiver.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NPUKSKGWT2/moc_uartcontroller.cpp \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NPUKSKGWT2/../../../controller/uartcontroller.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NPUKSKGWT2/../../../controller/../view/videoview.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NPUKSKGWT2/../../../controller/../view/../controller/mediacontroller.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NPUKSKGWT2/../../../controller/../view/../model/uartreceiver.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QtSerialPort \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/QtSerialPortDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
@@ -1160,24 +1160,31 @@ CMakeFiles/MockProject.dir/MockProject_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qserialportinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSerialPort/qtserialportversion.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/KEB5ZR3DWC/../../../include/controller/../view/audioview.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/Q6AU6LSD6J/moc_uartreceiver.cpp \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/Q6AU6LSD6J/../../../include/model/uartreceiver.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/Q6AU6LSD6J/moc_usbscanner.cpp \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/Q6AU6LSD6J/../../../include/model/usbscanner.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/moc_audioview.cpp \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/audioview.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/moc_mainwindow.cpp \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/mainwindow.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NPUKSKGWT2/../../../controller/../view/audioview.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NLOY5YBGEN/moc_uartreceiver.cpp \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NLOY5YBGEN/../../../model/uartreceiver.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NLOY5YBGEN/moc_usbscanner.cpp \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/NLOY5YBGEN/../../../model/usbscanner.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/moc_audioview.cpp \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/audioview.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/moc_mainwindow.cpp \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/videoview.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/audioview.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/playlistview.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/../model/playlist.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/../model/mediafile.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/../model/uartreceiver.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/../model/usbscanner.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/moc_playlistview.cpp \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/playlistview.h \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/moc_videoview.cpp \
- /home/d1fficult/DATN/MockProject/build/MockProject_autogen/75UR3EJMK3/../../../include/view/videoview.h
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/videoview.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/audioview.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/playlistview.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/../model/playlist.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/../model/mediafile.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/../model/uartreceiver.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/virtualkeyboard.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGridLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/../model/usbscanner.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/moc_playlistview.cpp \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/playlistview.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/moc_videoview.cpp \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/videoview.h \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/moc_virtualkeyboard.cpp \
+ /home/d1fficult/DATN/MockProject/build/MockProject_autogen/OTUN7GXZT4/../../../view/virtualkeyboard.h

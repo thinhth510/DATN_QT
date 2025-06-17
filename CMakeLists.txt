@@ -21,45 +21,47 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS
 )
 
 set(PROJECT_SOURCES
-    src/main.cpp
+    main.cpp
 
     # View sources
-    src/view/mainwindow.cpp
-    src/view/videoview.cpp
-    src/view/audioview.cpp
-    src/view/playlistview.cpp
+    view/mainwindow.cpp
+    view/videoview.cpp
+    view/audioview.cpp
+    view/playlistview.cpp
+    view/virtualkeyboard.cpp
 
     # Controller sources
-    src/controller/mediacontroller.cpp
-    src/controller/uartcontroller.cpp
+    controller/mediacontroller.cpp
+    controller/uartcontroller.cpp
 
     # Model sources
-    src/model/mediafile.cpp
-    src/model/playlist.cpp
-    src/model/uartreceiver.cpp
-    src/model/usbscanner.cpp
+    model/mediafile.cpp
+    model/playlist.cpp
+    model/uartreceiver.cpp
+    model/usbscanner.cpp
 
     # View headers
-    include/view/mainwindow.h
-    include/view/videoview.h
-    include/view/audioview.h
-    include/view/playlistview.h
+    view/mainwindow.h
+    view/videoview.h
+    view/audioview.h
+    view/playlistview.h
+    view/virtualkeyboard.h
 
     # Controller headers
-    include/controller/mediacontroller.h
-    include/controller/uartcontroller.h
+    controller/mediacontroller.h
+    controller/uartcontroller.h
 
     # Model headers
-    include/model/mediafile.h
-    include/model/playlist.h
-    include/model/uartreceiver.h
-    include/model/usbscanner.h
+    model/mediafile.h
+    model/playlist.h
+    model/uartreceiver.h
+    model/usbscanner.h
 
     # UI files
-    src/view/mainwindow.ui
-    src/view/videoview.ui
-    src/view/audioview.ui
-    src/view/playlistview.ui
+    view/mainwindow.ui
+    view/videoview.ui
+    view/audioview.ui
+    view/playlistview.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

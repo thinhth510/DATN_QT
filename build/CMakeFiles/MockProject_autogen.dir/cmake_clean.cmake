@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MockProject_autogen"
-  "MockProject_autogen/include/src/view/ui_audioview.h"
-  "MockProject_autogen/include/src/view/ui_mainwindow.h"
-  "MockProject_autogen/include/src/view/ui_playlistview.h"
-  "MockProject_autogen/include/src/view/ui_videoview.h"
+  "MockProject_autogen/include/view/ui_audioview.h"
+  "MockProject_autogen/include/view/ui_mainwindow.h"
+  "MockProject_autogen/include/view/ui_playlistview.h"
+  "MockProject_autogen/include/view/ui_videoview.h"
   "MockProject_autogen/mocs_compilation.cpp"
 )
 
