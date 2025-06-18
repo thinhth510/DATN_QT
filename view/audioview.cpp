@@ -7,7 +7,7 @@ AudioView::AudioView(const QString &audioPath, QWidget *parent)
       controller(new MediaController(this)),
       uartReceiver(new UARTReceiver(this)),
       totalDuration(0),
-      isPaused(true),
+      isPaused(false),
       isMuted(false)
 {
     ui->setupUi(this);
@@ -20,7 +20,7 @@ AudioView::AudioView(const QString &audioPath, QWidget *parent)
     ui->label_File_Name->setText(fileInfo.fileName());
 
     // Thiết lập icon cho các nút
-    ui->pushButton_Play_Pause->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
+    ui->pushButton_Play_Pause->setIcon(style()->standardIcon(QStyle::SP_MediaPause));
     ui->pushButton_Stop->setIcon(style()->standardIcon(QStyle::SP_MediaStop));
     ui->pushButton_Seek_Backward->setIcon(style()->standardIcon(QStyle::SP_MediaSeekBackward));
     ui->pushButton_Seek_Forward->setIcon(style()->standardIcon(QStyle::SP_MediaSeekForward));
@@ -46,6 +46,9 @@ AudioView::AudioView(const QString &audioPath, QWidget *parent)
     }
 
     ui->horizontalSlider_Duration->setRange(0, 0);
+
+    // Tự động phát audio khi mở cửa sổ
+    controller->play();
 
     // Thêm phím tắt F1 để chuyển đổi full screen
     QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F1), this);

@@ -73,13 +73,12 @@ Playlist PlaylistDAO::getPlaylistById(int playlistId) const {
 
 bool PlaylistDAO::addMediaFile(int playlistId, const MediaFile &file) {
     QSqlQuery query(m_db->connection());
-    query.prepare("INSERT INTO media_files (playlist_id, path, title, artist, album, composer, duration, genre, size) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    query.prepare("INSERT INTO media_files (playlist_id, path, title, artist, album, duration, genre, size) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
     query.addBindValue(playlistId);
     query.addBindValue(file.filePath());
     query.addBindValue(file.title());
     query.addBindValue(file.artist());
     query.addBindValue(file.album());
-    query.addBindValue(file.composer());
     query.addBindValue(file.duration());
     query.addBindValue(file.genre());
     query.addBindValue(file.fileSize());
@@ -96,7 +95,7 @@ bool PlaylistDAO::removeMediaFile(int mediaFileId) {
 QList<MediaFile> PlaylistDAO::getMediaFiles(int playlistId) const {
     QList<MediaFile> result;
     QSqlQuery query(m_db->connection());
-    query.prepare("SELECT path, title, artist, album, composer, duration, genre, size FROM media_files WHERE playlist_id=?");
+    query.prepare("SELECT path, title, artist, album, duration, genre, size FROM media_files WHERE playlist_id=?");
     query.addBindValue(playlistId);
     if (query.exec()) {
         while (query.next()) {

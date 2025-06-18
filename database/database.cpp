@@ -58,7 +58,6 @@ bool Database::initSchema() {
             title TEXT,
             artist TEXT,
             album TEXT,
-            composer TEXT,
             duration INTEGER,
             genre TEXT,
             size INTEGER,
