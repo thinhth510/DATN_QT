@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "database/mediafiledao.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -116,7 +117,7 @@ void MainWindow::setupPlaylistManager()
     connect(ui->playlistView, &QListView::doubleClicked,
             this, [this](const QModelIndex &index) {
         if (index.isValid() && m_currentPlaylist) {
-            PlaylistView *playlistWindow = new PlaylistView(m_currentPlaylist);
+            PlaylistView *playlistWindow = new PlaylistView(m_currentPlaylist, m_db);
             playlistWindow->setAttribute(Qt::WA_DeleteOnClose);
             playlistWindow->show();
         }
@@ -271,7 +272,7 @@ void MainWindow::on_actionDeletePlaylist_triggered()
     int index = ui->playlistComboBox->currentIndex();
     if (index >= 0 && index < m_playlists.size()) {
         int playlistId = m_playlists[index].id();
-        m_playlistDao->removePlaylist(playlistId);
+        m_playlistDao->deletePlaylist(playlistId);
         m_playlists.removeAt(index);
         ui->playlistComboBox->removeItem(index);
         m_playlistModel->setStringList(QStringList());
@@ -283,9 +284,12 @@ void MainWindow::on_playlistComboBox_currentIndexChanged(int index)
 {
     if (index >= 0 && index < m_playlists.size()) {
         m_currentPlaylist = &m_playlists[index];
+        // Lấy metadata từ database để hiển thị
+        MediaFileDAO mediaFileDao(m_db);
+        QList<MediaFile> files = mediaFileDao.getMediaFiles(m_currentPlaylist->id());
         QStringList fileNames;
-        for (const MediaFile &file : m_currentPlaylist->mediaFiles()) {
-            fileNames << file.title();
+        for (const MediaFile &f : files) {
+            fileNames << f.title();
         }
         m_playlistModel->setStringList(fileNames);
     }
@@ -298,14 +302,19 @@ void MainWindow::on_addToPlaylistButton_clicked()
     
     QString filePath = m_fileModel->filePath(index);
     if (!m_fileModel->isDir(index)) {
-        m_currentPlaylist->addMediaFile(filePath);
-        // Lưu vào database
-        if (m_currentPlaylist->id() != -1) {
-            m_playlistDao->addMediaFile(m_currentPlaylist->id(), MediaFile(filePath));
+        // Tạo MediaFile tạm để lấy metadata
+        MediaFile file(filePath);
+        if (file.isValid() && m_currentPlaylist->id() != -1) {
+            // Lưu metadata vào database qua MediaFileDAO
+            MediaFileDAO mediaFileDao(m_db);
+            mediaFileDao.addMediaFile(m_currentPlaylist->id(), file);
         }
+        // Update lại model hiển thị bằng cách lấy metadata từ database
+        MediaFileDAO mediaFileDao(m_db);
+        QList<MediaFile> files = mediaFileDao.getMediaFiles(m_currentPlaylist->id());
         QStringList fileNames;
-        for (const MediaFile &file : m_currentPlaylist->mediaFiles()) {
-            fileNames << file.title();
+        for (const MediaFile &f : files) {
+            fileNames << f.title();
         }
         m_playlistModel->setStringList(fileNames);
     }
@@ -316,8 +325,13 @@ void MainWindow::on_removeFromPlaylistButton_clicked()
     QModelIndex index = ui->playlistView->currentIndex();
     if (!index.isValid() || m_currentPlaylist == nullptr) return;
     int row = index.row();
-    if (row >= 0 && row < m_currentPlaylist->mediaFiles().size()) {
-        QString filePath = m_currentPlaylist->mediaFiles()[row].filePath();
+    
+    // Lấy danh sách file từ database
+    MediaFileDAO mediaFileDao(m_db);
+    QList<MediaFile> files = mediaFileDao.getMediaFiles(m_currentPlaylist->id());
+    
+    if (row >= 0 && row < files.size()) {
+        QString filePath = files[row].filePath();
         // Xóa trong database
         if (m_currentPlaylist->id() != -1) {
             // Tìm media file id trong database (giả sử chỉ có 1 file trùng path trong playlist)
@@ -327,9 +341,11 @@ void MainWindow::on_removeFromPlaylistButton_clicked()
             query.addBindValue(filePath);
             query.exec();
         }
-        m_currentPlaylist->removeMediaFile(filePath);
+        
+        // Update lại model hiển thị
+        files = mediaFileDao.getMediaFiles(m_currentPlaylist->id());
         QStringList fileNames;
-        for (const MediaFile &file : m_currentPlaylist->mediaFiles()) {
+        for (const MediaFile &file : files) {
             fileNames << file.title();
         }
         m_playlistModel->setStringList(fileNames);
@@ -348,6 +364,7 @@ void MainWindow::loadPlaylists()
         ui->playlistComboBox->setCurrentIndex(0);
     } else {
         m_currentPlaylist = nullptr;
+        m_playlistModel->setStringList(QStringList());
     }
 }
 
@@ -383,12 +400,10 @@ void MainWindow::on_playButton_clicked()
             m_playlistView->close();
             // Không cần delete vì Qt::WA_DeleteOnClose sẽ tự động xử lý
         }
-        
-        // Tạo PlaylistView mới
-        m_playlistView = new PlaylistView(m_currentPlaylist, this);
+        // Tạo PlaylistView mới, truyền thêm m_db
+        m_playlistView = new PlaylistView(m_currentPlaylist, m_db, this);
         m_playlistView->setAttribute(Qt::WA_DeleteOnClose);
         m_playlistView->show();
-        
         // Tự động bắt đầu phát
         QMetaObject::invokeMethod(m_playlistView, "on_playButton_clicked", Qt::QueuedConnection);
     }

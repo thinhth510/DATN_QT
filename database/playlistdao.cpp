@@ -15,12 +15,7 @@ int PlaylistDAO::addPlaylist(const Playlist &playlist) {
         qWarning() << "Add playlist failed:" << query.lastError().text();
         return -1;
     }
-    int playlistId = query.lastInsertId().toInt();
-    // Tự động lưu toàn bộ media file
-    for (const MediaFile &file : playlist.mediaFiles()) {
-        addMediaFile(playlistId, file);
-    }
-    return playlistId;
+    return query.lastInsertId().toInt();
 }
 
 bool PlaylistDAO::updatePlaylist(const Playlist &playlist) {
@@ -28,31 +23,36 @@ bool PlaylistDAO::updatePlaylist(const Playlist &playlist) {
     query.prepare("UPDATE playlists SET name=?, modified_at=? WHERE id=?");
     query.addBindValue(playlist.name());
     query.addBindValue(playlist.modifiedAt().toString(Qt::ISODate));
-    query.addBindValue(playlist.name()); // Giả sử name là id, bạn nên sửa lại thành id thực tế
+    query.addBindValue(playlist.id());
     return query.exec();
 }
 
-bool PlaylistDAO::removePlaylist(int playlistId) {
+bool PlaylistDAO::deletePlaylist(int playlistId)
+{
     QSqlQuery query(m_db->connection());
-    query.prepare("DELETE FROM playlists WHERE id=?");
+    query.prepare("DELETE FROM playlists WHERE id = ?");
     query.addBindValue(playlistId);
     return query.exec();
 }
 
-QList<Playlist> PlaylistDAO::getAllPlaylists() const {
-    QList<Playlist> result;
+QList<Playlist> PlaylistDAO::getAllPlaylists()
+{
+    QList<Playlist> playlists;
     QSqlQuery query(m_db->connection());
-    query.exec("SELECT id, name, created_at, modified_at FROM playlists");
-    while (query.next()) {
-        int id = query.value(0).toInt();
-        Playlist pl(query.value(1).toString(), id);
-        QList<MediaFile> files = getMediaFiles(id);
-        for (const MediaFile &file : files) {
-            pl.addMediaFile(file.filePath());
+    query.prepare("SELECT id, name, created_at, modified_at FROM playlists ORDER BY name");
+    
+    if (query.exec()) {
+        while (query.next()) {
+            Playlist playlist;
+            playlist.setId(query.value("id").toInt());
+            playlist.setName(query.value("name").toString());
+            playlist.setCreatedAt(query.value("created_at").toDateTime());
+            playlist.setModifiedAt(query.value("modified_at").toDateTime());
+            playlists.append(playlist);
         }
-        result.append(pl);
     }
-    return result;
+    
+    return playlists;
 }
 
 Playlist PlaylistDAO::getPlaylistById(int playlistId) const {
@@ -60,48 +60,12 @@ Playlist PlaylistDAO::getPlaylistById(int playlistId) const {
     query.prepare("SELECT id, name, created_at, modified_at FROM playlists WHERE id=?");
     query.addBindValue(playlistId);
     if (query.exec() && query.next()) {
-        int id = query.value(0).toInt();
-        Playlist pl(query.value(1).toString(), id);
-        QList<MediaFile> files = getMediaFiles(id);
-        for (const MediaFile &file : files) {
-            pl.addMediaFile(file.filePath());
-        }
-        return pl;
+        Playlist playlist;
+        playlist.setId(query.value("id").toInt());
+        playlist.setName(query.value("name").toString());
+        playlist.setCreatedAt(query.value("created_at").toDateTime());
+        playlist.setModifiedAt(query.value("modified_at").toDateTime());
+        return playlist;
     }
     return Playlist();
-}
-
-bool PlaylistDAO::addMediaFile(int playlistId, const MediaFile &file) {
-    QSqlQuery query(m_db->connection());
-    query.prepare("INSERT INTO media_files (playlist_id, path, title, artist, album, duration, genre, size) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    query.addBindValue(playlistId);
-    query.addBindValue(file.filePath());
-    query.addBindValue(file.title());
-    query.addBindValue(file.artist());
-    query.addBindValue(file.album());
-    query.addBindValue(file.duration());
-    query.addBindValue(file.genre());
-    query.addBindValue(file.fileSize());
-    return query.exec();
-}
-
-bool PlaylistDAO::removeMediaFile(int mediaFileId) {
-    QSqlQuery query(m_db->connection());
-    query.prepare("DELETE FROM media_files WHERE id=?");
-    query.addBindValue(mediaFileId);
-    return query.exec();
-}
-
-QList<MediaFile> PlaylistDAO::getMediaFiles(int playlistId) const {
-    QList<MediaFile> result;
-    QSqlQuery query(m_db->connection());
-    query.prepare("SELECT path, title, artist, album, duration, genre, size FROM media_files WHERE playlist_id=?");
-    query.addBindValue(playlistId);
-    if (query.exec()) {
-        while (query.next()) {
-            MediaFile file(query.value(0).toString());
-            result.append(file);
-        }
-    }
-    return result;
 } 

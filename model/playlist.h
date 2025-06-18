@@ -44,61 +44,6 @@ public:
      */
     void setName(const QString &name);
 
-    // Media File Management
-    /**
-     * @brief Lấy danh sách các file media
-     * @return QList chứa các MediaFile
-     */
-    QList<MediaFile> mediaFiles() const;
-    
-    /**
-     * @brief Thêm file media vào playlist
-     * @param filePath Đường dẫn đến file media
-     */
-    void addMediaFile(const QString &filePath);
-    
-    /**
-     * @brief Xóa file media khỏi playlist
-     * @param filePath Đường dẫn đến file cần xóa
-     */
-    void removeMediaFile(const QString &filePath);
-    
-    /**
-     * @brief Xóa tất cả file media khỏi playlist
-     */
-    void clear();
-
-    // Playlist Statistics
-    /**
-     * @brief Tính tổng thời lượng của playlist
-     * @return Tổng thời lượng (milliseconds)
-     */
-    int totalDuration() const;
-    
-    /**
-     * @brief Lấy tổng thời lượng dạng chuỗi (HH:MM:SS)
-     * @return Chuỗi biểu diễn thời lượng
-     */
-    QString totalDurationString() const;
-    
-    /**
-     * @brief Đếm số lượng file trong playlist
-     * @return Số lượng file
-     */
-    int fileCount() const;
-    
-    /**
-     * @brief Tính tổng kích thước của các file
-     * @return Tổng kích thước (bytes)
-     */
-    qint64 totalSize() const;
-    
-    /**
-     * @brief Lấy tổng kích thước dạng chuỗi (KB/MB/GB)
-     * @return Chuỗi biểu diễn kích thước
-     */
-    QString totalSizeString() const;
-
     // Timestamp Information
     /**
      * @brief Lấy thời điểm tạo playlist
@@ -107,10 +52,22 @@ public:
     QDateTime createdAt() const;
     
     /**
+     * @brief Đặt thời điểm tạo playlist
+     * @param createdAt Thời điểm tạo mới
+     */
+    void setCreatedAt(const QDateTime &createdAt);
+    
+    /**
      * @brief Lấy thời điểm chỉnh sửa cuối
      * @return QDateTime của lần chỉnh sửa cuối
      */
     QDateTime modifiedAt() const;
+    
+    /**
+     * @brief Đặt thời điểm chỉnh sửa cuối
+     * @param modifiedAt Thời điểm chỉnh sửa mới
+     */
+    void setModifiedAt(const QDateTime &modifiedAt);
 
     // Persistence Operations
     // (Đã chuyển sang DAO, không còn lưu file ở đây)
@@ -120,7 +77,7 @@ public:
 
 private:
     QString m_name;              ///< Tên của playlist
-    QList<MediaFile> m_mediaFiles; ///< Danh sách các file media
+    // QList<MediaFile> m_mediaFiles; ///< Đã bỏ, không giữ metadata trong RAM
     QDateTime m_createdAt;       ///< Thời điểm tạo playlist
     QDateTime m_modifiedAt;      ///< Thời điểm chỉnh sửa cuối
     int m_id; // id của playlist trong database

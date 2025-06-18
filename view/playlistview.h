@@ -6,6 +6,7 @@
 
 #include "../model/playlist.h"
 #include "../model/uartreceiver.h"
+#include "database/database.h"
 
 namespace Ui {
 class PlaylistView;
@@ -16,7 +17,7 @@ class PlaylistView : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit PlaylistView(Playlist *playlist, QWidget *parent = nullptr);
+    explicit PlaylistView(Playlist *playlist, Database *db, QWidget *parent = nullptr);
     ~PlaylistView();
 
     // UART Interface
@@ -36,6 +37,7 @@ private slots:
     void on_volumeSlider_valueChanged(int value);
     void on_positionSlider_sliderMoved(int position);
     void on_playlistView_doubleClicked(const QModelIndex &index);
+    void on_volumeButton_clicked();
     
     void updateDuration(qint64 duration);
     void updatePosition(qint64 position);
@@ -55,6 +57,7 @@ private:
     // Media State
     int m_currentIndex;
     bool m_isPlaying;
+    bool isMuted = false;
 
     // Setup Methods
     void setupUI();
@@ -64,6 +67,8 @@ private:
     void loadFile(int index);
     void updateCurrentFileInfo();
     QString formatTime(qint64 ms) const;
+
+    Database *m_db;
 };
 
 #endif // PLAYLISTVIEW_H 

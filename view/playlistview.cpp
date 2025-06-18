@@ -1,7 +1,8 @@
 #include "playlistview.h"
 #include "ui_playlistview.h"
+#include "database/mediafiledao.h"
 
-PlaylistView::PlaylistView(Playlist *playlist, QWidget *parent)
+PlaylistView::PlaylistView(Playlist *playlist, Database *db, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::PlaylistView)
     , uartReceiver(new UARTReceiver(this))
@@ -10,6 +11,8 @@ PlaylistView::PlaylistView(Playlist *playlist, QWidget *parent)
     , m_audioOutput(new QAudioOutput(this))
     , m_currentIndex(-1)
     , m_isPlaying(false)
+    , isMuted(false)
+    , m_db(db)
 {
     ui->setupUi(this);
     setupUI();
@@ -90,10 +93,17 @@ void PlaylistView::setupUI()
     ui->stopButton->setText("");
     ui->stopButton->setFixedSize(40, 40);
 
+    // Volume button
+    ui->volumeButton->setIcon(style()->standardIcon(QStyle::SP_MediaVolume));
+    ui->stopButton->setIconSize(iconSize);
+    ui->stopButton->setText("");
+    ui->stopButton->setFixedSize(40, 40);
+
     // Cài đặt slider volume
-    ui->volumeSlider->setMinimum(1);
+    ui->volumeSlider->setMinimum(0);
     ui->volumeSlider->setMaximum(100);
     ui->volumeSlider->setValue(30);
+
 }
 
 void PlaylistView::setupConnections()
@@ -120,9 +130,11 @@ void PlaylistView::updatePlaylistModel()
 {
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->playlistView->model());
     model->removeRows(0, model->rowCount());
-    
+    if (!m_playlist) return;
+    MediaFileDAO mediaFileDao(m_db);
+    QList<MediaFile> files = mediaFileDao.getMediaFiles(m_playlist->id());
     int row = 0;
-    for (const MediaFile &file : m_playlist->mediaFiles()) {
+    for (const MediaFile &file : files) {
         QList<QStandardItem*> items;
         items << new QStandardItem(file.title());
         items << new QStandardItem(file.artist());
@@ -130,18 +142,20 @@ void PlaylistView::updatePlaylistModel()
         items << new QStandardItem(file.genre());
         items << new QStandardItem(file.durationString());
         items << new QStandardItem(file.fileSizeString());
-        
         model->insertRow(row++, items);
     }
 }
 
 void PlaylistView::loadFile(int index)
 {
-    if (index < 0 || index >= m_playlist->mediaFiles().size())
+    MediaFileDAO mediaFileDao(m_db);
+    QList<MediaFile> files = mediaFileDao.getMediaFiles(m_playlist->id());
+    
+    if (index < 0 || index >= files.size())
         return;
         
     m_currentIndex = index;
-    const MediaFile &file = m_playlist->mediaFiles()[index];
+    const MediaFile &file = files[index];
     m_player->setSource(QUrl::fromLocalFile(file.filePath()));
     updateCurrentFileInfo();
     m_player->play();
@@ -151,8 +165,11 @@ void PlaylistView::loadFile(int index)
 
 void PlaylistView::updateCurrentFileInfo()
 {
-    if (m_currentIndex >= 0 && m_currentIndex < m_playlist->mediaFiles().size()) {
-        const MediaFile &file = m_playlist->mediaFiles()[m_currentIndex];
+    MediaFileDAO mediaFileDao(m_db);
+    QList<MediaFile> files = mediaFileDao.getMediaFiles(m_playlist->id());
+    
+    if (m_currentIndex >= 0 && m_currentIndex < files.size()) {
+        const MediaFile &file = files[m_currentIndex];
         ui->titleLabel->setText(file.title());
         ui->artistLabel->setText(file.artist());
         ui->albumLabel->setText(file.album());
@@ -173,7 +190,10 @@ QString PlaylistView::formatTime(qint64 ms) const
 
 void PlaylistView::on_playButton_clicked()
 {
-    if (m_currentIndex == -1 && !m_playlist->mediaFiles().isEmpty()) {
+    MediaFileDAO mediaFileDao(m_db);
+    QList<MediaFile> files = mediaFileDao.getMediaFiles(m_playlist->id());
+    
+    if (m_currentIndex == -1 && !files.isEmpty()) {
         loadFile(0);
         return;
     }
@@ -191,11 +211,14 @@ void PlaylistView::on_playButton_clicked()
 
 void PlaylistView::on_nextButton_clicked()
 {
-    if (m_playlist->mediaFiles().isEmpty()) {
+    MediaFileDAO mediaFileDao(m_db);
+    QList<MediaFile> files = mediaFileDao.getMediaFiles(m_playlist->id());
+    
+    if (files.isEmpty()) {
         return;
     }
     
-    if (m_currentIndex < m_playlist->mediaFiles().size() - 1) {
+    if (m_currentIndex < files.size() - 1) {
         loadFile(m_currentIndex + 1);
     } else {
         // Nếu đang ở bài cuối, quay về bài đầu
@@ -205,8 +228,17 @@ void PlaylistView::on_nextButton_clicked()
 
 void PlaylistView::on_previousButton_clicked()
 {
+    MediaFileDAO mediaFileDao(m_db);
+    QList<MediaFile> files = mediaFileDao.getMediaFiles(m_playlist->id());
+    
+    if (files.isEmpty()) {
+        return;
+    }
     if (m_currentIndex > 0) {
         loadFile(m_currentIndex - 1);
+    } else {
+        // Nếu đang ở bài đầu, quay về bài cuối
+        loadFile(files.size() - 1);
     }
 }
 
@@ -253,7 +285,10 @@ void PlaylistView::updateMetadata()
 void PlaylistView::handleMediaStatusChanged(QMediaPlayer::MediaStatus status)
 {
     if (status == QMediaPlayer::EndOfMedia) {
-        if (m_currentIndex < m_playlist->mediaFiles().size() - 1) {
+        MediaFileDAO mediaFileDao(m_db);
+        QList<MediaFile> files = mediaFileDao.getMediaFiles(m_playlist->id());
+        
+        if (m_currentIndex < files.size() - 1) {
             loadFile(m_currentIndex + 1);
         } else {
             m_player->stop();
@@ -308,4 +343,11 @@ void PlaylistView::toggleFullScreen()
     } else {
         showFullScreen();
     }
+}
+
+void PlaylistView::on_volumeButton_clicked()
+{
+    isMuted = !isMuted;
+    m_audioOutput->setMuted(isMuted);
+    ui->volumeButton->setIcon(style()->standardIcon(isMuted ? QStyle::SP_MediaVolumeMuted : QStyle::SP_MediaVolume));
 }

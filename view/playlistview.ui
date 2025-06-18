@@ -363,6 +363,41 @@ QPushButton:pressed {
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="volumeButton">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #0078D7;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+QPushButton:hover {
+    background-color: #1E88E5;
+}
+
+QPushButton:pressed {
+    background-color: #005A9E;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QSlider" name="volumeSlider">
          <property name="enabled">
           <bool>true</bool>

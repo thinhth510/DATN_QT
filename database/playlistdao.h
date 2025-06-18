@@ -14,14 +14,14 @@ public:
 
     int addPlaylist(const Playlist &playlist);
     bool updatePlaylist(const Playlist &playlist);
-    bool removePlaylist(int playlistId);
-    QList<Playlist> getAllPlaylists() const;
+    bool deletePlaylist(int playlistId);
+    QList<Playlist> getAllPlaylists();
     Playlist getPlaylistById(int playlistId) const;
 
-    // Media file operations
-    bool addMediaFile(int playlistId, const MediaFile &file);
-    bool removeMediaFile(int mediaFileId);
-    QList<MediaFile> getMediaFiles(int playlistId) const;
+    // XÓA các hàm thao tác media file khỏi đây
+    // bool addMediaFile(int playlistId, const MediaFile &file);
+    // bool removeMediaFile(int mediaFileId);
+    // QList<MediaFile> getMediaFiles(int playlistId) const;
 
 private:
     Database *m_db;

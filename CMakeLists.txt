@@ -44,6 +44,7 @@ set(PROJECT_SOURCES
     # Database sources
     database/database.cpp   
     database/playlistdao.cpp
+    database/mediafiledao.cpp
 
     # View headers
     view/mainwindow.h
@@ -65,6 +66,7 @@ set(PROJECT_SOURCES
     # Database headers
     database/database.h
     database/playlistdao.h
+    database/mediafiledao.h
 
     # UI files
     view/mainwindow.ui
