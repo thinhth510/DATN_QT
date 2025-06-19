@@ -11,6 +11,7 @@ VirtualKeyboard::VirtualKeyboard(QWidget *parent)
     , closeButton(nullptr)
 {
     setWindowFlags(Qt::Tool | Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint);
+    setWindowOpacity(0.5);
     mainLayout = new QGridLayout(this);
     createButtons();
     setFixedSize(800, 320);

@@ -140,7 +140,7 @@ bool MainWindow::eventFilter(QObject *watched, QEvent *event)
         
         // Với màn hình 1024x600, căn giữa bàn phím
         int x = (1024 - m_virtualKeyboard->width()) / 2;  // Căn giữa theo chiều ngang
-        int y = 600 - m_virtualKeyboard->height() - 10;   // Đặt ở dưới cùng, cách lề 10px
+        int y = 600 - m_virtualKeyboard->height();   // Đặt ở dưới cùng, cách lề 10px
         
         m_virtualKeyboard->move(x, y);
         m_virtualKeyboard->show();
@@ -245,15 +245,76 @@ void MainWindow::on_actionScan_USB_triggered()
 
 void MainWindow::on_actionNewPlaylist_triggered()
 {
-    bool ok;
-    QString name = QInputDialog::getText(this, tr("New Playlist"),
-                                       tr("Playlist name:"), QLineEdit::Normal,
-                                       "New Playlist", &ok);
-    if (ok && !name.isEmpty()) {
+    // Tạo tên playlist mặc định
+    QString defaultName = "New Playlist";
+    int counter = 1;
+    
+    // Tìm số thứ tự tiếp theo cho "New Playlist"
+    while (true) {
+        QString testName = QString("%1 %2").arg(defaultName).arg(counter);
+        bool nameExists = false;
+        for (const Playlist &pl : m_playlists) {
+            if (pl.name().toLower() == testName.toLower()) {
+                nameExists = true;
+                break;
+            }
+        }
+        if (!nameExists) {
+            defaultName = testName;
+            break;
+        }
+        counter++;
+    }
+    
+    // Làm cho comboBox có thể edit được
+    ui->playlistComboBox->setEditable(true);
+    ui->playlistComboBox->setCurrentText(defaultName);
+    ui->playlistComboBox->setFocus();
+    
+    // Lưu trạng thái cũ để khôi phục nếu cần
+    int oldIndex = ui->playlistComboBox->currentIndex();
+    
+    // Kết nối signal để xử lý khi người dùng nhập xong
+    connect(ui->playlistComboBox->lineEdit(), &QLineEdit::editingFinished, this, [this, oldIndex]() {
+        QString name = ui->playlistComboBox->currentText().trimmed();
+        
+        // Khôi phục trạng thái không edit được ngay lập tức
+        ui->playlistComboBox->setEditable(false);
+        disconnect(ui->playlistComboBox->lineEdit(), &QLineEdit::editingFinished, this, nullptr);
+        
+        if (name.isEmpty()) {
+            // Nếu tên rỗng, khôi phục index cũ
+            if (oldIndex >= 0 && oldIndex < ui->playlistComboBox->count()) {
+                ui->playlistComboBox->setCurrentIndex(oldIndex);
+            }
+            return;
+        }
+        
+        // Kiểm tra xem tên playlist đã tồn tại chưa
+        bool nameExists = false;
+        for (const Playlist &pl : m_playlists) {
+            if (pl.name().toLower() == name.toLower()) {
+                nameExists = true;
+                break;
+            }
+        }
+        
+        if (nameExists) {
+            // Hiển thị thông báo lỗi và khôi phục index cũ
+            QMessageBox::warning(this, tr("Error"), 
+                tr("The Playlist name already exists, please enter a different name.").arg(name));
+            if (oldIndex >= 0 && oldIndex < ui->playlistComboBox->count()) {
+                ui->playlistComboBox->setCurrentIndex(oldIndex);
+            }
+            return;
+        }
+        
+        // Tạo playlist mới
         Playlist playlist(name);
         int playlistId = m_playlistDao->addPlaylist(playlist);
         loadPlaylists();
-        // Tìm index của playlist vừa tạo
+        
+        // Tìm index của playlist vừa tạo và chọn nó
         int newIndex = -1;
         for (int i = 0; i < m_playlists.size(); ++i) {
             if (m_playlists[i].id() == playlistId) {
@@ -264,7 +325,12 @@ void MainWindow::on_actionNewPlaylist_triggered()
         if (newIndex != -1) {
             ui->playlistComboBox->setCurrentIndex(newIndex);
         }
-    }
+    });
+    
+    // Kết nối signal để xử lý khi nhấn Enter
+    connect(ui->playlistComboBox->lineEdit(), &QLineEdit::returnPressed, this, [this]() {
+        ui->playlistComboBox->lineEdit()->clearFocus();
+    });
 }
 
 void MainWindow::on_actionDeletePlaylist_triggered()
