@@ -1,1 +1,0 @@
-QPointer<PlaylistWindow> m_playlistWindow; 

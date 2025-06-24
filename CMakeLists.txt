@@ -48,18 +48,14 @@ set(PROJECT_SOURCES
     model/uartreceiver.h
     model/usbscanner.h
 
-
-
     # Database sources
     database/database.cpp   
     database/playlistdao.cpp
     database/mediafiledao.cpp
+    
     database/database.h
     database/playlistdao.h
     database/mediafiledao.h
-
-
-
 
     # UI files
     view/mainwindow.ui
