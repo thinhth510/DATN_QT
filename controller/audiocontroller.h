@@ -1,21 +1,21 @@
-#ifndef AUDIOVIEW_H
-#define AUDIOVIEW_H
+#ifndef AUDIOCONTROLLER_H
+#define AUDIOCONTROLLER_H
 
 #include <QtWidgets>
 
-#include "../controller/mediacontroller.h"
+#include "mediacontroller.h"
 #include "../model/uartreceiver.h"
 
 namespace Ui {
-class AudioView;
+class AudioWindow;
 }
 
-class AudioView : public QMainWindow {
+class AudioWindow : public QMainWindow {
     Q_OBJECT
 
 public:
-    explicit AudioView(const QString &audioPath, QWidget *parent = nullptr);
-    ~AudioView();
+    explicit AudioWindow(const QString &audioPath, QWidget *parent = nullptr);
+    ~AudioWindow();
 
     // UART Interface
     void handleUARTCommand(const QString &command);
@@ -40,7 +40,7 @@ private slots:
 
 private:
     // UI Components
-    Ui::AudioView *ui;
+    Ui::AudioWindow *ui;
     MediaController *controller;
     UARTReceiver *uartReceiver;
 
@@ -53,4 +53,4 @@ private:
     void updateDurationDisplay(qint64 currentSeconds);
 };
 
-#endif // AUDIOVIEW_H
+#endif // AUDIOCONTROLLER_H

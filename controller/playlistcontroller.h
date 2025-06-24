@@ -1,24 +1,28 @@
-#ifndef PLAYLISTVIEW_H
-#define PLAYLISTVIEW_H
+#ifndef PLAYLISTCONTROLLER_H
+#define PLAYLISTCONTROLLER_H
 
 #include <QtWidgets>
 #include <QtMultimedia>
 
 #include "../model/playlist.h"
 #include "../model/uartreceiver.h"
+
+#include "mediacontroller.h"
+
 #include "database/database.h"
+#include "database/mediafiledao.h"
 
 namespace Ui {
-class PlaylistView;
+class PlaylistWindow;
 }
 
-class PlaylistView : public QMainWindow
+class PlaylistWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit PlaylistView(Playlist *playlist, Database *db, QWidget *parent = nullptr);
-    ~PlaylistView();
+    explicit PlaylistWindow(Playlist *playlist, Database *db, QWidget *parent = nullptr);
+    ~PlaylistWindow();
 
     // UART Interface
     void handleUARTCommand(const QString &command);
@@ -39,19 +43,21 @@ private slots:
     void on_playlistView_doubleClicked(const QModelIndex &index);
     void on_volumeButton_clicked();
     
+    // MediaController slots
     void updateDuration(qint64 duration);
     void updatePosition(qint64 position);
     void updateMetadata();
     void handleMediaStatusChanged(QMediaPlayer::MediaStatus status);
     void handleStateChanged(QMediaPlayer::PlaybackState state);
+    void handleCurrentIndexChanged(int index);
+    void handlePlaylistEnded();
     void toggleFullScreen();
 
 private:
     // UI Components
-    Ui::PlaylistView *ui;
+    Ui::PlaylistWindow *ui;
     Playlist *m_playlist;
-    QMediaPlayer *m_player;
-    QAudioOutput *m_audioOutput;
+    MediaController *m_controller;
     UARTReceiver *uartReceiver;
 
     // Media State
@@ -64,11 +70,11 @@ private:
     void setupConnections();
     void setupStyle();
     void updatePlaylistModel();
-    void loadFile(int index);
+    void loadPlaylist();
     void updateCurrentFileInfo();
     QString formatTime(qint64 ms) const;
 
     Database *m_db;
 };
 
-#endif // PLAYLISTVIEW_H 
+#endif // PLAYLISTCONTROLLER_H 

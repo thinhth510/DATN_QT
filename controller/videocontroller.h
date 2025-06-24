@@ -1,22 +1,22 @@
-#ifndef VIDEOVIEW_H
-#define VIDEOVIEW_H
+#ifndef VIDEOCONTROLLER_H
+#define VIDEOCONTROLLER_H
 
 #include <QtWidgets>
 #include <QtMultimediaWidgets>
 
-#include "../controller/mediacontroller.h"
+#include "mediacontroller.h"
 #include "../model/uartreceiver.h"
 
 namespace Ui {
-class VideoView;
+class VideoWindow;
 }
 
-class VideoView : public QMainWindow {
+class VideoWindow : public QMainWindow {
     Q_OBJECT
 
 public:
-    explicit VideoView(const QString &videoPath, QWidget *parent = nullptr);
-    ~VideoView();
+    explicit VideoWindow(const QString &videoPath, QWidget *parent = nullptr);
+    ~VideoWindow();
 
     // UART Interface
     void handleUARTCommand(const QString &command);
@@ -41,7 +41,7 @@ private slots:
 
 private:
     // UI Components
-    Ui::VideoView *ui;
+    Ui::VideoWindow *ui;
     MediaController *controller;
     UARTReceiver *uartReceiver;
     QVideoWidget *videoWidget;
@@ -55,4 +55,4 @@ private:
     void updateDurationDisplay(qint64 currentSeconds);
 };
 
-#endif // VIDEOVIEW_H
+#endif // VIDEOCONTROLLER_H

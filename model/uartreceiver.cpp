@@ -102,4 +102,9 @@ void UARTReceiver::processCommand(const QString &command)
     } else {
         qDebug() << "Invalid command received:" << command;
     }
+}
+
+UARTReceiver* UARTReceiver::getInstance() {
+    static UARTReceiver instance;
+    return &instance;
 } 

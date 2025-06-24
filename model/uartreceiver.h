@@ -16,6 +16,8 @@ public:
     bool startListening(const QString &portName = "/dev/ttyACM0", int baudRate = 9600);
     void stopListening();
 
+    static UARTReceiver* getInstance();
+
 signals:
     // UART Events
     void controlCommandReceived(const QString &command);

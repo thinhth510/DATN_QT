@@ -24,16 +24,18 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS
 set(PROJECT_SOURCES
     main.cpp
 
-    # View sources
-    view/mainwindow.cpp
-    view/videoview.cpp
-    view/audioview.cpp
-    view/playlistview.cpp
-    view/virtualkeyboard.cpp
-
     # Controller sources
     controller/mediacontroller.cpp
-    controller/uartcontroller.cpp
+    controller/audiocontroller.cpp
+    controller/videocontroller.cpp
+    controller/playlistcontroller.cpp
+    controller/maincontroller.cpp
+
+    controller/mediacontroller.h
+    controller/audiocontroller.h   
+    controller/videocontroller.h
+    controller/playlistcontroller.h
+    controller/maincontroller.h
 
     # Model sources
     model/mediafile.cpp
@@ -41,62 +43,55 @@ set(PROJECT_SOURCES
     model/uartreceiver.cpp
     model/usbscanner.cpp
 
-    # Database sources
-    database/database.cpp   
-    database/playlistdao.cpp
-    database/mediafiledao.cpp
-
-    # View headers
-    view/mainwindow.h
-    view/videoview.h
-    view/audioview.h
-    view/playlistview.h
-    view/virtualkeyboard.h
-
-    # Controller headers
-    controller/mediacontroller.h
-    controller/uartcontroller.h
-
-    # Model headers
     model/mediafile.h
     model/playlist.h
     model/uartreceiver.h
     model/usbscanner.h
 
-    # Database headers
+
+
+    # Database sources
+    database/database.cpp   
+    database/playlistdao.cpp
+    database/mediafiledao.cpp
     database/database.h
     database/playlistdao.h
     database/mediafiledao.h
 
+
+
+
     # UI files
     view/mainwindow.ui
-    view/videoview.ui
-    view/audioview.ui
-    view/playlistview.ui
+    view/videowindow.ui
+    view/audiowindow.ui
+    view/playlistwindow.ui
+    view/virtualkeyboard.cpp
+    view/virtualkeyboard.h
 )
-
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(MockProject
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
+    set_property(TARGET MockProject PROPERTY AUTOUIC_SEARCH_PATHS "${CMAKE_SOURCE_DIR}/view")
 else()
     if(ANDROID)
         add_library(MockProject SHARED
             ${PROJECT_SOURCES}
         )
+        set_property(TARGET MockProject PROPERTY AUTOUIC_SEARCH_PATHS "${CMAKE_SOURCE_DIR}/view")
     else()
         add_executable(MockProject
             ${PROJECT_SOURCES}
         )
+        set_property(TARGET MockProject PROPERTY AUTOUIC_SEARCH_PATHS "${CMAKE_SOURCE_DIR}/view")
     endif()
 endif()
 
 target_include_directories(MockProject PRIVATE
     ${CMAKE_SOURCE_DIR}
-    ${CMAKE_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/src
 )
 
 target_link_libraries(MockProject PRIVATE
@@ -131,3 +126,4 @@ install(TARGETS MockProject
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(MockProject)
 endif()
+

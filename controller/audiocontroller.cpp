@@ -1,11 +1,11 @@
-#include "audioview.h"
-#include "ui_audioview.h"
+#include "audiocontroller.h"
+#include "ui_audiowindow.h"
 
-AudioView::AudioView(const QString &audioPath, QWidget *parent)
+AudioWindow::AudioWindow(const QString &audioPath, QWidget *parent)
     : QMainWindow(parent),
-      ui(new Ui::AudioView),
+      ui(new Ui::AudioWindow),
       controller(new MediaController(this)),
-      uartReceiver(new UARTReceiver(this)),
+      uartReceiver(UARTReceiver::getInstance()),
       totalDuration(0),
       isPaused(false),
       isMuted(false)
@@ -27,45 +27,46 @@ AudioView::AudioView(const QString &audioPath, QWidget *parent)
     ui->pushButton_Volume->setIcon(style()->standardIcon(QStyle::SP_MediaVolume));
 
     // Cài đặt slider volume
-    ui->horizontalSlider_Volume->setMinimum(1);
+    ui->horizontalSlider_Volume->setMinimum(0);
     ui->horizontalSlider_Volume->setMaximum(100);
     ui->horizontalSlider_Volume->setValue(30);
 
-    // Kết nối tín hiệu từ controller
-    connect(controller, &MediaController::durationChanged, this, &AudioView::handleDurationChanged);
-    connect(controller, &MediaController::positionChanged, this, &AudioView::handlePositionChanged);
-
-    // Kết nối tín hiệu UART
-    connect(uartReceiver, &UARTReceiver::controlCommandReceived, this, &AudioView::handleUARTCommand);
-    connect(uartReceiver, &UARTReceiver::numberReceived, this, &AudioView::handleUARTNumber);
-    connect(uartReceiver, &UARTReceiver::errorOccurred, this, &AudioView::handleUARTError);
-
-    // Khởi động UART
-    if (!uartReceiver->startListening()) {
-        qDebug() << "Failed to start UART listening in AudioView";
-    }
-
+    // Cài đặt slider duration
     ui->horizontalSlider_Duration->setRange(0, 0);
+
+    // Kết nối tín hiệu từ controller
+    connect(controller, &MediaController::durationChanged, this, &AudioWindow::handleDurationChanged);
+    connect(controller, &MediaController::positionChanged, this, &AudioWindow::handlePositionChanged);
+
+    // Kết nối tín hiệu từ UARTReceiver
+    connect(uartReceiver, &UARTReceiver::controlCommandReceived, this, &AudioWindow::handleUARTCommand);
+    connect(uartReceiver, &UARTReceiver::numberReceived, this, &AudioWindow::handleUARTNumber);
+    connect(uartReceiver, &UARTReceiver::errorOccurred, this, &AudioWindow::handleUARTError);
+
+    // Khởi động UART nếu chưa được khởi động
+    if (!uartReceiver->startListening()) {
+        qDebug() << "Failed to start UART listening in AudioWindow";
+    }
 
     // Tự động phát audio khi mở cửa sổ
     controller->play();
 
     // Thêm phím tắt F1 để chuyển đổi full screen
     QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F1), this);
-    connect(fullScreenShortcut, &QShortcut::activated, this, &AudioView::toggleFullScreen);
+    connect(fullScreenShortcut, &QShortcut::activated, this, &AudioWindow::toggleFullScreen);
     showFullScreen();
 }
 
-AudioView::~AudioView() {
+AudioWindow::~AudioWindow() {
+    // Dừng UARTReceiver nếu cần
     if (uartReceiver) {
         uartReceiver->stopListening();
-        delete uartReceiver;
-        uartReceiver = nullptr;
     }
     delete ui;
 }
 
-void AudioView::closeEvent(QCloseEvent *event) {
+void AudioWindow::closeEvent(QCloseEvent *event) {
+    // Dừng UARTReceiver nếu cần
     if (uartReceiver) {
         uartReceiver->stopListening();
     }
@@ -73,12 +74,12 @@ void AudioView::closeEvent(QCloseEvent *event) {
     QMainWindow::closeEvent(event);
 }
 
-void AudioView::handleDurationChanged(qint64 duration) {
+void AudioWindow::handleDurationChanged(qint64 duration) {
     totalDuration = duration / 1000;
     ui->horizontalSlider_Duration->setMaximum(totalDuration);
 }
 
-void AudioView::handlePositionChanged(qint64 position) {
+void AudioWindow::handlePositionChanged(qint64 position) {
     int currentSec = position / 1000;
     if (!ui->horizontalSlider_Duration->isSliderDown()) {
         ui->horizontalSlider_Duration->setValue(currentSec);
@@ -86,7 +87,7 @@ void AudioView::handlePositionChanged(qint64 position) {
     updateDurationDisplay(currentSec);
 }
 
-void AudioView::updateDurationDisplay(qint64 currentSeconds) {
+void AudioWindow::updateDurationDisplay(qint64 currentSeconds) {
     if (totalDuration > 0) {
         QTime currentTime(currentSeconds / 3600, (currentSeconds / 60) % 60, currentSeconds % 60);
         QTime totalTime(totalDuration / 3600, (totalDuration / 60) % 60, totalDuration % 60);
@@ -96,14 +97,13 @@ void AudioView::updateDurationDisplay(qint64 currentSeconds) {
     }
 }
 
-void AudioView::on_horizontalSlider_Duration_valueChanged(int value) {
+void AudioWindow::on_horizontalSlider_Duration_valueChanged(int value) {
     if (ui->horizontalSlider_Duration->isSliderDown()) {
         controller->setPosition(value * 1000);
     }
 }
 
-
-void AudioView::on_pushButton_Play_Pause_clicked() {
+void AudioWindow::on_pushButton_Play_Pause_clicked() {
     if (isPaused) {
         isPaused = false;
         controller->play();
@@ -115,24 +115,24 @@ void AudioView::on_pushButton_Play_Pause_clicked() {
     }
 }
 
-void AudioView::on_pushButton_Stop_clicked() {
+void AudioWindow::on_pushButton_Stop_clicked() {
     controller->stop();
     this->close();
 }
 
-void AudioView::on_pushButton_Seek_Forward_clicked() {
+void AudioWindow::on_pushButton_Seek_Forward_clicked() {
     controller->seekForward(20);
 }
 
-void AudioView::on_pushButton_Seek_Backward_clicked() {
+void AudioWindow::on_pushButton_Seek_Backward_clicked() {
     controller->seekBackward(20);
 }
 
-void AudioView::on_horizontalSlider_Volume_valueChanged(int value) {
+void AudioWindow::on_horizontalSlider_Volume_valueChanged(int value) {
     controller->setVolume(value);
 }
 
-void AudioView::on_pushButton_Volume_clicked() {
+void AudioWindow::on_pushButton_Volume_clicked() {
     if (!isMuted) {
         isMuted = true;
         ui->pushButton_Volume->setIcon(style()->standardIcon(QStyle::SP_MediaVolumeMuted));
@@ -144,9 +144,18 @@ void AudioView::on_pushButton_Volume_clicked() {
     }
 }
 
-void AudioView::handleUARTCommand(const QString &command)
+void AudioWindow::toggleFullScreen()
 {
-    qDebug() << "AudioView received UART command:" << command;
+    if (isFullScreen()) {
+        showNormal();
+    } else {
+        showFullScreen();
+    }
+}
+
+void AudioWindow::handleUARTCommand(const QString &command)
+{
+    qDebug() << "AudioWindow received UART command:" << command;
 
     if (command == "stop") {
         on_pushButton_Stop_clicked();
@@ -162,23 +171,14 @@ void AudioView::handleUARTCommand(const QString &command)
     }
 }
 
-void AudioView::handleUARTNumber(int number) {
-    qDebug() << "AudioView received UART number:" << number;
+void AudioWindow::handleUARTNumber(int number) {
+    qDebug() << "AudioWindow received UART number:" << number;
     if (number >= 0 && number <= 100) {
         ui->horizontalSlider_Volume->setValue(number);
     }
 }
 
-void AudioView::handleUARTError(const QString &error)
+void AudioWindow::handleUARTError(const QString &error)
 {
-    qDebug() << "AudioView UART error:" << error;
-}
-
-void AudioView::toggleFullScreen()
-{
-    if (isFullScreen()) {
-        showNormal();
-    } else {
-        showFullScreen();
-    }
+    qDebug() << "AudioWindow UART error:" << error;
 }

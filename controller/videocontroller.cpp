@@ -1,11 +1,11 @@
-#include "videoview.h"
-#include "ui_videoview.h"
+#include "videocontroller.h"
+#include "ui_videowindow.h"
 
-VideoView::VideoView(const QString &videoPath, QWidget *parent)
+VideoWindow::VideoWindow(const QString &videoPath, QWidget *parent)
     : QMainWindow(parent),
-      ui(new Ui::VideoView),
+      ui(new Ui::VideoWindow),
       controller(new MediaController(this)),
-      uartReceiver(new UARTReceiver(this)),
+      uartReceiver(UARTReceiver::getInstance()),
       totalDuration(0),
       isPaused(false),
       isMuted(false)
@@ -37,42 +37,44 @@ VideoView::VideoView(const QString &videoPath, QWidget *parent)
     ui->horizontalSlider_Volume->setMaximum(100);
     ui->horizontalSlider_Volume->setValue(30);
 
-    // Kết nối tín hiệu từ controller đến các slot của view
-    connect(controller, &MediaController::durationChanged, this, &VideoView::handleDurationChanged);
-    connect(controller, &MediaController::positionChanged, this, &VideoView::handlePositionChanged);
-
-    // Kết nối tín hiệu UART
-    connect(uartReceiver, &UARTReceiver::controlCommandReceived, this, &VideoView::handleUARTCommand);
-    connect(uartReceiver, &UARTReceiver::numberReceived, this, &VideoView::handleUARTNumber);
-    connect(uartReceiver, &UARTReceiver::errorOccurred, this, &VideoView::handleUARTError);
-
-    // Khởi động UART
-    if (!uartReceiver->startListening()) {
-        qDebug() << "Failed to start UART listening in VideoView";
-    }
-
     // Khởi tạo slider thời gian
     ui->horizontalSlider_Duration->setRange(0, 0);
+
+    // Kết nối tín hiệu từ controller đến các slot của view
+    connect(controller, &MediaController::durationChanged, this, &VideoWindow::handleDurationChanged);
+    connect(controller, &MediaController::positionChanged, this, &VideoWindow::handlePositionChanged);
+
+    // Kết nối tín hiệu từ UARTReceiver
+    connect(uartReceiver, &UARTReceiver::controlCommandReceived, this, &VideoWindow::handleUARTCommand);
+    connect(uartReceiver, &UARTReceiver::numberReceived, this, &VideoWindow::handleUARTNumber);
+    connect(uartReceiver, &UARTReceiver::errorOccurred, this, &VideoWindow::handleUARTError);
+
+    // Khởi động UART nếu chưa được khởi động
+    if (!uartReceiver->startListening()) {
+        qDebug() << "Failed to start UART listening in VideoWindow";
+    }
 
     // Tự động phát video khi mở cửa sổ
     controller->play();
 
     // Thêm phím tắt F1 để chuyển đổi full screen
     QShortcut *fullScreenShortcut = new QShortcut(QKeySequence(Qt::Key_F1), this);
-    connect(fullScreenShortcut, &QShortcut::activated, this, &VideoView::toggleFullScreen);
+    connect(fullScreenShortcut, &QShortcut::activated, this, &VideoWindow::toggleFullScreen);
     showFullScreen();
 }
 
-VideoView::~VideoView() {
+VideoWindow::~VideoWindow() {
+    // Dừng UARTReceiver nếu cần
     if (uartReceiver) {
         uartReceiver->stopListening();
-        delete uartReceiver;
-        uartReceiver = nullptr;
     }
+    controller->stop();
+    controller->getPlayer()->setVideoOutput(nullptr);
     delete ui;
 }
 
-void VideoView::closeEvent(QCloseEvent *event) {
+void VideoWindow::closeEvent(QCloseEvent *event) {
+    // Dừng UARTReceiver nếu cần
     if (uartReceiver) {
         uartReceiver->stopListening();
     }
@@ -81,12 +83,12 @@ void VideoView::closeEvent(QCloseEvent *event) {
     QMainWindow::closeEvent(event);
 }
 
-void VideoView::handleDurationChanged(qint64 duration) {
+void VideoWindow::handleDurationChanged(qint64 duration) {
     totalDuration = duration / 1000;
     ui->horizontalSlider_Duration->setMaximum(totalDuration);
 }
 
-void VideoView::handlePositionChanged(qint64 position) {
+void VideoWindow::handlePositionChanged(qint64 position) {
     int currentSec = position / 1000;
     if (!ui->horizontalSlider_Duration->isSliderDown()) {
         ui->horizontalSlider_Duration->setValue(currentSec);
@@ -94,7 +96,7 @@ void VideoView::handlePositionChanged(qint64 position) {
     updateDurationDisplay(currentSec);
 }
 
-void VideoView::updateDurationDisplay(qint64 currentSeconds) {
+void VideoWindow::updateDurationDisplay(qint64 currentSeconds) {
     if (totalDuration > 0) {
         QTime currentTime(currentSeconds / 3600, (currentSeconds / 60) % 60, currentSeconds % 60);
         QTime totalTime(totalDuration / 3600, (totalDuration / 60) % 60, totalDuration % 60);
@@ -104,13 +106,13 @@ void VideoView::updateDurationDisplay(qint64 currentSeconds) {
     }
 }
 
-void VideoView::on_horizontalSlider_Duration_valueChanged(int value) {
+void VideoWindow::on_horizontalSlider_Duration_valueChanged(int value) {
     if (ui->horizontalSlider_Duration->isSliderDown()) {
         controller->setPosition(value * 1000);
     }
 }
 
-void VideoView::on_pushButton_Play_Pause_clicked() {
+void VideoWindow::on_pushButton_Play_Pause_clicked() {
     if (isPaused) {
         isPaused = false;
         controller->play();
@@ -122,26 +124,26 @@ void VideoView::on_pushButton_Play_Pause_clicked() {
     }
 }
 
-void VideoView::on_pushButton_Stop_clicked() {
+void VideoWindow::on_pushButton_Stop_clicked() {
     controller->stop();
     this->close();
 }
 
-void VideoView::on_pushButton_Seek_Forward_clicked() {
+void VideoWindow::on_pushButton_Seek_Forward_clicked() {
     // Seek forward 20 giây
     controller->seekForward(20);
 }
 
-void VideoView::on_pushButton_Seek_Backward_clicked() {
+void VideoWindow::on_pushButton_Seek_Backward_clicked() {
     // Seek backward 20 giây
     controller->seekBackward(20);
 }
 
-void VideoView::on_horizontalSlider_Volume_valueChanged(int value) {
+void VideoWindow::on_horizontalSlider_Volume_valueChanged(int value) {
     controller->setVolume(value);
 }
 
-void VideoView::on_pushButton_Volume_clicked() {
+void VideoWindow::on_pushButton_Volume_clicked() {
     if (!isMuted) {
         isMuted = true;
         ui->pushButton_Volume->setIcon(style()->standardIcon(QStyle::SP_MediaVolumeMuted));
@@ -153,9 +155,18 @@ void VideoView::on_pushButton_Volume_clicked() {
     }
 }
 
-void VideoView::handleUARTCommand(const QString &command)
+void VideoWindow::toggleFullScreen()
 {
-    qDebug() << "VideoView received UART command:" << command;
+    if (isFullScreen()) {
+        showNormal();
+    } else {
+        showFullScreen();
+    }
+}
+
+void VideoWindow::handleUARTCommand(const QString &command)
+{
+    qDebug() << "VideoWindow received UART command:" << command;
 
     if (command == "stop") {
         on_pushButton_Stop_clicked();
@@ -171,23 +182,14 @@ void VideoView::handleUARTCommand(const QString &command)
     }
 }
 
-void VideoView::handleUARTNumber(int number) {
-    qDebug() << "VideoView received UART number:" << number;
+void VideoWindow::handleUARTNumber(int number) {
+    qDebug() << "VideoWindow received UART number:" << number;
     if (number >= 0 && number <= 100) {
         ui->horizontalSlider_Volume->setValue(number);
     }
 }
 
-void VideoView::handleUARTError(const QString &error)
+void VideoWindow::handleUARTError(const QString &error)
 {
-    qDebug() << "VideoView UART error:" << error;
-}
-
-void VideoView::toggleFullScreen()
-{
-    if (isFullScreen()) {
-        showNormal();
-    } else {
-        showFullScreen();
-    }
+    qDebug() << "VideoWindow UART error:" << error;
 }
