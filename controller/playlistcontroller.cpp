@@ -122,10 +122,8 @@ void PlaylistWindow::setupConnections()
     connect(m_controller, &MediaController::positionChanged, this, &PlaylistWindow::updatePosition);
     connect(m_controller, &MediaController::playbackStateChanged, this, &PlaylistWindow::handleStateChanged);
     connect(m_controller, &MediaController::currentIndexChanged, this, &PlaylistWindow::handleCurrentIndexChanged);
-    connect(m_controller, &MediaController::playlistEnded, this, &PlaylistWindow::handlePlaylistEnded);
     
     // Player signals for metadata
-    connect(m_controller->getPlayer(), &QMediaPlayer::mediaStatusChanged, this, &PlaylistWindow::handleMediaStatusChanged);
     connect(m_controller->getPlayer(), &QMediaPlayer::metaDataChanged, this, &PlaylistWindow::updateMetadata);
 }
 
@@ -249,11 +247,6 @@ void PlaylistWindow::updatePosition(qint64 position)
 void PlaylistWindow::updateMetadata()
 {
     updateCurrentFileInfo();
-}
-
-void PlaylistWindow::handleMediaStatusChanged(QMediaPlayer::MediaStatus status)
-{
-    // This is now handled by MediaController
 }
 
 void PlaylistWindow::handleStateChanged(QMediaPlayer::PlaybackState state)

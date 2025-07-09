@@ -50,7 +50,6 @@ signals:
     void positionChanged(qint64 position);
     void playbackStateChanged(QMediaPlayer::PlaybackState state);
     void currentIndexChanged(int index);
-    void playlistEnded();
 
 private slots:
     void handlePlaybackStateChanged(QMediaPlayer::PlaybackState state);

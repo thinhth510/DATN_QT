@@ -47,7 +47,6 @@ private slots:
     void updateDuration(qint64 duration);
     void updatePosition(qint64 position);
     void updateMetadata();
-    void handleMediaStatusChanged(QMediaPlayer::MediaStatus status);
     void handleStateChanged(QMediaPlayer::PlaybackState state);
     void handleCurrentIndexChanged(int index);
     void handlePlaylistEnded();
@@ -68,7 +67,6 @@ private:
     // Setup Methods
     void setupUI();
     void setupConnections();
-    void setupStyle();
     void updatePlaylistModel();
     void loadPlaylist();
     void updateCurrentFileInfo();

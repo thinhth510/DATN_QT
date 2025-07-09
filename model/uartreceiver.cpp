@@ -65,11 +65,6 @@ void UARTReceiver::handleReadyRead()
     }
 }
 
-void UARTReceiver::processBufferedData()
-{
-    // No longer needed as handleReadyRead processes data by newline
-}
-
 void UARTReceiver::handleError(QSerialPort::SerialPortError error)
 {
     if (error == QSerialPort::NoError) {

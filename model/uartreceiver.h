@@ -28,7 +28,6 @@ private slots:
     // UART Event Handlers
     void handleReadyRead();
     void handleError(QSerialPort::SerialPortError error);
-    void processBufferedData();
 
 private:
     // UART Components
